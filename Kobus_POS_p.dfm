@@ -1,9 +1,8 @@
-object Form1: TForm1
+object frmMain: TfrmMain
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 448
-  ClientWidth = 741
+  ClientHeight = 622
+  ClientWidth = 956
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,12 +10,28 @@ object Form1: TForm1
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object Button1: TButton
-    Left = 320
-    Top = 184
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
+  object pgcMain: TPageControl
+    Left = 0
+    Top = 0
+    Width = 956
+    Height = 622
+    ActivePage = tbsManageStaff
+    Align = alClient
     TabOrder = 0
+    object tbsLogin: TTabSheet
+      Caption = 'Login'
+    end
+    object tbsPOS: TTabSheet
+      Caption = 'POS'
+      ImageIndex = 1
+    end
+    object tbsStock: TTabSheet
+      Caption = 'Stock'
+      ImageIndex = 2
+    end
+    object tbsManageStaff: TTabSheet
+      Caption = 'Staff'
+      ImageIndex = 3
+    end
   end
 end

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2023/09/12 21:22:11.157,=C:\Users\kotze\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/09/12 21:22:47.623,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Kobus_POS_p.pas=C:\Users\kotze\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2023/09/12 21:22:47.623,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Kobus_POS_p.dfm=C:\Users\kotze\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2023/09/12 21:23:02.016,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Kobus_POS_u.dproj=C:\Users\kotze\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+	<Transactions>
+    <Transaction>2023/09/12 21:22:11.000.157,=C:\Users\kotze\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 21:22:47.000.623,C:\Users\kotze\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Kobus_POS_p.pas</Transaction>
+    <Transaction>2023/09/12 21:22:47.000.623,C:\Users\kotze\OneDrive\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Kobus_POS_p.dfm</Transaction>
+    <Transaction>2023/09/12 21:23:02.000.016,C:\Users\kotze\OneDrive\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Kobus_POS_u.dproj</Transaction>
   </Transactions>
 </BorlandProject>
