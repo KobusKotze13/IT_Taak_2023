@@ -7,13 +7,8 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls, Vcl.ExtCtrls;
 
 type
-  TfrmMain = class(TForm)
-    pgcMain: TPageControl;
-    tbsLogin: TTabSheet;
-    tbsPOS: TTabSheet;
-    tbsStock: TTabSheet;
-    tbsManageStaff: TTabSheet;
-    pnlStaffBackground: TPanel;
+  TfrmPOS__Main = class(TForm)
+    pnlPOSBackground: TPanel;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
@@ -22,13 +17,13 @@ type
   end;
 
 var
-  frmMain: TfrmMain;
+  frmPOS__Main: TfrmPOS__Main;
 
 implementation
 
 {$R *.dfm}
 
-procedure TfrmMain.FormCreate(Sender: TObject);
+procedure TfrmPOS__Main.FormCreate(Sender: TObject);
 var
 ScaleFactorX, ScaleFactorY: Single;
 begin

@@ -123,7 +123,19 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="Kobus_POS_p.pas">
-            <Form>frmMain</Form>
+            <Form>frmPOS__Main</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Kobus_Login_p.pas">
+            <Form>frmLogin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Kobus_Stock_p.pas">
+            <Form>frmStaff</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Kobus_Staff_p.pas">
+            <Form>frmStock</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
@@ -151,6 +163,18 @@
                 <DeployFile LocalName="Win32\Debug\Kobus_POS_u.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Kobus_POS_u.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win64\Debug\Kobus_POS_u.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win64">
+                        <RemoteName>Kobus_POS_u.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win64\Debug\Kobus_POS_u.rsm" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win64">
+                        <RemoteName>Kobus_POS_u.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

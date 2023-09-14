@@ -1,0 +1,52 @@
+unit Kobus_POS_p;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ComCtrls;
+
+type
+  TfrmMain = class(TForm)
+    pgcMain: TPageControl;
+    tbsLogin: TTabSheet;
+    tbsPOS: TTabSheet;
+    tbsStock: TTabSheet;
+    tbsManageStaff: TTabSheet;
+    Button1: TButton;
+    Edit1: TEdit;
+    Memo1: TMemo;
+    CheckBox1: TCheckBox;
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMain: TfrmMain;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmMain.FormCreate(Sender: TObject);
+var
+ScalefactorX, ScaleFactorY : real;
+i : integer;
+begin
+  ScaleFactorX := Screen.Width / Self.Width;
+  ScaleFactorY := Screen.Height / Self.Height;
+
+   for i := 0 to ComponentCount - 1 do
+     begin
+       if Components[i] is TControl then
+         begin
+           TControl(Components[i]).Width := Round(TControl(Components[i]).Width * ScaleFactorX);
+           TControl(Components[i]).Height := Round(TControl(Components[i]).Height * ScaleFactorY);
+         end;
+     end;
+end;
+
+end.

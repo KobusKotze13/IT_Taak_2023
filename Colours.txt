@@ -1,0 +1,5 @@
+Licorice(dark) : rgb(23, 15, 12)
+Licorice(light) : rgb(44, 32, 29)
+Gunmetal : rgb(34, 53, 53)
+Dark slate grey : rgb(42, 71, 63) 
+Hunter Green : rgb(50, 94, 66)
