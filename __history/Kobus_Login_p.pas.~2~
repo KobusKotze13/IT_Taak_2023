@@ -1,0 +1,33 @@
+unit Kobus_Login_p;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Kobus_POS_p;
+
+type
+  TfrmLogin = class(TForm)
+    pnlLoginBackground: TPanel;
+    pnlLoginBtn: TPanel;
+    procedure pnlLoginBtnClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmLogin: TfrmLogin;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmLogin.pnlLoginBtnClick(Sender: TObject);
+begin
+//  frmPOS__Main.show;
+//  frmLogin.hide;
+end;
+
+end.
