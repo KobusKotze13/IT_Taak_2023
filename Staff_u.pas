@@ -4,10 +4,11 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls;
 
 type
-  TForm1 = class(TForm)
+  TfrmStaff = class(TForm)
+    pnlStaffBackground: TPanel;
   private
     { Private declarations }
   public
@@ -15,7 +16,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  frmStaff: TfrmStaff;
 
 implementation
 

@@ -2,22 +2,26 @@ object frmPOS: TfrmPOS
   Left = 0
   Top = 0
   Caption = 'POS'
-  ClientHeight = 442
-  ClientWidth = 628
+  ClientHeight = 658
+  ClientWidth = 952
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnCreate = FormCreate
   TextHeight = 15
-  object Button1: TButton
-    Left = 280
-    Top = 232
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
+  object pnlPOSBackground: TPanel
+    Left = 0
+    Top = 0
+    Width = 952
+    Height = 658
+    Align = alClient
     TabOrder = 0
-    OnClick = Button1Click
+    ExplicitLeft = 376
+    ExplicitTop = 280
+    ExplicitWidth = 185
+    ExplicitHeight = 41
   end
 end

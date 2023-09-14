@@ -8,8 +8,10 @@ uses
 
 type
   TfrmLogin = class(TForm)
-    Panel1: TPanel;
-    procedure Panel1Click(Sender: TObject);
+    pnlLoginBackground: TPanel;
+    pnlLodinBtn: TPanel;
+    pnlSignUp: TPanel;
+    procedure pnlLodinBtnClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,7 +28,7 @@ POS_u;
 
 {$R *.dfm}
 
-procedure TfrmLogin.Panel1Click(Sender: TObject);
+procedure TfrmLogin.pnlLodinBtnClick(Sender: TObject);
 begin
 frmPOS.Show;
 end;

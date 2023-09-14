@@ -131,11 +131,11 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Staff_u.pas">
-            <Form>Form1</Form>
+            <Form>frmStaff</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Stock_u.pas">
-            <Form>Form2</Form>
+            <Form>frmStock</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
