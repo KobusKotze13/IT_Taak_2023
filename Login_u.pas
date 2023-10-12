@@ -8,13 +8,14 @@ uses
 
 type
   TfrmLogin = class(TForm)
-    pnlLoginBackground: TPanel;
-    pnlLodinBtn: TPanel;
-    pnlSignUp: TPanel;
-    edtUserName: TEdit;
-    edtPass: TEdit;
+    gplLogin: TGridPanel;
     lblTitle: TLabel;
-    procedure pnlLodinBtnClick(Sender: TObject);
+    edtPass: TEdit;
+    edtUserName: TEdit;
+    pnlLoginbtn: TPanel;
+    pnlSignUpBtn: TPanel;
+    procedure pnlLoginBtnClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,7 +32,12 @@ POS_u;
 
 {$R *.dfm}
 
-procedure TfrmLogin.pnlLodinBtnClick(Sender: TObject);
+procedure TfrmLogin.FormShow(Sender: TObject);
+begin
+frmPos.Hide;
+end;
+
+procedure TfrmLogin.pnlLoginBtnClick(Sender: TObject);
 begin
 frmPOS.Show;
 end;

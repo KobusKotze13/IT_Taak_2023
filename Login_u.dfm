@@ -2,7 +2,7 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 692
+  ClientHeight = 693
   ClientWidth = 1025
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,22 +11,81 @@ object frmLogin: TfrmLogin
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesigned
+  OnShow = FormShow
   TextHeight = 15
-  object pnlLoginBackground: TPanel
+  object gplLogin: TGridPanel
     Left = 0
     Top = 0
     Width = 1025
-    Height = 692
+    Height = 693
     Align = alClient
+    ColumnCollection = <
+      item
+        Value = 33.333333333333340000
+      end
+      item
+        Value = 33.333333333333340000
+      end
+      item
+        Value = 33.333333333333340000
+      end>
+    ControlCollection = <
+      item
+        Column = 1
+        Control = lblTitle
+        Row = 1
+      end
+      item
+        Column = 1
+        Control = edtPass
+        Row = 3
+      end
+      item
+        Column = 1
+        Control = edtUserName
+        Row = 2
+      end
+      item
+        Column = 1
+        Control = pnlLoginbtn
+        Row = 4
+      end
+      item
+        Column = 1
+        Control = pnlSignUpBtn
+        Row = 5
+      end>
+    Ctl3D = True
+    ParentCtl3D = False
+    RowCollection = <
+      item
+        Value = 25.000000000000000000
+      end
+      item
+        Value = 25.000000000000000000
+      end
+      item
+        Value = 12.500000000000000000
+      end
+      item
+        Value = 12.500000000000000000
+      end
+      item
+        Value = 12.500000000000000000
+      end
+      item
+        Value = 12.500000000000000000
+      end>
     TabOrder = 0
-    ExplicitLeft = 32
-    ExplicitTop = 8
+    StyleElements = [seFont, seClient]
+    ExplicitWidth = 1019
+    ExplicitHeight = 684
     DesignSize = (
       1025
-      692)
+      693)
     object lblTitle: TLabel
-      Left = 359
-      Top = 128
+      Left = 364
+      Top = 174
       Width = 297
       Height = 77
       Anchors = [akTop]
@@ -37,48 +96,45 @@ object frmLogin: TfrmLogin
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-    end
-    object pnlLodinBtn: TPanel
-      Left = 420
-      Top = 552
-      Width = 185
-      Height = 41
-      Anchors = [akBottom]
-      Caption = 'Login'
-      TabOrder = 0
-      OnClick = pnlLodinBtnClick
-      ExplicitLeft = 417
-      ExplicitTop = 543
-    end
-    object pnlSignUp: TPanel
-      Left = 420
-      Top = 616
-      Width = 185
-      Height = 41
-      Anchors = [akBottom]
-      Caption = 'Sign Up'
-      TabOrder = 1
-      OnClick = pnlLodinBtnClick
-      ExplicitLeft = 417
-      ExplicitTop = 607
-    end
-    object edtUserName: TEdit
-      Left = 423
-      Top = 272
-      Width = 185
-      Height = 23
-      Anchors = [akTop]
-      TabOrder = 2
-      Text = 'Enter User Name'
+      ExplicitLeft = 170
     end
     object edtPass: TEdit
-      Left = 423
-      Top = 320
-      Width = 185
+      Left = 406
+      Top = 464
+      Width = 212
       Height = 23
-      Anchors = [akTop]
-      TabOrder = 3
+      Anchors = [akLeft, akRight]
+      TabOrder = 0
       Text = 'Enter Password'
+    end
+    object edtUserName: TEdit
+      Left = 408
+      Top = 378
+      Width = 209
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 1
+      Text = 'Enter User Name'
+    end
+    object pnlLoginbtn: TPanel
+      Left = 414
+      Top = 560
+      Width = 197
+      Height = 46
+      Anchors = [akBottom]
+      Caption = 'Log In'
+      TabOrder = 2
+      ExplicitLeft = 420
+    end
+    object pnlSignUpBtn: TPanel
+      Left = 414
+      Top = 626
+      Width = 197
+      Height = 45
+      Anchors = [akLeft, akRight]
+      Caption = 'Sign Up'
+      TabOrder = 3
+      ExplicitTop = 624
     end
   end
 end

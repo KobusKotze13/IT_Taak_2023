@@ -9,20 +9,21 @@ uses
 
 type
   TfrmPOS = class(TForm)
-    pnlPOSBackground: TPanel;
-    cmbPapSelect: TComboBox;
-    cmbMeatSelect: TComboBox;
-    cmbVegSelect: TComboBox;
+    gplPOS: TGridPanel;
     cmbExtra1: TComboBox;
     cmbExtra2: TComboBox;
     cmbExtra3: TComboBox;
-    redOrder: TRichEdit;
+    cmbMeatSelect: TComboBox;
+    cmbPapSelect: TComboBox;
+    cmbVegSelect: TComboBox;
     pnlAddOrderBtn: TPanel;
     pnlFinalOrder: TPanel;
+    pnlLogout: TPanel;
     pnlManagaeStaffBtn: TPanel;
     pnlManageStockBtn: TPanel;
+    redOrder: TRichEdit;
     procedure Button1Click(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,10 +43,10 @@ frmLogin.show;
 frmPOS.hide;
 end;
 
-procedure TfrmPOS.FormCreate(Sender: TObject);
+
+procedure TfrmPOS.FormShow(Sender: TObject);
 begin
 frmLogin.Show;
-frmPOS.Hide;
-end;
+frmPos.Hide;end;
 
 end.

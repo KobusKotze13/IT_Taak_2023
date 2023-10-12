@@ -9,21 +9,21 @@ uses
 
 type
   TfrmStaff = class(TForm)
-    pnlStaffBackground: TPanel;
+    gplStaff: TGridPanel;
     dbgStaff: TDBGrid;
     dbnStaff: TDBNavigator;
-    pnlSearchBtn: TPanel;
-    edtSearchName: TEdit;
-    pnlRemStaffBtn: TPanel;
-    pnlManagerBtn: TPanel;
-    edtEnterName: TEdit;
-    edtPassEnter: TEdit;
     edtAddress: TEdit;
     edtCellNum: TEdit;
     edtEmail: TEdit;
+    edtEnterName: TEdit;
+    edtPassEnter: TEdit;
+    edtSearchName: TEdit;
     edtWage: TEdit;
     pnlAddStaff: TPanel;
+    pnlManagerBtn: TPanel;
     pnlRemMAnager: TPanel;
+    pnlRemStaffBtn: TPanel;
+    pnlSearchBtn: TPanel;
   private
     { Private declarations }
   public
