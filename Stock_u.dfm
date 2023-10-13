@@ -11,20 +11,130 @@ object frmStock: TfrmStock
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object pnlStockBackground: TPanel
+  object gplStock: TGridPanel
     Left = 0
     Top = 0
     Width = 1055
     Height = 710
     Align = alClient
+    ColumnCollection = <
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 0
+        ColumnSpan = 10
+        Control = dbgStock
+        Row = 0
+        RowSpan = 3
+      end
+      item
+        Column = 7
+        ColumnSpan = 3
+        Control = dbnStock
+        Row = 3
+        RowSpan = 3
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = edtSearchProductName
+        Row = 4
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = pnlAddProductBtn
+        Row = 6
+      end
+      item
+        Column = 7
+        Control = pnlBackToPOSBtn
+        Row = 8
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = pnlRemStockBtn
+        Row = 7
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = pnlSearchBtn
+        Row = 5
+      end>
+    RowCollection = <
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end>
     TabOrder = 0
     ExplicitWidth = 1049
     ExplicitHeight = 701
-    object dbgStaff: TDBGrid
-      Left = 16
-      Top = 24
-      Width = 1009
-      Height = 272
+    DesignSize = (
+      1055
+      710)
+    object dbgStock: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 1053
+      Height = 212
+      Align = alClient
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -32,52 +142,63 @@ object frmStock: TfrmStock
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
     end
-    object dbnStaff: TDBNavigator
-      Left = 785
-      Top = 302
+    object dbnStock: TDBNavigator
+      Left = 776
+      Top = 213
       Width = 240
       Height = 25
+      Anchors = [akLeft, akTop, akRight]
       TabOrder = 1
     end
-    object edtSearchName: TEdit
-      Left = 32
-      Top = 368
-      Width = 185
+    object edtSearchProductName: TEdit
+      Left = 106
+      Top = 308
+      Width = 210
       Height = 23
+      Anchors = [akLeft, akRight]
       TabOrder = 2
-      Text = 'Enter Name'
+      Text = 'Enter Product Name'
     end
-    object pnlAddStaff: TPanel
-      Left = 592
-      Top = 368
+    object pnlAddProductBtn: TPanel
+      Left = 119
+      Top = 441
       Width = 185
       Height = 41
-      Caption = 'Add Staff Member'
+      Anchors = [akLeft, akRight]
+      Caption = 'Add Stock'
       TabOrder = 3
+      ExplicitTop = 296
     end
-    object pnlRemStaffBtn: TPanel
-      Left = 32
-      Top = 488
+    object pnlBackToPOSBtn: TPanel
+      Left = 738
+      Top = 582
       Width = 185
       Height = 41
-      Caption = 'Remove Staff'
+      Anchors = []
+      Caption = 'Back to POS'
       TabOrder = 4
+      ExplicitLeft = 422
+      ExplicitTop = 296
+    end
+    object pnlRemStockBtn: TPanel
+      Left = 119
+      Top = 511
+      Width = 185
+      Height = 41
+      Anchors = [akLeft, akRight]
+      Caption = 'Remove Stock'
+      TabOrder = 5
+      ExplicitTop = 296
     end
     object pnlSearchBtn: TPanel
-      Left = 32
-      Top = 416
+      Left = 119
+      Top = 370
       Width = 185
       Height = 41
+      Anchors = [akLeft, akRight]
       Caption = 'Search'
-      TabOrder = 5
-    end
-    object Panel1: TPanel
-      Left = 592
-      Top = 424
-      Width = 185
-      Height = 41
-      Caption = 'Add Staff Member'
       TabOrder = 6
+      ExplicitTop = 296
     end
   end
 end

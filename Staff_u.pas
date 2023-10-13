@@ -24,6 +24,7 @@ type
     pnlRemMAnager: TPanel;
     pnlRemStaffBtn: TPanel;
     pnlSearchBtn: TPanel;
+    pnlBackToPOSBtn: TPanel;
   private
     { Private declarations }
   public

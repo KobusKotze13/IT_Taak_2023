@@ -9,14 +9,14 @@ uses
 
 type
   TfrmStock = class(TForm)
-    pnlStockBackground: TPanel;
-    dbgStaff: TDBGrid;
-    dbnStaff: TDBNavigator;
-    edtSearchName: TEdit;
-    pnlAddStaff: TPanel;
-    pnlRemStaffBtn: TPanel;
+    gplStock: TGridPanel;
+    dbgStock: TDBGrid;
+    dbnStock: TDBNavigator;
+    edtSearchProductName: TEdit;
+    pnlAddProductBtn: TPanel;
+    pnlBackToPOSBtn: TPanel;
+    pnlRemStockBtn: TPanel;
     pnlSearchBtn: TPanel;
-    Panel1: TPanel;
   private
     { Private declarations }
   public

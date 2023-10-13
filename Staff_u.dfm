@@ -51,73 +51,87 @@ object frmStaff: TfrmStaff
     ControlCollection = <
       item
         Column = 0
+        ColumnSpan = 10
         Control = dbgStaff
         Row = 0
+        RowSpan = 4
       end
       item
-        Column = 1
+        Column = 7
+        ColumnSpan = 3
         Control = dbnStaff
-        Row = 0
+        Row = 4
       end
       item
-        Column = 2
+        Column = 4
         Control = edtAddress
-        Row = 0
+        Row = 9
       end
       item
-        Column = 3
+        Column = 4
         Control = edtCellNum
-        Row = 0
+        Row = 8
       end
       item
         Column = 4
         Control = edtEmail
-        Row = 0
+        Row = 7
       end
       item
-        Column = 5
+        Column = 4
         Control = edtEnterName
-        Row = 0
+        Row = 4
       end
       item
-        Column = 6
+        Column = 4
         Control = edtPassEnter
-        Row = 0
-      end
-      item
-        Column = 7
-        Control = edtSearchName
-        Row = 0
-      end
-      item
-        Column = 8
-        Control = edtWage
-        Row = 0
-      end
-      item
-        Column = 9
-        Control = pnlAddStaff
-        Row = 0
+        Row = 5
       end
       item
         Column = 0
+        ColumnSpan = 2
+        Control = edtSearchName
+        Row = 5
+      end
+      item
+        Column = 4
+        Control = edtWage
+        Row = 6
+      end
+      item
+        Column = 6
+        ColumnSpan = 2
+        Control = pnlAddStaff
+        Row = 5
+      end
+      item
+        Column = 0
+        ColumnSpan = 2
         Control = pnlManagerBtn
-        Row = 1
+        Row = 8
       end
       item
-        Column = 1
+        Column = 0
+        ColumnSpan = 2
         Control = pnlRemMAnager
-        Row = 1
+        Row = 9
       end
       item
-        Column = 2
+        Column = 0
+        ColumnSpan = 2
         Control = pnlRemStaffBtn
-        Row = 1
+        Row = 7
       end
       item
-        Column = 3
+        Column = 0
+        ColumnSpan = 2
         Control = pnlSearchBtn
-        Row = 1
+        Row = 6
+      end
+      item
+        Column = 8
+        Control = pnlBackToPOSBtn
+        Row = 8
       end>
     RowCollection = <
       item
@@ -159,9 +173,9 @@ object frmStaff: TfrmStaff
     object dbgStaff: TDBGrid
       Left = 1
       Top = 1
-      Width = 320
-      Height = 120
-      Anchors = []
+      Width = 1045
+      Height = 284
+      Align = alClient
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -170,26 +184,26 @@ object frmStaff: TfrmStaff
       TitleFont.Style = []
     end
     object dbnStaff: TDBNavigator
-      Left = 105
-      Top = 24
+      Left = 769
+      Top = 285
       Width = 240
       Height = 25
-      Anchors = []
+      Anchors = [akLeft, akTop, akRight]
       TabOrder = 1
     end
     object edtAddress: TEdit
-      Left = 210
-      Top = 25
-      Width = 121
+      Left = 419
+      Top = 665
+      Width = 166
       Height = 23
       Anchors = []
       TabOrder = 2
       Text = 'Enter Address'
     end
     object edtCellNum: TEdit
-      Left = 314
-      Top = 25
-      Width = 121
+      Left = 419
+      Top = 594
+      Width = 166
       Height = 23
       Anchors = []
       TabOrder = 3
@@ -197,62 +211,61 @@ object frmStaff: TfrmStaff
     end
     object edtEmail: TEdit
       Left = 419
-      Top = 25
-      Width = 121
+      Top = 523
+      Width = 166
       Height = 23
       Anchors = []
       TabOrder = 4
       Text = 'Enter E-mail'
     end
     object edtEnterName: TEdit
-      Left = 523
-      Top = 25
-      Width = 121
+      Left = 419
+      Top = 309
+      Width = 166
       Height = 23
       Anchors = []
       TabOrder = 5
       Text = 'Enter Name'
     end
     object edtPassEnter: TEdit
-      Left = 628
-      Top = 25
-      Width = 121
+      Left = 419
+      Top = 380
+      Width = 166
       Height = 23
       Anchors = []
       TabOrder = 6
       Text = 'Enter Password'
     end
     object edtSearchName: TEdit
-      Left = 732
-      Top = 25
-      Width = 121
+      Left = 11
+      Top = 380
+      Width = 188
       Height = 23
-      Anchors = []
+      Anchors = [akLeft, akRight]
       TabOrder = 7
       Text = 'Enter Name'
     end
     object edtWage: TEdit
-      Left = 837
-      Top = 25
-      Width = 121
+      Left = 419
+      Top = 452
+      Width = 166
       Height = 23
       Anchors = []
       TabOrder = 8
       Text = 'Enter Wage'
     end
     object pnlAddStaff: TPanel
-      Left = 941
-      Top = 16
+      Left = 640
+      Top = 371
       Width = 185
       Height = 41
-      Anchors = []
+      Anchors = [akLeft, akRight]
       Caption = 'Add Staff Member'
       TabOrder = 9
-      ExplicitLeft = 862
     end
     object pnlManagerBtn: TPanel
-      Left = 1
-      Top = 87
+      Left = 13
+      Top = 585
       Width = 185
       Height = 41
       Anchors = []
@@ -260,8 +273,8 @@ object frmStaff: TfrmStaff
       TabOrder = 10
     end
     object pnlRemMAnager: TPanel
-      Left = 105
-      Top = 87
+      Left = 13
+      Top = 656
       Width = 185
       Height = 41
       Anchors = []
@@ -269,8 +282,8 @@ object frmStaff: TfrmStaff
       TabOrder = 11
     end
     object pnlRemStaffBtn: TPanel
-      Left = 210
-      Top = 87
+      Left = 13
+      Top = 514
       Width = 185
       Height = 41
       Anchors = []
@@ -278,13 +291,23 @@ object frmStaff: TfrmStaff
       TabOrder = 12
     end
     object pnlSearchBtn: TPanel
-      Left = 314
-      Top = 87
+      Left = 13
+      Top = 443
       Width = 185
       Height = 41
-      Anchors = []
+      Anchors = [akLeft, akRight]
       Caption = 'Search'
       TabOrder = 13
+    end
+    object pnlBackToPOSBtn: TPanel
+      Left = 837
+      Top = 585
+      Width = 185
+      Height = 41
+      Anchors = [akLeft, akRight]
+      Caption = 'Back to POS '
+      TabOrder = 14
+      ExplicitTop = 300
     end
   end
 end
