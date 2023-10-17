@@ -27,7 +27,7 @@ object frmLogin: TfrmLogin
         Value = 33.333333333333340000
       end
       item
-        Value = 33.333333333333340000
+        Value = 33.333333333333310000
       end>
     ControlCollection = <
       item
@@ -124,7 +124,7 @@ object frmLogin: TfrmLogin
       Anchors = [akBottom]
       Caption = 'Log In'
       TabOrder = 2
-      ExplicitLeft = 420
+      OnClick = pnlLoginbtnClick
     end
     object pnlSignUpBtn: TPanel
       Left = 414
@@ -134,7 +134,6 @@ object frmLogin: TfrmLogin
       Anchors = [akLeft, akRight]
       Caption = 'Sign Up'
       TabOrder = 3
-      ExplicitTop = 624
     end
   end
 end

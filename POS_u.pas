@@ -4,8 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Login_u, Vcl.ExtCtrls,
-  Vcl.ComCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls;
 
 type
   TfrmPOS = class(TForm)
@@ -22,7 +21,7 @@ type
     pnlManagaeStaffBtn: TPanel;
     pnlManageStockBtn: TPanel;
     redOrder: TRichEdit;
-    procedure Button1Click(Sender: TObject);
+    procedure pnlLogoutClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
@@ -35,18 +34,22 @@ var
 
 implementation
 
+uses
+Login_u;
+
 {$R *.dfm}
 
-procedure TfrmPOS.Button1Click(Sender: TObject);
-begin
-frmLogin.show;
-frmPOS.hide;
-end;
 
 
 procedure TfrmPOS.FormShow(Sender: TObject);
 begin
+WindowState := TWindowState.wsMaximized;
+end;
+
+procedure TfrmPOS.pnlLogoutClick(Sender: TObject);
+begin
 frmLogin.Show;
-frmPos.Hide;end;
+frmPOS.Close;
+end;
 
 end.

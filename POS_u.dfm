@@ -2,8 +2,8 @@ object frmPOS: TfrmPOS
   Left = 0
   Top = 0
   Caption = 'POS'
-  ClientHeight = 680
-  ClientWidth = 1020
+  ClientHeight = 671
+  ClientWidth = 1014
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,8 +15,8 @@ object frmPOS: TfrmPOS
   object gplPOS: TGridPanel
     Left = 0
     Top = 0
-    Width = 1020
-    Height = 680
+    Width = 1014
+    Height = 671
     Align = alClient
     ColumnCollection = <
       item
@@ -162,14 +162,12 @@ object frmPOS: TfrmPOS
         SizeStyle = ssAuto
       end>
     TabOrder = 0
-    ExplicitWidth = 928
-    ExplicitHeight = 622
     DesignSize = (
-      1020
-      680)
+      1014
+      671)
     object cmbExtra1: TComboBox
-      Left = 17
-      Top = 430
+      Left = 16
+      Top = 424
       Width = 171
       Height = 23
       Anchors = [akLeft, akRight]
@@ -177,8 +175,8 @@ object frmPOS: TfrmPOS
       Text = 'Extra 1'
     end
     object cmbExtra2: TComboBox
-      Left = 17
-      Top = 498
+      Left = 16
+      Top = 491
       Width = 171
       Height = 23
       Anchors = [akLeft, akRight]
@@ -186,18 +184,17 @@ object frmPOS: TfrmPOS
       Text = 'Extra 2'
     end
     object cmbExtra3: TComboBox
-      Left = 17
-      Top = 565
+      Left = 16
+      Top = 558
       Width = 171
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 2
       Text = 'Extra 3'
-      ExplicitTop = 569
     end
     object cmbMeatSelect: TComboBox
-      Left = 17
-      Top = 294
+      Left = 16
+      Top = 291
       Width = 171
       Height = 23
       Anchors = [akLeft, akRight]
@@ -205,8 +202,8 @@ object frmPOS: TfrmPOS
       Text = 'Select Meat'
     end
     object cmbPapSelect: TComboBox
-      Left = 17
-      Top = 226
+      Left = 16
+      Top = 224
       Width = 171
       Height = 23
       Anchors = [akLeft, akRight]
@@ -214,8 +211,8 @@ object frmPOS: TfrmPOS
       Text = 'Select Pap'
     end
     object cmbVegSelect: TComboBox
-      Left = 17
-      Top = 362
+      Left = 16
+      Top = 357
       Width = 171
       Height = 23
       Anchors = [akLeft, akRight]
@@ -223,65 +220,56 @@ object frmPOS: TfrmPOS
       Text = 'Select Veg'
     end
     object pnlAddOrderBtn: TPanel
-      Left = 18
-      Top = 624
+      Left = 17
+      Top = 616
       Width = 170
       Height = 41
       Anchors = []
       Caption = 'Add To Order'
       TabOrder = 6
-      ExplicitLeft = 16
-      ExplicitTop = 578
     end
     object pnlFinalOrder: TPanel
-      Left = 652
-      Top = 581
+      Left = 647
+      Top = 573
       Width = 225
       Height = 59
       Anchors = []
       Caption = 'Finalise Order'
       TabOrder = 7
-      ExplicitLeft = 632
-      ExplicitTop = 590
     end
     object pnlLogout: TPanel
-      Left = 824
-      Top = 48
+      Left = 819
+      Top = 47
       Width = 185
       Height = 41
       Anchors = []
       Caption = 'Log Out'
       TabOrder = 8
-      ExplicitLeft = 258
-      ExplicitTop = 208
+      OnClick = pnlLogoutClick
     end
     object pnlManagaeStaffBtn: TPanel
-      Left = 417
-      Top = 48
+      Left = 414
+      Top = 47
       Width = 185
       Height = 41
       Anchors = []
       Caption = 'Manage Staff'
       TabOrder = 9
-      ExplicitLeft = 384
-      ExplicitTop = 90
     end
     object pnlManageStockBtn: TPanel
-      Left = 621
-      Top = 48
+      Left = 617
+      Top = 47
       Width = 185
       Height = 41
       Anchors = []
       Caption = 'Manage Stock'
       TabOrder = 10
-      ExplicitLeft = 526
-      ExplicitTop = 90
     end
     object redOrder: TRichEdit
-      Left = 408
-      Top = 137
-      Width = 611
-      Height = 406
+      Left = 406
+      Top = 135
+      Width = 607
+      Height = 401
       Align = alClient
       Font.Charset = ANSI_CHARSET
       Font.Color = clWindowText
@@ -292,8 +280,6 @@ object frmPOS: TfrmPOS
         'redOrder')
       ParentFont = False
       TabOrder = 11
-      ExplicitWidth = 612
-      ExplicitHeight = 408
     end
   end
 end

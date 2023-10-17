@@ -13,8 +13,8 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TfrmPOS, frmPOS);
   Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TfrmPOS, frmPOS);
   Application.CreateForm(TfrmStaff, frmStaff);
   Application.CreateForm(TfrmStock, frmStock);
   Application.CreateForm(TForm1, Form1);

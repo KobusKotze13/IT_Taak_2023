@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, POS_u;
 
 type
   TfrmLogin = class(TForm)
@@ -14,7 +14,7 @@ type
     edtUserName: TEdit;
     pnlLoginbtn: TPanel;
     pnlSignUpBtn: TPanel;
-    procedure pnlLoginBtnClick(Sender: TObject);
+    procedure pnlLoginbtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
@@ -27,19 +27,19 @@ var
 
 implementation
 
-uses
-POS_u;
+
 
 {$R *.dfm}
 
+
 procedure TfrmLogin.FormShow(Sender: TObject);
 begin
-frmPos.Hide;
+WindowState := TWindowState.wsMaximized;
 end;
 
-procedure TfrmLogin.pnlLoginBtnClick(Sender: TObject);
+procedure TfrmLogin.pnlLoginbtnClick(Sender: TObject);
 begin
-frmPOS.Show;
+frmPOS.show;
 end;
 
 end.
