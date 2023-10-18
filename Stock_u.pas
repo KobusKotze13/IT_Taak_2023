@@ -17,6 +17,8 @@ type
     pnlBackToPOSBtn: TPanel;
     pnlRemStockBtn: TPanel;
     pnlSearchBtn: TPanel;
+    procedure pnlBackToPOSBtnClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -27,7 +29,20 @@ var
   frmStock: TfrmStock;
 
 implementation
+uses
+POS_u;
 
 {$R *.dfm}
+
+procedure TfrmStock.FormShow(Sender: TObject);
+begin
+WindowState := TWindowState.wsMaximized;
+end;
+
+procedure TfrmStock.pnlBackToPOSBtnClick(Sender: TObject);
+begin
+frmPOS.Show;
+frmStock.Hide;
+end;
 
 end.

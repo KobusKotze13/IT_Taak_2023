@@ -10,6 +10,7 @@ object frmStaff: TfrmStaff
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnShow = FormShow
   TextHeight = 15
   object gplStaff: TGridPanel
     Left = 0
@@ -307,7 +308,7 @@ object frmStaff: TfrmStaff
       Anchors = [akLeft, akRight]
       Caption = 'Back to POS '
       TabOrder = 14
-      ExplicitTop = 300
+      OnClick = pnlBackToPOSBtnClick
     end
   end
 end

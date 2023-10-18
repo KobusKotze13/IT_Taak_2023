@@ -6,7 +6,7 @@ object frmPOS: TfrmPOS
   ClientWidth = 1014
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = clWindowText
+  Font.Color = clHighlight
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
@@ -162,6 +162,8 @@ object frmPOS: TfrmPOS
         SizeStyle = ssAuto
       end>
     TabOrder = 0
+    ExplicitWidth = 1008
+    ExplicitHeight = 662
     DesignSize = (
       1014
       671)
@@ -255,6 +257,7 @@ object frmPOS: TfrmPOS
       Anchors = []
       Caption = 'Manage Staff'
       TabOrder = 9
+      OnClick = pnlManagaeStaffBtnClick
     end
     object pnlManageStockBtn: TPanel
       Left = 617
@@ -264,6 +267,7 @@ object frmPOS: TfrmPOS
       Anchors = []
       Caption = 'Manage Stock'
       TabOrder = 10
+      OnClick = pnlManageStockBtnClick
     end
     object redOrder: TRichEdit
       Left = 406

@@ -25,6 +25,8 @@ type
     pnlRemStaffBtn: TPanel;
     pnlSearchBtn: TPanel;
     pnlBackToPOSBtn: TPanel;
+    procedure pnlBackToPOSBtnClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +37,20 @@ var
   frmStaff: TfrmStaff;
 
 implementation
+uses
+POS_u;
 
 {$R *.dfm}
+
+procedure TfrmStaff.FormShow(Sender: TObject);
+begin
+WindowState := TWindowState.wsMaximized
+end;
+
+procedure TfrmStaff.pnlBackToPOSBtnClick(Sender: TObject);
+begin
+frmPOS.Show;
+frmStaff.Close;
+end;
 
 end.

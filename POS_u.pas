@@ -23,6 +23,8 @@ type
     redOrder: TRichEdit;
     procedure pnlLogoutClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure pnlManagaeStaffBtnClick(Sender: TObject);
+    procedure pnlManageStockBtnClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -35,7 +37,7 @@ var
 implementation
 
 uses
-Login_u;
+Login_u, Staff_u, Stock_u;
 
 {$R *.dfm}
 
@@ -49,6 +51,18 @@ end;
 procedure TfrmPOS.pnlLogoutClick(Sender: TObject);
 begin
 frmLogin.Show;
+frmPOS.Close;
+end;
+
+procedure TfrmPOS.pnlManagaeStaffBtnClick(Sender: TObject);
+begin
+frmStaff.Show;
+frmPOS.Close;
+end;
+
+procedure TfrmPOS.pnlManageStockBtnClick(Sender: TObject);
+begin
+frmStock.Show;
 frmPOS.Close;
 end;
 

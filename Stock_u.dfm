@@ -10,6 +10,7 @@ object frmStock: TfrmStock
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnShow = FormShow
   TextHeight = 15
   object gplStock: TGridPanel
     Left = 0
@@ -167,7 +168,6 @@ object frmStock: TfrmStock
       Anchors = [akLeft, akRight]
       Caption = 'Add Stock'
       TabOrder = 3
-      ExplicitTop = 296
     end
     object pnlBackToPOSBtn: TPanel
       Left = 738
@@ -177,8 +177,7 @@ object frmStock: TfrmStock
       Anchors = []
       Caption = 'Back to POS'
       TabOrder = 4
-      ExplicitLeft = 422
-      ExplicitTop = 296
+      OnClick = pnlBackToPOSBtnClick
     end
     object pnlRemStockBtn: TPanel
       Left = 119
@@ -188,7 +187,6 @@ object frmStock: TfrmStock
       Anchors = [akLeft, akRight]
       Caption = 'Remove Stock'
       TabOrder = 5
-      ExplicitTop = 296
     end
     object pnlSearchBtn: TPanel
       Left = 119
@@ -198,7 +196,6 @@ object frmStock: TfrmStock
       Anchors = [akLeft, akRight]
       Caption = 'Search'
       TabOrder = 6
-      ExplicitTop = 296
     end
   end
 end
