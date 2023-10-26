@@ -6,13 +6,16 @@ uses
   Login_u in 'Login_u.pas' {frmLogin},
   Staff_u in 'Staff_u.pas' {frmStaff},
   Stock_u in 'Stock_u.pas' {frmStock},
-  Signup_u in 'Signup_u.pas' {Form1};
+  Signup_u in 'Signup_u.pas' {Form1},
+  Vcl.Themes,
+  Vcl.Styles;
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Windows10 SlateGray');
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TfrmPOS, frmPOS);
   Application.CreateForm(TfrmStaff, frmStaff);

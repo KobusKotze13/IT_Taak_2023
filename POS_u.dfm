@@ -10,6 +10,7 @@ object frmPOS: TfrmPOS
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
   object gplPOS: TGridPanel

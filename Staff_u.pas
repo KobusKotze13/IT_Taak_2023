@@ -27,6 +27,7 @@ type
     pnlBackToPOSBtn: TPanel;
     procedure pnlBackToPOSBtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -38,9 +39,14 @@ var
 
 implementation
 uses
-POS_u;
+POS_u, Login_u;
 
 {$R *.dfm}
+
+procedure TfrmStaff.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+frmLogin.Show;
+end;
 
 procedure TfrmStaff.FormShow(Sender: TObject);
 begin

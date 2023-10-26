@@ -25,6 +25,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure pnlManagaeStaffBtnClick(Sender: TObject);
     procedure pnlManageStockBtnClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -42,6 +43,11 @@ Login_u, Staff_u, Stock_u;
 {$R *.dfm}
 
 
+
+procedure TfrmPOS.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+frmLogin.Show;
+end;
 
 procedure TfrmPOS.FormShow(Sender: TObject);
 begin

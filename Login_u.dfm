@@ -2,24 +2,27 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 638
-  ClientWidth = 1020
-  Color = clBtnFace
+  ClientHeight = 620
+  ClientWidth = 1008
+  Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poDesigned
+  StyleName = 'Windows10 SlateGray'
   OnShow = FormShow
   TextHeight = 15
   object gplLogin: TGridPanel
     Left = 0
     Top = 0
-    Width = 1020
-    Height = 638
+    Width = 1008
+    Height = 620
+    ParentCustomHint = False
     Align = alClient
-    Color = 7434270
+    BiDiMode = bdLeftToRight
+    Color = 9599053
     ColumnCollection = <
       item
         Value = 33.333333333333340000
@@ -57,8 +60,18 @@ object frmLogin: TfrmLogin
         Row = 5
       end>
     Ctl3D = True
+    DoubleBuffered = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentBiDiMode = False
     ParentBackground = False
     ParentCtl3D = False
+    ParentDoubleBuffered = False
+    ParentFont = False
+    ParentShowHint = False
     RowCollection = <
       item
         Value = 25.000000000000000000
@@ -78,16 +91,16 @@ object frmLogin: TfrmLogin
       item
         Value = 12.500000000000000000
       end>
+    ShowHint = False
     TabOrder = 0
     StyleElements = [seFont, seClient]
-    ExplicitWidth = 1019
-    ExplicitHeight = 684
+    StyleName = 'Windows'
     DesignSize = (
-      1020
-      638)
+      1008
+      620)
     object lblTitle: TLabel
-      Left = 361
-      Top = 160
+      Left = 355
+      Top = 155
       Width = 297
       Height = 77
       Anchors = [akTop]
@@ -101,53 +114,52 @@ object frmLogin: TfrmLogin
       ExplicitLeft = 170
     end
     object edtPass: TEdit
-      Left = 404
-      Top = 427
+      Left = 398
+      Top = 414
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 0
       Text = 'Enter Password'
-      ExplicitTop = 458
     end
     object edtUserName: TEdit
-      Left = 405
-      Top = 347
+      Left = 399
+      Top = 337
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
       Text = 'Enter User Name'
-      ExplicitTop = 373
     end
     object pnlLoginbtn: TPanel
-      Left = 411
-      Top = 512
+      Left = 405
+      Top = 496
       Width = 197
       Height = 46
       Anchors = [akBottom]
+      BevelEdges = []
       Caption = 'Log In'
-      Color = 7743044
+      Color = 6049102
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlight
+      Font.Color = clWindowText
       Font.Height = -12
       Font.Name = 'Segoe UI'
-      Font.Style = []
+      Font.Style = [fsBold]
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
       OnClick = pnlLoginbtnClick
-      ExplicitTop = 552
     end
     object pnlSignUpBtn: TPanel
-      Left = 411
-      Top = 575
+      Left = 405
+      Top = 558
       Width = 197
       Height = 45
       Anchors = [akLeft, akRight]
       Caption = 'Sign Up'
+      Color = 6049102
+      ParentBackground = False
       TabOrder = 3
-      ExplicitTop = 618
     end
   end
 end
