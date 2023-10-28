@@ -11,7 +11,6 @@ type
   TfrmStock = class(TForm)
     gplStock: TGridPanel;
     dbgStock: TDBGrid;
-    dbnStock: TDBNavigator;
     edtSearchProductName: TEdit;
     pnlAddProductBtn: TPanel;
     pnlBackToPOSBtn: TPanel;
@@ -43,6 +42,8 @@ end;
 procedure TfrmStock.FormShow(Sender: TObject);
 begin
 WindowState := TWindowState.wsMaximized;
+frmLogin.connectdb;
+dbgStock.DataSource := dsrStock;
 end;
 
 procedure TfrmStock.pnlBackToPOSBtnClick(Sender: TObject);

@@ -11,7 +11,6 @@ type
   TfrmStaff = class(TForm)
     gplStaff: TGridPanel;
     dbgStaff: TDBGrid;
-    dbnStaff: TDBNavigator;
     edtAddress: TEdit;
     edtCellNum: TEdit;
     edtEmail: TEdit;
@@ -50,7 +49,9 @@ end;
 
 procedure TfrmStaff.FormShow(Sender: TObject);
 begin
-WindowState := TWindowState.wsMaximized
+WindowState := TWindowState.wsMaximized;
+frmLogin.connectdb;
+dbgStaff.DataSource := dsrStaff;
 end;
 
 procedure TfrmStaff.pnlBackToPOSBtnClick(Sender: TObject);

@@ -59,12 +59,6 @@ object frmStaff: TfrmStaff
         RowSpan = 4
       end
       item
-        Column = 7
-        ColumnSpan = 3
-        Control = dbnStaff
-        Row = 4
-      end
-      item
         Column = 4
         Control = edtAddress
         Row = 9
@@ -178,6 +172,7 @@ object frmStaff: TfrmStaff
       Width = 1045
       Height = 284
       Align = alClient
+      ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
@@ -233,24 +228,14 @@ object frmStaff: TfrmStaff
           Visible = True
         end>
     end
-    object dbnStaff: TDBNavigator
-      Left = 769
-      Top = 285
-      Width = 240
-      Height = 25
-      Anchors = [akLeft, akTop, akRight]
-      TabOrder = 1
-    end
     object edtAddress: TEdit
       Left = 419
       Top = 665
       Width = 166
       Height = 23
       Anchors = []
-      TabOrder = 2
+      TabOrder = 1
       Text = 'Enter Address'
-      ExplicitLeft = 417
-      ExplicitTop = 656
     end
     object edtCellNum: TEdit
       Left = 419
@@ -258,10 +243,8 @@ object frmStaff: TfrmStaff
       Width = 166
       Height = 23
       Anchors = []
-      TabOrder = 3
+      TabOrder = 2
       Text = 'Enter Cell Number'
-      ExplicitLeft = 417
-      ExplicitTop = 586
     end
     object edtEmail: TEdit
       Left = 419
@@ -269,10 +252,8 @@ object frmStaff: TfrmStaff
       Width = 166
       Height = 23
       Anchors = []
-      TabOrder = 4
+      TabOrder = 3
       Text = 'Enter E-mail'
-      ExplicitLeft = 417
-      ExplicitTop = 516
     end
     object edtEnterName: TEdit
       Left = 419
@@ -280,10 +261,8 @@ object frmStaff: TfrmStaff
       Width = 166
       Height = 23
       Anchors = []
-      TabOrder = 5
+      TabOrder = 4
       Text = 'Enter Name'
-      ExplicitLeft = 417
-      ExplicitTop = 305
     end
     object edtPassEnter: TEdit
       Left = 419
@@ -291,10 +270,8 @@ object frmStaff: TfrmStaff
       Width = 166
       Height = 23
       Anchors = []
-      TabOrder = 6
+      TabOrder = 5
       Text = 'Enter Password'
-      ExplicitLeft = 417
-      ExplicitTop = 375
     end
     object edtSearchName: TEdit
       Left = 11
@@ -302,9 +279,8 @@ object frmStaff: TfrmStaff
       Width = 188
       Height = 23
       Anchors = [akLeft, akRight]
-      TabOrder = 7
+      TabOrder = 6
       Text = 'Enter Name'
-      ExplicitTop = 375
     end
     object edtWage: TEdit
       Left = 419
@@ -312,10 +288,8 @@ object frmStaff: TfrmStaff
       Width = 166
       Height = 23
       Anchors = []
-      TabOrder = 8
+      TabOrder = 7
       Text = 'Enter Wage'
-      ExplicitLeft = 417
-      ExplicitTop = 445
     end
     object pnlAddStaff: TPanel
       Left = 640
@@ -324,8 +298,7 @@ object frmStaff: TfrmStaff
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Add Staff Member'
-      TabOrder = 9
-      ExplicitTop = 366
+      TabOrder = 8
     end
     object pnlManagerBtn: TPanel
       Left = 13
@@ -334,9 +307,7 @@ object frmStaff: TfrmStaff
       Height = 41
       Anchors = []
       Caption = 'Make Manager'
-      TabOrder = 10
-      ExplicitLeft = 12
-      ExplicitTop = 577
+      TabOrder = 9
     end
     object pnlRemMAnager: TPanel
       Left = 13
@@ -345,9 +316,7 @@ object frmStaff: TfrmStaff
       Height = 41
       Anchors = []
       Caption = 'Remove Manager'
-      TabOrder = 11
-      ExplicitLeft = 12
-      ExplicitTop = 647
+      TabOrder = 10
     end
     object pnlRemStaffBtn: TPanel
       Left = 13
@@ -356,9 +325,7 @@ object frmStaff: TfrmStaff
       Height = 41
       Anchors = []
       Caption = 'Remove Staff'
-      TabOrder = 12
-      ExplicitLeft = 12
-      ExplicitTop = 507
+      TabOrder = 11
     end
     object pnlSearchBtn: TPanel
       Left = 13
@@ -367,8 +334,7 @@ object frmStaff: TfrmStaff
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Search'
-      TabOrder = 13
-      ExplicitTop = 436
+      TabOrder = 12
     end
     object pnlBackToPOSBtn: TPanel
       Left = 837
@@ -377,9 +343,8 @@ object frmStaff: TfrmStaff
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Back to POS '
-      TabOrder = 14
+      TabOrder = 13
       OnClick = pnlBackToPOSBtnClick
-      ExplicitTop = 577
     end
   end
 end

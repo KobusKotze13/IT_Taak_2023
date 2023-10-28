@@ -59,13 +59,6 @@ object frmStock: TfrmStock
         RowSpan = 3
       end
       item
-        Column = 7
-        ColumnSpan = 3
-        Control = dbnStock
-        Row = 3
-        RowSpan = 3
-      end
-      item
         Column = 1
         ColumnSpan = 2
         Control = edtSearchProductName
@@ -126,8 +119,7 @@ object frmStock: TfrmStock
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitWidth = 1049
-    ExplicitHeight = 701
+    ExplicitLeft = 8
     DesignSize = (
       1055
       710)
@@ -137,20 +129,56 @@ object frmStock: TfrmStock
       Width = 1053
       Height = 212
       Align = alClient
+      ReadOnly = True
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET
       TitleFont.Color = clWindowText
       TitleFont.Height = -12
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
-    end
-    object dbnStock: TDBNavigator
-      Left = 776
-      Top = 213
-      Width = 240
-      Height = 25
-      Anchors = [akLeft, akTop, akRight]
-      TabOrder = 1
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'Product_ID'
+          Width = 75
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Product_Name'
+          Width = 150
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Product_Type'
+          Width = 75
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Amount'
+          Width = 75
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Supplier_ID'
+          Width = 100
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Price_Buy'
+          Width = 75
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Price_Sell'
+          Width = 75
+          Visible = True
+        end>
     end
     object edtSearchProductName: TEdit
       Left = 106
@@ -158,7 +186,7 @@ object frmStock: TfrmStock
       Width = 210
       Height = 23
       Anchors = [akLeft, akRight]
-      TabOrder = 2
+      TabOrder = 1
       Text = 'Enter Product Name'
     end
     object pnlAddProductBtn: TPanel
@@ -168,7 +196,7 @@ object frmStock: TfrmStock
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Add Stock'
-      TabOrder = 3
+      TabOrder = 2
     end
     object pnlBackToPOSBtn: TPanel
       Left = 738
@@ -177,7 +205,7 @@ object frmStock: TfrmStock
       Height = 41
       Anchors = []
       Caption = 'Back to POS'
-      TabOrder = 4
+      TabOrder = 3
       OnClick = pnlBackToPOSBtnClick
     end
     object pnlRemStockBtn: TPanel
@@ -187,7 +215,7 @@ object frmStock: TfrmStock
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Remove Stock'
-      TabOrder = 5
+      TabOrder = 4
     end
     object pnlSearchBtn: TPanel
       Left = 119
@@ -196,7 +224,7 @@ object frmStock: TfrmStock
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Search'
-      TabOrder = 6
+      TabOrder = 5
     end
   end
 end

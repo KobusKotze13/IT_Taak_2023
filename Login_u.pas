@@ -17,6 +17,8 @@ type
     pnlSignUpBtn: TPanel;
     procedure pnlLoginbtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure edtUserNameClick(Sender: TObject);
+    procedure edtPassClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -55,9 +57,10 @@ conPOS_Database := TADOConnection.Create(Self);
  sTableStock := 'Stock';
  sTableSuppliers := 'Suppliers';
 
- conPOS_Database.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Data Source='+sDatabaseName +'.mdb;Persist Security Info=False';
+ conPOS_Database.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Data Source='+sDatabaseName+'.mdb;Mode=ReadWrite;Persist Security Info=False';
  conPOS_Database.LoginPrompt := False;
  conPOS_Database.Connected := True;
+
 
 
  tblStaff := TADOTable.Create(Self);
@@ -86,17 +89,48 @@ conPOS_Database := TADOConnection.Create(Self);
 
 end;
 
+procedure TfrmLogin.edtPassClick(Sender: TObject);
+begin
+edtPass.Clear;
+end;
+
+procedure TfrmLogin.edtUserNameClick(Sender: TObject);
+begin
+edtUserName.Clear;
+end;
+
 procedure TfrmLogin.FormShow(Sender: TObject);
 begin
+connectDB;
 WindowState := TWindowState.wsMaximized;
 gplLogin.Color := RGB(77,120,146);
 pnlLoginbtn.Font.Color := RGB(135,188,222);
+pnlSignupbtn.Font.Color := RGB(135,188,222);
+pnlLoginbtn.SetFocus;
 end;
 
 procedure TfrmLogin.pnlLoginbtnClick(Sender: TObject);
+var
+Username, Password : String;
+i : integer;
 begin
-frmPOS.show;
-//frmLogin.Hide;
+Username := edtUserName.Text;
+Password := edtPass.Text;
+
+for i := 1 to tblStaff.IndexFieldCount-1 do
+  begin
+    if (Username = tblStaff['Staff_ID'][i]) and (Password = tblStaff['Password'][i]) then
+      begin
+        frmPOS.show;
+        frmLogin.Hide;
+      end
+    else
+      begin
+        Showmessage('StaffID or Password is incorrect');
+      end;
+end;
+
+
 end;
 
 end.

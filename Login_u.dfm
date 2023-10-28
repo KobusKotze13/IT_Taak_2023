@@ -2,8 +2,8 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 620
-  ClientWidth = 1008
+  ClientHeight = 584
+  ClientWidth = 984
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmLogin: TfrmLogin
   object gplLogin: TGridPanel
     Left = 0
     Top = 0
-    Width = 1008
-    Height = 620
+    Width = 984
+    Height = 584
     ParentCustomHint = False
     Align = alClient
     BiDiMode = bdLeftToRight
@@ -96,11 +96,11 @@ object frmLogin: TfrmLogin
     StyleElements = [seFont, seClient]
     StyleName = 'Windows'
     DesignSize = (
-      1008
-      620)
+      984
+      584)
     object lblTitle: TLabel
-      Left = 355
-      Top = 155
+      Left = 343
+      Top = 147
       Width = 297
       Height = 77
       Anchors = [akTop]
@@ -114,26 +114,28 @@ object frmLogin: TfrmLogin
       ExplicitLeft = 170
     end
     object edtPass: TEdit
-      Left = 398
-      Top = 414
+      Left = 386
+      Top = 389
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 0
       Text = 'Enter Password'
+      OnClick = edtPassClick
     end
     object edtUserName: TEdit
-      Left = 399
-      Top = 337
+      Left = 387
+      Top = 317
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
       Text = 'Enter User Name'
+      OnClick = edtUserNameClick
     end
     object pnlLoginbtn: TPanel
-      Left = 405
-      Top = 496
+      Left = 393
+      Top = 464
       Width = 197
       Height = 46
       Anchors = [akBottom]
@@ -151,14 +153,20 @@ object frmLogin: TfrmLogin
       OnClick = pnlLoginbtnClick
     end
     object pnlSignUpBtn: TPanel
-      Left = 405
-      Top = 558
+      Left = 393
+      Top = 524
       Width = 197
       Height = 45
       Anchors = [akLeft, akRight]
       Caption = 'Sign Up'
       Color = 6049102
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
       ParentBackground = False
+      ParentFont = False
       TabOrder = 3
     end
   end
