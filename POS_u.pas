@@ -13,17 +13,23 @@ type
     cmbExtra2: TComboBox;
     cmbExtra3: TComboBox;
     cmbMeatSelect: TComboBox;
-    cmbPapSelect: TComboBox;
     cmbVegSelect: TComboBox;
     pnlAddOrderBtn: TPanel;
     pnlFinalOrder: TPanel;
     pnlLogout: TPanel;
-    pnlManagaeStaffBtn: TPanel;
+    pnlManageStaffBtn: TPanel;
     pnlManageStockBtn: TPanel;
     redOrder: TRichEdit;
+    cmbPap: TComboBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    lblMeat: TLabel;
+    lblPap: TLabel;
     procedure pnlLogoutClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure pnlManagaeStaffBtnClick(Sender: TObject);
+    procedure pnlManageStaffBtnClick(Sender: TObject);
     procedure pnlManageStockBtnClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
@@ -52,6 +58,12 @@ end;
 procedure TfrmPOS.FormShow(Sender: TObject);
 begin
 WindowState := TWindowState.wsMaximized;
+if NOT frmLogin.StaffUser.Get_ManagerStatus = True then
+  begin
+    pnlManageStaffBtn.Visible := False;
+    pnlManageStockBtn.Caption := 'View Stock';
+  End;
+
 end;
 
 procedure TfrmPOS.pnlLogoutClick(Sender: TObject);
@@ -60,7 +72,7 @@ frmLogin.Show;
 frmPOS.Close;
 end;
 
-procedure TfrmPOS.pnlManagaeStaffBtnClick(Sender: TObject);
+procedure TfrmPOS.pnlManageStaffBtnClick(Sender: TObject);
 begin
 frmStaff.Show;
 frmPOS.Close;
