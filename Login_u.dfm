@@ -2,8 +2,8 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 671
-  ClientWidth = 1035
+  ClientHeight = 653
+  ClientWidth = 1023
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,13 +12,14 @@ object frmLogin: TfrmLogin
   Font.Style = []
   Position = poDesigned
   StyleName = 'Windows10 SlateGray'
+  OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 15
   object gplLogin: TGridPanel
     Left = 0
     Top = 0
-    Width = 1035
-    Height = 671
+    Width = 1023
+    Height = 653
     ParentCustomHint = False
     Align = alClient
     BiDiMode = bdLeftToRight
@@ -42,22 +43,27 @@ object frmLogin: TfrmLogin
       item
         Column = 1
         Control = edtPass
-        Row = 3
+        Row = 5
       end
       item
         Column = 1
         Control = edtUserName
-        Row = 2
+        Row = 3
       end
       item
         Column = 1
         Control = pnlLoginbtn
-        Row = 4
+        Row = 6
       end
       item
         Column = 1
-        Control = pnlSignUpBtn
-        Row = 5
+        Control = lblStaffID
+        Row = 2
+      end
+      item
+        Column = 1
+        Control = lblEnterPassword
+        Row = 4
       end>
     Ctl3D = True
     DoubleBuffered = False
@@ -80,10 +86,16 @@ object frmLogin: TfrmLogin
         Value = 25.000000000000000000
       end
       item
-        Value = 12.500000000000000000
+        Value = 6.250000000000000000
       end
       item
-        Value = 12.500000000000000000
+        Value = 6.250000000000000000
+      end
+      item
+        Value = 6.250000000000000000
+      end
+      item
+        Value = 6.250000000000000000
       end
       item
         Value = 12.500000000000000000
@@ -95,15 +107,12 @@ object frmLogin: TfrmLogin
     TabOrder = 0
     StyleElements = [seFont, seClient]
     StyleName = 'Windows'
-    ExplicitTop = 64
-    ExplicitWidth = 996
-    ExplicitHeight = 642
     DesignSize = (
-      1035
-      671)
+      1023
+      653)
     object lblTitle: TLabel
-      Left = 369
-      Top = 168
+      Left = 363
+      Top = 164
       Width = 297
       Height = 77
       Anchors = [akTop]
@@ -117,28 +126,24 @@ object frmLogin: TfrmLogin
       ExplicitLeft = 170
     end
     object edtPass: TEdit
-      Left = 411
-      Top = 449
+      Left = 405
+      Top = 457
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 0
-      Text = 'Enter Password'
-      ExplicitTop = 429
     end
     object edtUserName: TEdit
-      Left = 413
-      Top = 366
+      Left = 407
+      Top = 376
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
-      Text = 'Enter User Name'
-      ExplicitTop = 349
     end
     object pnlLoginbtn: TPanel
-      Left = 419
-      Top = 540
+      Left = 413
+      Top = 525
       Width = 197
       Height = 46
       Anchors = [akBottom]
@@ -154,26 +159,42 @@ object frmLogin: TfrmLogin
       ParentFont = False
       TabOrder = 2
       OnClick = pnlLoginbtnClick
-      ExplicitLeft = 399
-      ExplicitTop = 515
     end
-    object pnlSignUpBtn: TPanel
-      Left = 419
-      Top = 605
-      Width = 197
-      Height = 45
-      Anchors = [akLeft, akRight]
-      Caption = 'Sign Up'
-      Color = 6049102
+    object lblStaffID: TLabel
+      Left = 454
+      Top = 334
+      Width = 115
+      Height = 25
+      Anchors = []
+      Caption = 'Enter Staff ID'
+      Color = 9665357
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -12
+      Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
-      ParentBackground = False
+      ParentColor = False
       ParentFont = False
-      TabOrder = 3
-      ExplicitTop = 578
+      ExplicitLeft = 464
+      ExplicitTop = 339
+    end
+    object lblEnterPassword: TLabel
+      Left = 446
+      Top = 416
+      Width = 130
+      Height = 25
+      Anchors = []
+      Caption = 'Enter Password'
+      Color = 9665101
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -18
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      ExplicitLeft = 487
+      ExplicitTop = 422
     end
   end
 end

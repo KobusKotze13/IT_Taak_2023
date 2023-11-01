@@ -202,7 +202,9 @@ object frmPOS: TfrmPOS
       Height = 23
       Style = csDropDownList
       Anchors = [akLeft, akRight]
+      ItemIndex = 0
       TabOrder = 0
+      Text = 'Smoor'
       Items.Strings = (
         'Smoor'
         'Chakalaka'
@@ -232,7 +234,8 @@ object frmPOS: TfrmPOS
         'Pumkin'
         'Beans'
         'Onion'
-        'Chilli')
+        'Chilli'
+        'None')
     end
     object cmbExtra2: TComboBox
       Left = 118
@@ -241,7 +244,9 @@ object frmPOS: TfrmPOS
       Height = 23
       Style = csDropDownList
       Anchors = [akLeft, akRight]
+      ItemIndex = 0
       TabOrder = 1
+      Text = 'Smoor'
       Items.Strings = (
         'Smoor'
         'Chakalaka'
@@ -271,7 +276,8 @@ object frmPOS: TfrmPOS
         'Pumkin'
         'Beans'
         'Onion'
-        'Chilli')
+        'Chilli'
+        'None')
     end
     object cmbExtra3: TComboBox
       Left = 118
@@ -280,7 +286,9 @@ object frmPOS: TfrmPOS
       Height = 23
       Style = csDropDownList
       Anchors = [akLeft, akRight]
+      ItemIndex = 0
       TabOrder = 2
+      Text = 'Smoor'
       Items.Strings = (
         'Smoor'
         'Chakalaka'
@@ -310,7 +318,8 @@ object frmPOS: TfrmPOS
         'Pumkin'
         'Beans'
         'Onion'
-        'Chilli')
+        'Chilli'
+        'None')
     end
     object cmbMeat: TComboBox
       Left = 118
@@ -319,7 +328,9 @@ object frmPOS: TfrmPOS
       Height = 23
       Style = csDropDownList
       Anchors = [akLeft, akRight]
+      ItemIndex = 0
       TabOrder = 3
+      Text = 'Beef'
       Items.Strings = (
         'Beef'
         'Pork'
@@ -330,7 +341,8 @@ object frmPOS: TfrmPOS
         'Affal'
         'Boerewors'
         'Walkie Talkies'
-        'Bacon')
+        'Bacon'
+        'None')
     end
     object cmbVeg: TComboBox
       Left = 118
@@ -339,7 +351,9 @@ object frmPOS: TfrmPOS
       Height = 23
       Style = csDropDownList
       Anchors = [akLeft, akRight]
+      ItemIndex = 0
       TabOrder = 4
+      Text = 'Morogo'
       Items.Strings = (
         'Morogo'
         'Cabbage'
@@ -348,8 +362,8 @@ object frmPOS: TfrmPOS
         'Pumkin'
         'Beans'
         'Onion'
-        'Chilli')
-      ExplicitTop = 361
+        'Chilli'
+        'None')
     end
     object pnlAddOrderBtn: TPanel
       Left = 118
@@ -369,7 +383,6 @@ object frmPOS: TfrmPOS
       Anchors = []
       Caption = 'Finalise Order'
       TabOrder = 6
-      ExplicitLeft = 647
     end
     object pnlLogout: TPanel
       Left = 819
@@ -424,7 +437,9 @@ object frmPOS: TfrmPOS
       Height = 23
       Style = csDropDownList
       Anchors = [akLeft, akRight]
+      ItemIndex = 0
       TabOrder = 11
+      Text = 'Krummel Pap'
       Items.Strings = (
         'Krummel Pap'
         'Stywe Pap'
@@ -500,8 +515,6 @@ object frmPOS: TfrmPOS
       Caption = 'Total: '
       TabOrder = 12
       OnClick = pnlAddOrderBtnClick
-      ExplicitLeft = 1
-      ExplicitTop = 14
     end
   end
 end

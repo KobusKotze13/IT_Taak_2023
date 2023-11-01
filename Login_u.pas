@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, POS_u, adodb, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, clsStaff_u;
+  Vcl.DBGrids, clsStaff_u, Signup_u;
 
 type
   TfrmLogin = class(TForm)
@@ -14,9 +14,12 @@ type
     edtPass: TEdit;
     edtUserName: TEdit;
     pnlLoginbtn: TPanel;
-    pnlSignUpBtn: TPanel;
+    lblStaffID: TLabel;
+    lblEnterPassword: TLabel;
     procedure pnlLoginbtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure pnlSignUpBtnClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
 
   private
     { Private declarations }
@@ -90,13 +93,24 @@ conPOS_Database := TADOConnection.Create(Self);
 
 end;
 
-procedure TfrmLogin.FormShow(Sender: TObject);
+procedure TfrmLogin.FormCreate(Sender: TObject);
 begin
 connectDB;
+tblStaff.First;
+if tblStaff['Staff_ID'] = '0000' then
+  begin
+    frmSignup.Show;
+    frmLogin.Hide;
+  end;
+
+end;
+
+procedure TfrmLogin.FormShow(Sender: TObject);
+begin
+
 WindowState := TWindowState.wsMaximized;
 gplLogin.Color := RGB(77,120,146);
 pnlLoginbtn.Font.Color := RGB(135,188,222);
-pnlSignupbtn.Font.Color := RGB(135,188,222);
 pnlLoginbtn.SetFocus;
 end;
 
@@ -126,8 +140,6 @@ while (NOT tblStaff.EOF) and (LoginSuccessfull = False)  do
         break;
       end;
 
-
-
   tblStaff.Next;
   end;
 
@@ -136,6 +148,12 @@ if LoginSuccessfull = False then
     Showmessage('StaffID or Password is incorrect');
   end;
 
+end;
+
+procedure TfrmLogin.pnlSignUpBtnClick(Sender: TObject);
+begin
+frmSignup.show;
+frmLogin.Hide;
 end;
 
 end.

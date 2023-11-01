@@ -142,7 +142,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Signup_u.pas">
-            <Form>Form1</Form>
+            <Form>frmSignup</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="clsStaff_u.pas"/>

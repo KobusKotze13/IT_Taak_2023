@@ -6,7 +6,7 @@ uses
   Login_u in 'Login_u.pas' {frmLogin},
   Staff_u in 'Staff_u.pas' {frmStaff},
   Stock_u in 'Stock_u.pas' {frmStock},
-  Signup_u in 'Signup_u.pas' {Form1},
+  Signup_u in 'Signup_u.pas' {frmSignup},
   Vcl.Themes,
   Vcl.Styles,
   clsStaff_u in 'clsStaff_u.pas';
@@ -21,6 +21,6 @@ begin
   Application.CreateForm(TfrmPOS, frmPOS);
   Application.CreateForm(TfrmStaff, frmStaff);
   Application.CreateForm(TfrmStock, frmStock);
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TfrmSignup, frmSignup);
   Application.Run;
 end.
