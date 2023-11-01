@@ -2,8 +2,8 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 584
-  ClientWidth = 984
+  ClientHeight = 671
+  ClientWidth = 1035
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmLogin: TfrmLogin
   object gplLogin: TGridPanel
     Left = 0
     Top = 0
-    Width = 984
-    Height = 584
+    Width = 1035
+    Height = 671
     ParentCustomHint = False
     Align = alClient
     BiDiMode = bdLeftToRight
@@ -95,12 +95,15 @@ object frmLogin: TfrmLogin
     TabOrder = 0
     StyleElements = [seFont, seClient]
     StyleName = 'Windows'
+    ExplicitTop = 64
+    ExplicitWidth = 996
+    ExplicitHeight = 642
     DesignSize = (
-      984
-      584)
+      1035
+      671)
     object lblTitle: TLabel
-      Left = 343
-      Top = 147
+      Left = 369
+      Top = 168
       Width = 297
       Height = 77
       Anchors = [akTop]
@@ -114,28 +117,28 @@ object frmLogin: TfrmLogin
       ExplicitLeft = 170
     end
     object edtPass: TEdit
-      Left = 386
-      Top = 389
+      Left = 411
+      Top = 449
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 0
       Text = 'Enter Password'
-      OnClick = edtPassClick
+      ExplicitTop = 429
     end
     object edtUserName: TEdit
-      Left = 387
-      Top = 317
+      Left = 413
+      Top = 366
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
       Text = 'Enter User Name'
-      OnClick = edtUserNameClick
+      ExplicitTop = 349
     end
     object pnlLoginbtn: TPanel
-      Left = 393
-      Top = 464
+      Left = 419
+      Top = 540
       Width = 197
       Height = 46
       Anchors = [akBottom]
@@ -151,10 +154,12 @@ object frmLogin: TfrmLogin
       ParentFont = False
       TabOrder = 2
       OnClick = pnlLoginbtnClick
+      ExplicitLeft = 399
+      ExplicitTop = 515
     end
     object pnlSignUpBtn: TPanel
-      Left = 393
-      Top = 524
+      Left = 419
+      Top = 605
       Width = 197
       Height = 45
       Anchors = [akLeft, akRight]
@@ -168,6 +173,7 @@ object frmLogin: TfrmLogin
       ParentBackground = False
       ParentFont = False
       TabOrder = 3
+      ExplicitTop = 578
     end
   end
 end

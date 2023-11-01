@@ -17,8 +17,6 @@ type
     pnlSignUpBtn: TPanel;
     procedure pnlLoginbtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure edtUserNameClick(Sender: TObject);
-    procedure edtPassClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -90,16 +88,6 @@ conPOS_Database := TADOConnection.Create(Self);
  dsrSuppliers := TDataSource.Create(Self);
  dsrSuppliers.DataSet := tblSuppliers;
 
-end;
-
-procedure TfrmLogin.edtPassClick(Sender: TObject);
-begin
-edtPass.Clear;
-end;
-
-procedure TfrmLogin.edtUserNameClick(Sender: TObject);
-begin
-edtUserName.Clear;
 end;
 
 procedure TfrmLogin.FormShow(Sender: TObject);

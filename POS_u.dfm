@@ -10,6 +10,7 @@ object frmPOS: TfrmPOS
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poDesigned
   OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
@@ -72,13 +73,13 @@ object frmPOS: TfrmPOS
       item
         Column = 1
         ColumnSpan = 2
-        Control = cmbMeatSelect
+        Control = cmbMeat
         Row = 4
       end
       item
         Column = 1
         ColumnSpan = 2
-        Control = cmbVegSelect
+        Control = cmbVeg
         Row = 5
       end
       item
@@ -88,7 +89,7 @@ object frmPOS: TfrmPOS
         Row = 9
       end
       item
-        Column = 6
+        Column = 7
         ColumnSpan = 3
         Control = pnlFinalOrder
         Row = 8
@@ -130,22 +131,12 @@ object frmPOS: TfrmPOS
       end
       item
         Column = 0
-        Control = Label1
-        Row = 8
-      end
-      item
-        Column = 0
-        Control = Label2
-        Row = 7
-      end
-      item
-        Column = 0
-        Control = Label3
+        Control = lblExtra
         Row = 6
       end
       item
         Column = 0
-        Control = Label4
+        Control = lblVeg
         Row = 5
       end
       item
@@ -157,6 +148,12 @@ object frmPOS: TfrmPOS
         Column = 0
         Control = lblPap
         Row = 3
+      end
+      item
+        Column = 4
+        ColumnSpan = 2
+        Control = pnlTotal
+        Row = 8
       end>
     RowCollection = <
       item
@@ -193,8 +190,8 @@ object frmPOS: TfrmPOS
         SizeStyle = ssAuto
       end>
     TabOrder = 0
-    ExplicitLeft = -8
-    ExplicitTop = 8
+    ExplicitWidth = 1008
+    ExplicitHeight = 662
     DesignSize = (
       1014
       671)
@@ -206,6 +203,36 @@ object frmPOS: TfrmPOS
       Style = csDropDownList
       Anchors = [akLeft, akRight]
       TabOrder = 0
+      Items.Strings = (
+        'Smoor'
+        'Chakalaka'
+        'Curry'
+        'Stock'
+        'Gravy'
+        'Butter'
+        'Sugar'
+        'Milk'
+        'Sour Milk'
+        'Fat'
+        'Syrup'
+        'Beef'
+        'Pork'
+        'Lamb'
+        'Chicken'
+        'Goat'
+        'Livers'
+        'Affal'
+        'Boerewors'
+        'Walkie Talkies'
+        'Bacon'
+        'Morogo'
+        'Cabbage'
+        'Corn'
+        'Spinich'
+        'Pumkin'
+        'Beans'
+        'Onion'
+        'Chilli')
     end
     object cmbExtra2: TComboBox
       Left = 118
@@ -215,6 +242,36 @@ object frmPOS: TfrmPOS
       Style = csDropDownList
       Anchors = [akLeft, akRight]
       TabOrder = 1
+      Items.Strings = (
+        'Smoor'
+        'Chakalaka'
+        'Curry'
+        'Stock'
+        'Gravy'
+        'Butter'
+        'Sugar'
+        'Milk'
+        'Sour Milk'
+        'Fat'
+        'Syrup'
+        'Beef'
+        'Pork'
+        'Lamb'
+        'Chicken'
+        'Goat'
+        'Livers'
+        'Affal'
+        'Boerewors'
+        'Walkie Talkies'
+        'Bacon'
+        'Morogo'
+        'Cabbage'
+        'Corn'
+        'Spinich'
+        'Pumkin'
+        'Beans'
+        'Onion'
+        'Chilli')
     end
     object cmbExtra3: TComboBox
       Left = 118
@@ -224,8 +281,38 @@ object frmPOS: TfrmPOS
       Style = csDropDownList
       Anchors = [akLeft, akRight]
       TabOrder = 2
+      Items.Strings = (
+        'Smoor'
+        'Chakalaka'
+        'Curry'
+        'Stock'
+        'Gravy'
+        'Butter'
+        'Sugar'
+        'Milk'
+        'Sour Milk'
+        'Fat'
+        'Syrup'
+        'Beef'
+        'Pork'
+        'Lamb'
+        'Chicken'
+        'Goat'
+        'Livers'
+        'Affal'
+        'Boerewors'
+        'Walkie Talkies'
+        'Bacon'
+        'Morogo'
+        'Cabbage'
+        'Corn'
+        'Spinich'
+        'Pumkin'
+        'Beans'
+        'Onion'
+        'Chilli')
     end
-    object cmbMeatSelect: TComboBox
+    object cmbMeat: TComboBox
       Left = 118
       Top = 291
       Width = 171
@@ -233,8 +320,19 @@ object frmPOS: TfrmPOS
       Style = csDropDownList
       Anchors = [akLeft, akRight]
       TabOrder = 3
+      Items.Strings = (
+        'Beef'
+        'Pork'
+        'Lamb'
+        'Chicken'
+        'Goat'
+        'Livers'
+        'Affal'
+        'Boerewors'
+        'Walkie Talkies'
+        'Bacon')
     end
-    object cmbVegSelect: TComboBox
+    object cmbVeg: TComboBox
       Left = 118
       Top = 357
       Width = 171
@@ -242,6 +340,16 @@ object frmPOS: TfrmPOS
       Style = csDropDownList
       Anchors = [akLeft, akRight]
       TabOrder = 4
+      Items.Strings = (
+        'Morogo'
+        'Cabbage'
+        'Corn'
+        'Spinich'
+        'Pumkin'
+        'Beans'
+        'Onion'
+        'Chilli')
+      ExplicitTop = 361
     end
     object pnlAddOrderBtn: TPanel
       Left = 118
@@ -251,16 +359,17 @@ object frmPOS: TfrmPOS
       Anchors = []
       Caption = 'Add To Order'
       TabOrder = 5
-      ExplicitLeft = 17
+      OnClick = pnlAddOrderBtnClick
     end
     object pnlFinalOrder: TPanel
-      Left = 647
+      Left = 748
       Top = 573
       Width = 225
       Height = 59
       Anchors = []
       Caption = 'Finalise Order'
       TabOrder = 6
+      ExplicitLeft = 647
     end
     object pnlLogout: TPanel
       Left = 819
@@ -316,51 +425,41 @@ object frmPOS: TfrmPOS
       Style = csDropDownList
       Anchors = [akLeft, akRight]
       TabOrder = 11
+      Items.Strings = (
+        'Krummel Pap'
+        'Stywe Pap'
+        'Drink Pap'
+        'Slap Pap')
     end
-    object Label1: TLabel
-      Left = 34
-      Top = 562
-      Width = 34
-      Height = 15
-      Anchors = []
-      Caption = 'Label1'
-      ExplicitLeft = 16
-      ExplicitTop = 24
-    end
-    object Label2: TLabel
-      Left = 34
-      Top = 495
-      Width = 34
-      Height = 15
-      Anchors = []
-      Caption = 'Label1'
-      ExplicitLeft = 50
-      ExplicitTop = 27
-    end
-    object Label3: TLabel
-      Left = 34
-      Top = 428
-      Width = 34
-      Height = 15
-      Anchors = []
-      Caption = 'Label1'
-      ExplicitLeft = 50
-      ExplicitTop = 27
-    end
-    object Label4: TLabel
-      Left = 24
-      Top = 356
-      Width = 55
+    object lblExtra: TLabel
+      Left = 1
+      Top = 423
+      Width = 108
       Height = 25
-      Anchors = []
-      Caption = 'Label1'
+      Anchors = [akRight]
+      Caption = 'Select Extras'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlight
       Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 26
+      ExplicitLeft = 47
+    end
+    object lblVeg: TLabel
+      Left = 9
+      Top = 356
+      Width = 93
+      Height = 25
+      Anchors = [akRight]
+      Caption = 'Select Veg:'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHighlight
+      Font.Height = -18
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 24
     end
     object lblMeat: TLabel
       Left = 1
@@ -378,7 +477,7 @@ object frmPOS: TfrmPOS
       ExplicitLeft = 24
     end
     object lblPap: TLabel
-      Left = 5
+      Left = 9
       Top = 223
       Width = 93
       Height = 25
@@ -391,6 +490,18 @@ object frmPOS: TfrmPOS
       Font.Style = [fsBold]
       ParentFont = False
       ExplicitLeft = 7
+    end
+    object pnlTotal: TPanel
+      Left = 414
+      Top = 549
+      Width = 185
+      Height = 41
+      Anchors = []
+      Caption = 'Total: '
+      TabOrder = 12
+      OnClick = pnlAddOrderBtnClick
+      ExplicitLeft = 1
+      ExplicitTop = 14
     end
   end
 end
