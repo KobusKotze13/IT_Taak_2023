@@ -1,37 +1,37 @@
 ﻿[lblSignup]
 Coordinates=138,10,68,58
 
-[edtManagerUsername]
-Coordinates=350,10,142,58
-
 [gplSignup]
 Coordinates=300,78,72,58
-
-[edtPass]
-Coordinates=216,10,61,58
-
-[edtUserName]
-Coordinates=134,78,93,58
 
 [Panel1]
 Coordinates=73,10,55,58
 
-[edtManagerPass]
-Coordinates=10,146,111,58
-
-[lblNameNewStaff]
-Coordinates=10,78,114,58
-Visible=True
-
 []
 Coordinates=383,78,91,36
 
-[lblPasswordNewStaff]
-Coordinates=287,10,53,58
-
-[lblManagerUserID]
+[lblNewStaffNumber]
 Coordinates=237,78,53,58
 
-[lblManagerPassword]
+[lblNewStaffEmail]
 Coordinates=10,10,53,58
+
+[edtNewStaffName]
+Coordinates=134,78,93,58
+
+[lblNewStaffName]
+Coordinates=10,78,114,58
+Visible=True
+
+[lblNewStaffPassword]
+Coordinates=287,10,53,58
+
+[edtNewStaffPassword]
+Coordinates=216,10,61,58
+
+[edtNewStaffNUmber]
+Coordinates=350,10,142,58
+
+[edtNewStaffEmail]
+Coordinates=10,146,111,58
 

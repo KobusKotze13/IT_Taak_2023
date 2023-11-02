@@ -146,6 +146,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="clsStaff_u.pas"/>
+        <DCCReference Include="clsValidatioin_u.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -31,12 +31,12 @@ object frmSignup: TfrmSignup
     ControlCollection = <
       item
         Column = 1
-        Control = edtPass
+        Control = edtNewStaffPassword
         Row = 6
       end
       item
         Column = 1
-        Control = edtUserName
+        Control = edtNewStaffName
         Row = 4
       end
       item
@@ -53,42 +53,42 @@ object frmSignup: TfrmSignup
       end
       item
         Column = 1
-        Control = edtManagerUsername
+        Control = edtNewStaffNUmber
         Row = 8
       end
       item
         Column = 1
-        Control = edtManagerPass
+        Control = edtNewStaffEmail
         Row = 10
       end
       item
         Column = 1
-        Control = lblManagerPassword
+        Control = lblNewStaffEmail
         Row = 9
       end
       item
         Column = 1
-        Control = lblManagerUserID
+        Control = lblNewStaffNumber
         Row = 7
       end
       item
         Column = 1
-        Control = lblPasswordNewStaff
+        Control = lblNewStaffPassword
         Row = 5
       end
       item
         Column = 1
-        Control = lblNameNewStaff
+        Control = lblNewStaffName
         Row = 3
       end
       item
         Column = 1
-        Control = Edit1
+        Control = edtNewStaffAddress
         Row = 12
       end
       item
         Column = 1
-        Control = Label1
+        Control = lblNewStaffAddress
         Row = 11
       end>
     RowCollection = <
@@ -138,27 +138,26 @@ object frmSignup: TfrmSignup
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitTop = -8
+    ExplicitWidth = 1001
+    ExplicitHeight = 671
     DesignSize = (
       1007
       680)
-    object edtPass: TEdit
+    object edtNewStaffPassword: TEdit
       Left = 408
       Top = 325
       Width = 190
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 0
-      Text = 'Enter Password'
     end
-    object edtUserName: TEdit
+    object edtNewStaffName: TEdit
       Left = 408
       Top = 257
       Width = 190
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
-      Text = 'Enter User Name'
     end
     object lblSignup: TLabel
       Left = 402
@@ -173,7 +172,7 @@ object frmSignup: TfrmSignup
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
-      ExplicitTop = 102
+      ExplicitTop = 97
     end
     object Panel1: TPanel
       Left = 411
@@ -183,57 +182,54 @@ object frmSignup: TfrmSignup
       Anchors = [akLeft, akRight]
       Caption = 'Sign Up'
       TabOrder = 2
-      ExplicitTop = 523
     end
-    object edtManagerUsername: TEdit
+    object edtNewStaffNUmber: TEdit
       Left = 408
       Top = 392
       Width = 190
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 3
-      Text = 'Enter Manager User Name'
     end
-    object edtManagerPass: TEdit
+    object edtNewStaffEmail: TEdit
       Left = 408
       Top = 460
       Width = 190
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 4
-      Text = 'Enter Manager Password'
     end
-    object lblManagerPassword: TLabel
-      Left = 398
+    object lblNewStaffEmail: TLabel
+      Left = 453
       Top = 425
-      Width = 211
+      Width = 101
       Height = 25
       Anchors = []
-      Caption = 'Enter Manager Password'
+      Caption = 'Enter Email '
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 415
+      ExplicitLeft = 398
     end
-    object lblManagerUserID: TLabel
-      Left = 421
+    object lblNewStaffNumber: TLabel
+      Left = 444
       Top = 358
-      Width = 165
+      Width = 119
       Height = 25
       Anchors = []
-      Caption = 'Enter a Manager ID'
+      Caption = 'Enter Number'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 476
+      ExplicitLeft = 421
     end
-    object lblPasswordNewStaff: TLabel
+    object lblNewStaffPassword: TLabel
       Left = 438
       Top = 290
       Width = 130
@@ -248,7 +244,7 @@ object frmSignup: TfrmSignup
       ParentFont = False
       ExplicitLeft = 476
     end
-    object lblNameNewStaff: TLabel
+    object lblNewStaffName: TLabel
       Left = 395
       Top = 222
       Width = 217
@@ -263,30 +259,28 @@ object frmSignup: TfrmSignup
       ParentFont = False
       ExplicitLeft = 405
     end
-    object Edit1: TEdit
+    object edtNewStaffAddress: TEdit
       Left = 408
       Top = 528
       Width = 190
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 5
-      Text = 'Enter Manager Password'
     end
-    object Label1: TLabel
-      Left = 398
+    object lblNewStaffAddress: TLabel
+      Left = 444
       Top = 493
-      Width = 211
+      Width = 118
       Height = 25
       Anchors = []
-      Caption = 'Enter Manager Password'
+      Caption = 'Enter Address'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitLeft = 167
-      ExplicitTop = 27
+      ExplicitLeft = 398
     end
   end
 end

@@ -9,18 +9,18 @@ uses
 type
   TfrmSignup = class(TForm)
     gplSignup: TGridPanel;
-    edtPass: TEdit;
-    edtUserName: TEdit;
+    edtNewStaffPassword: TEdit;
+    edtNewStaffName: TEdit;
     lblSignup: TLabel;
     Panel1: TPanel;
-    edtManagerUsername: TEdit;
-    edtManagerPass: TEdit;
-    lblManagerPassword: TLabel;
-    lblManagerUserID: TLabel;
-    lblPasswordNewStaff: TLabel;
-    lblNameNewStaff: TLabel;
-    Edit1: TEdit;
-    Label1: TLabel;
+    edtNewStaffNUmber: TEdit;
+    edtNewStaffEmail: TEdit;
+    lblNewStaffEmail: TLabel;
+    lblNewStaffNumber: TLabel;
+    lblNewStaffPassword: TLabel;
+    lblNewStaffName: TLabel;
+    edtNewStaffAddress: TEdit;
+    lblNewStaffAddress: TLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
