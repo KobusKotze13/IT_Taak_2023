@@ -1,12 +1,10 @@
 unit Login_u;
 
 interface
-
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, POS_u, adodb, Data.DB, Vcl.Grids,
   Vcl.DBGrids, clsStaff_u, Signup_u;
-
 type
   TfrmLogin = class(TForm)
     gplLogin: TGridPanel;
@@ -16,138 +14,128 @@ type
     pnlLoginbtn: TPanel;
     lblStaffID: TLabel;
     lblEnterPassword: TLabel;
+    // Event handler for the Login button
     procedure pnlLoginbtnClick(Sender: TObject);
+    // Event handler for when the form is shown
     procedure FormShow(Sender: TObject);
-
   private
     { Private declarations }
   public
     { Public declarations }
-
-    StaffUser : TStaff;
-
+    // Staff user object to store user information
+    StaffUser: TStaff;
+    // Function to connect to the database
     procedure connectDb;
   end;
-
 var
+  // Declaration and DB connection variables
   frmLogin: TfrmLogin;
-  conPOS_Database : TADOConnection;
-  tblStaff : TADOTable;
-  tblStock : TADOTable;
-  tblSuppliers : TADOTable;
-  dsrStaff : TDataSource;
-  dsrStock : TDataSource;
-  dsrSuppliers : TDataSource;
-  sDatabaseName : string;
-  sTableStaff : string;
-  sTableStock : string;
-  sTableSuppliers : string;
-
+  conPOS_Database: TADOConnection;
+  tblStaff: TADOTable;
+  tblStock: TADOTable;
+  tblSuppliers: TADOTable;
+  dsrStaff: TDataSource;
+  dsrStock: TDataSource;
+  dsrSuppliers: TDataSource;
+  sDatabaseName: string;
+  sTableStaff: string;
+  sTableStock: string;
+  sTableSuppliers: string;
 implementation
-
-
-
 {$R *.dfm}
-
-
+// Function to connect to the database
 procedure TfrmLogin.connectDb;
 begin
- conPOS_Database := TADOConnection.Create(Self);
-
- sDatabaseName := 'POS_Database';
- sTableStaff := 'Staff';
- sTableStock := 'Stock';
- sTableSuppliers := 'Suppliers';
-
- conPOS_Database.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Data Source='+sDatabaseName+'.mdb;Mode=ReadWrite;Persist Security Info=False';
- conPOS_Database.LoginPrompt := False;
- conPOS_Database.Connected := True;
-
-
-
- tblStaff := TADOTable.Create(Self);
- tblStaff.Connection := conPOS_Database;
- tblStaff.TableName := sTableStaff;
- tblStaff.Active := True;
-
- tblStock := TADOTable.Create(Self);
- tblStock.Connection := conPOS_Database;
- tblStock.TableName := sTableStock;
- tblStock.Active := True;
-
- tblSuppliers := TADOTable.Create(Self);
- tblSuppliers.Connection := conPOS_Database;
- tblSuppliers.TableName := sTableSuppliers;
- tblSuppliers.Active := True;
-
- dsrStaff := TDataSource.Create(Self);
- dsrStaff.DataSet := tblStaff;
-
- dsrStock := TDataSource.Create(Self);
- dsrStock.DataSet := tblStock;
-
- dsrSuppliers := TDataSource.Create(Self);
- dsrSuppliers.DataSet := tblSuppliers;
-
+  conPOS_Database := TADOConnection.Create(Self);
+  sDatabaseName := 'POS_Database';
+  sTableStaff := 'Staff';
+  sTableStock := 'Stock';
+  sTableSuppliers := 'Suppliers';
+  // Configure the database connection
+  conPOS_Database.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=' + sDatabaseName + '.mdb;Mode=ReadWrite;Persist Security Info=False';
+  conPOS_Database.LoginPrompt := False;
+  conPOS_Database.Connected := True;
+  // Create tables for Staff, Stock, and Suppliers
+  tblStaff := TADOTable.Create(Self);
+  tblStaff.Connection := conPOS_Database;
+  tblStaff.TableName := sTableStaff;
+  tblStaff.Active := True;
+  tblStock := TADOTable.Create(Self);
+  tblStock.Connection := conPOS_Database;
+  tblStock.TableName := sTableStock;
+  tblStock.Active := True;
+  tblSuppliers := TADOTable.Create(Self);
+  tblSuppliers.Connection := conPOS_Database;
+  tblSuppliers.TableName := sTableSuppliers;
+  tblSuppliers.Active := True;
+  // Create data sources for the tables
+  dsrStaff := TDataSource.Create(Self);
+  dsrStaff.DataSet := tblStaff;
+  dsrStock := TDataSource.Create(Self);
+  dsrStock.DataSet := tblStock;
+  dsrSuppliers := TDataSource.Create(Self);
+  dsrSuppliers.DataSet := tblSuppliers;
 end;
-
+// Event handler for when the form is shown
 procedure TfrmLogin.FormShow(Sender: TObject);
 begin
-connectDb;
-WindowState := TWindowState.wsMaximized;
-gplLogin.Color := RGB(77,120,146);
-pnlLoginbtn.Font.Color := RGB(135,188,222);
-pnlLoginbtn.SetFocus;
-edtUserName.Clear;
-edtPass.Clear;
-
-
-tblStaff.first;
-while NOT tblStaff.Eof do
+  // Connect to the database
+  connectDb;
+  // Set form properties
+  WindowState := TWindowState.wsMaximized;
+  gplLogin.Color := RGB(77, 120, 146);
+  pnlLoginbtn.Font.Color := RGB(135, 188, 222);
+  pnlLoginbtn.SetFocus;
+  edtUserName.Clear;
+  edtPass.Clear;
+  // Check if there are no staff records for the initial setup
+  tblStaff.First;
+  while NOT tblStaff.Eof do
   begin
     if tblStaff['Staff_Name'] = '0000' then
-      begin
-        frmSignup.Show;
-      end;
+    begin
+      // Show the signup form and break the loop
+      frmSignup.Show;
+      break;
+    end;
     tblStaff.Next;
   end;
-
 end;
-
+// Event handler for the Login button
 procedure TfrmLogin.pnlLoginbtnClick(Sender: TObject);
 var
-Username, Password : String;
-LoginSuccessfull :boolean;
+  Username, Password: String;
+  LoginSuccessful: boolean;
 begin
-LoginSuccessfull := False;
-Username := edtUserName.Text;
-Password := edtPass.Text;
-
-tblStaff.First;
-
-while (NOT tblStaff.EOF) and (LoginSuccessfull = False)  do
+  LoginSuccessful := False;
+  Username := edtUserName.Text;
+  Password := edtPass.Text;
+  // Start from the first record in the staff table
+  tblStaff.First;
+  while (NOT tblStaff.EOF) and (NOT LoginSuccessful) do
   begin
+    // Check if the entered username and password match a record
     if (Username = tblStaff['Staff_ID']) and (Password = tblStaff['Password']) then
-      begin
-        StaffUser := TStaff.Create();
-        LoginSuccessfull := True;
-        StaffUser.Set_Name(tblStaff['Staff_Name']);
-        StaffUser.Set_StaffId(tblStaff['Staff_ID']);
-        StaffUser.Set_Password(tblStaff['Password']);
-        StaffUser.Set_ManagerStatus(tblStaff['Manager']);
-        frmPOS.show;
-        frmLogin.Hide;
-        break;
-      end;
-
-  tblStaff.Next;
+    begin
+      // Create a Staff object to store user information
+      StaffUser := TStaff.Create();
+      LoginSuccessful := True;
+      StaffUser.Set_Name(tblStaff['Staff_Name']);
+      StaffUser.Set_StaffId(tblStaff['Staff_ID']);
+      StaffUser.Set_Password(tblStaff['Password']);
+      StaffUser.Set_ManagerStatus(tblStaff['Manager']);
+      // Show the POS form and hide the login form
+      frmPOS.show;
+      frmLogin.Hide;
+      break; // No need to continue checking
+    end;
+    tblStaff.Next;
   end;
-
-if LoginSuccessfull = False then
+  // If login is not successful, show an error message
+  if NOT LoginSuccessful then
   begin
-    Showmessage('StaffID or Password is incorrect');
+    ShowMessage('StaffID or Password is incorrect');
   end;
-
 end;
-
 end.
+
