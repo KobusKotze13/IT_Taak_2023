@@ -16,9 +16,13 @@ type
     pnlBackToPOSBtn: TPanel;
     pnlRemStockBtn: TPanel;
     pnlSearchBtn: TPanel;
+    lblProductSearch: TLabel;
     procedure pnlBackToPOSBtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure pnlSearchBtnClick(Sender: TObject);
+    procedure pnlAddProductBtnClick(Sender: TObject);
+    procedure pnlRemStockBtnClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -49,6 +53,11 @@ WindowState := TWindowState.wsMaximized;
 frmLogin.connectdb;
 dbgStock.DataSource := dsrStock;
 
+if frmLogin.StaffUser.get_ManagerStatus = False then
+  begin
+    pnlAddProductBtn.Hide;
+    pnlRemStockBtn.Hide;
+  end;
 
 
 tblStock.FieldByName('Product_ID').DisplayWidth := 15;
@@ -80,10 +89,56 @@ else
   end;
 end;
 
+procedure TfrmStock.pnlAddProductBtnClick(Sender: TObject);
+begin
+tblStock.Edit;
+try
+  begin
+    tblStock['Ammount_Left'] := tblStock['Ammount_Left'] +
+      StrToInt(Inputbox('Increase stock', 'Enter ammount stock needs to be increased with', ''));
+  end;
+Finally
+  begin
+    Showmessage('Please enter a valid Number');
+  end;
+end;
+tblStock.Post;
+end;
+
 procedure TfrmStock.pnlBackToPOSBtnClick(Sender: TObject);
 begin
 frmPOS.Show;
 frmStock.Hide;
+end;
+
+procedure TfrmStock.pnlRemStockBtnClick(Sender: TObject);
+var
+Temp : String;
+begin
+tblStock.Edit;
+Temp := Inputbox('Increase stock', 'Enter ammount stock needs to be increased with', '');
+if StrToInt(Temp) > tblStock['Ammount_Left'] then
+  begin
+    Showmessage('Number Is too big');
+    exit
+  end;
+
+try
+  begin
+    tblStock['Ammount_Left'] := tblStock['Ammount_Left'] - StrToInt(Temp);
+
+  end;
+Finally
+  begin
+    Showmessage('Please enter a valid Number');
+  end;
+end;
+tblStock.Post;
+end;
+
+procedure TfrmStock.pnlSearchBtnClick(Sender: TObject);
+begin
+tblStock.Locate('Product_Name',edtSearchProductName.Text,[loCaseInsensitive,loPartialKey]);
 end;
 
 end.

@@ -228,7 +228,7 @@ OrderItems[3] := cmbExtra1.text;
   end;
 
 OrderItems[4] := cmbExtra2.text;
-  case cmbExtra1.ItemIndex of
+  case cmbExtra2.ItemIndex of
     0 : OrderItemPrice[4] := 0;
     1..6 : OrderItemPrice[4] := 3;
     7..19 : OrderItemPrice[4] := 7;
@@ -236,7 +236,7 @@ OrderItems[4] := cmbExtra2.text;
   end;
 
 OrderItems[5] := cmbExtra3.text;
-  case cmbExtra1.ItemIndex of
+  case cmbExtra3.ItemIndex of
     0 : OrderItemPrice[5] := 0;
     1..6 : OrderItemPrice[5] := 3;
     7..19 : OrderItemPrice[5] := 7;

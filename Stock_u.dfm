@@ -86,6 +86,12 @@ object frmStock: TfrmStock
         ColumnSpan = 2
         Control = pnlSearchBtn
         Row = 5
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = lblProductSearch
+        Row = 3
       end>
     RowCollection = <
       item
@@ -145,7 +151,6 @@ object frmStock: TfrmStock
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
-      Text = 'Enter Product Name'
     end
     object pnlAddProductBtn: TPanel
       Left = 119
@@ -155,6 +160,7 @@ object frmStock: TfrmStock
       Anchors = [akLeft, akRight]
       Caption = 'Add Stock'
       TabOrder = 2
+      OnClick = pnlAddProductBtnClick
     end
     object pnlBackToPOSBtn: TPanel
       Left = 738
@@ -174,6 +180,7 @@ object frmStock: TfrmStock
       Anchors = [akLeft, akRight]
       Caption = 'Remove Stock'
       TabOrder = 4
+      OnClick = pnlRemStockBtnClick
     end
     object pnlSearchBtn: TPanel
       Left = 119
@@ -183,6 +190,22 @@ object frmStock: TfrmStock
       Anchors = [akLeft, akRight]
       Caption = 'Search'
       TabOrder = 5
+      OnClick = pnlSearchBtnClick
+    end
+    object lblProductSearch: TLabel
+      Left = 125
+      Top = 236
+      Width = 172
+      Height = 25
+      Anchors = []
+      Caption = 'Enter Product Name'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -18
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 139
     end
   end
 end
