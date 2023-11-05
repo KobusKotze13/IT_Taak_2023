@@ -102,11 +102,14 @@ edtUserName.Clear;
 edtPass.Clear;
 
 
-tblStaff.last;
-if tblStaff['Staff_ID'] = '0000' then
+tblStaff.first;
+while NOT tblStaff.Eof do
   begin
-    frmSignup.Show;
-    frmLogin.Hide;
+    if tblStaff['Staff_Name'] = '0000' then
+      begin
+        frmSignup.Show;
+      end;
+    tblStaff.Next;
   end;
 
 end;

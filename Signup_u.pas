@@ -25,6 +25,7 @@ type
     procedure pnlSignupbtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     function CreateStaffID(Name, Number: String): String;
+    procedure FormShow(Sender: TObject);
 
   private
     { Private declarations }
@@ -73,6 +74,11 @@ begin
 frmLogin.connectDB;
 end;
 
+procedure TfrmSignup.FormShow(Sender: TObject);
+begin
+WindowState := TWindowState.wsMaximized;
+end;
+
 procedure TfrmSignup.pnlSignupbtnClick(Sender: TObject);
 var
 TempPass : string;
@@ -104,9 +110,13 @@ if edtNewStaffPassword.Text = TempPass then
   begin
     tblStaff.First;
     tblStaff.Edit;
-    if tblStaff['Staff_ID'] = '0000' then
+    while NOT tblStaff.Eof do
       begin
-        tblStaff.Delete;
+        if tblStaff['Staff_ID'] = '0000' then
+          begin
+            tblStaff.Delete;
+          end;
+        tblStaff.Next;
       end;
 
     tblStaff.append;

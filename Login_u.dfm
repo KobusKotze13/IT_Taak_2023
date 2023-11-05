@@ -2,8 +2,8 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 626
-  ClientWidth = 1005
+  ClientHeight = 617
+  ClientWidth = 999
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmLogin: TfrmLogin
   object gplLogin: TGridPanel
     Left = 0
     Top = 0
-    Width = 1005
-    Height = 626
+    Width = 999
+    Height = 617
     ParentCustomHint = False
     Align = alClient
     BiDiMode = bdLeftToRight
@@ -107,11 +107,11 @@ object frmLogin: TfrmLogin
     StyleElements = [seFont, seClient]
     StyleName = 'Windows'
     DesignSize = (
-      1005
-      626)
+      999
+      617)
     object lblTitle: TLabel
-      Left = 354
-      Top = 157
+      Left = 351
+      Top = 155
       Width = 297
       Height = 77
       Anchors = [akTop]
@@ -125,8 +125,8 @@ object frmLogin: TfrmLogin
       ExplicitLeft = 170
     end
     object edtPass: TEdit
-      Left = 396
-      Top = 438
+      Left = 393
+      Top = 431
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
@@ -134,16 +134,16 @@ object frmLogin: TfrmLogin
       TabOrder = 0
     end
     object edtUserName: TEdit
-      Left = 398
-      Top = 360
+      Left = 395
+      Top = 354
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
     end
     object pnlLoginbtn: TPanel
-      Left = 404
-      Top = 501
+      Left = 401
+      Top = 493
       Width = 197
       Height = 46
       Anchors = [akBottom]
@@ -161,8 +161,8 @@ object frmLogin: TfrmLogin
       OnClick = pnlLoginbtnClick
     end
     object lblStaffID: TLabel
-      Left = 445
-      Top = 320
+      Left = 442
+      Top = 315
       Width = 115
       Height = 25
       Anchors = []
@@ -179,8 +179,8 @@ object frmLogin: TfrmLogin
       ExplicitTop = 339
     end
     object lblEnterPassword: TLabel
-      Left = 437
-      Top = 398
+      Left = 434
+      Top = 392
       Width = 130
       Height = 25
       Anchors = []

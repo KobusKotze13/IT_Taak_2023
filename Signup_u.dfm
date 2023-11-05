@@ -12,6 +12,7 @@ object frmSignup: TfrmSignup
   Font.Style = []
   OnClose = FormClose
   OnCreate = FormCreate
+  OnShow = FormShow
   TextHeight = 15
   object gplSignup: TGridPanel
     Left = 0
