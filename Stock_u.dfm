@@ -119,7 +119,8 @@ object frmStock: TfrmStock
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitLeft = 8
+    ExplicitWidth = 1049
+    ExplicitHeight = 701
     DesignSize = (
       1055
       710)
@@ -136,49 +137,6 @@ object frmStock: TfrmStock
       TitleFont.Height = -12
       TitleFont.Name = 'Segoe UI'
       TitleFont.Style = []
-      Columns = <
-        item
-          Expanded = False
-          FieldName = 'Product_ID'
-          Width = 75
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'Product_Name'
-          Width = 150
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'Product_Type'
-          Width = 75
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'Amount'
-          Width = 75
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'Supplier_ID'
-          Width = 100
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'Price_Buy'
-          Width = 75
-          Visible = True
-        end
-        item
-          Expanded = False
-          FieldName = 'Price_Sell'
-          Width = 75
-          Visible = True
-        end>
     end
     object edtSearchProductName: TEdit
       Left = 106

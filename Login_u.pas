@@ -18,8 +18,6 @@ type
     lblEnterPassword: TLabel;
     procedure pnlLoginbtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure pnlSignUpBtnClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
 
   private
     { Private declarations }
@@ -35,9 +33,9 @@ var
   frmLogin: TfrmLogin;
   conPOS_Database : TADOConnection;
   tblStaff : TADOTable;
-  tblStock : TADOTable; //change variable names to your database names
+  tblStock : TADOTable;
   tblSuppliers : TADOTable;
-  dsrStaff : TDataSource; //change variable names to your database names
+  dsrStaff : TDataSource;
   dsrStock : TDataSource;
   dsrSuppliers : TDataSource;
   sDatabaseName : string;
@@ -54,7 +52,7 @@ implementation
 
 procedure TfrmLogin.connectDb;
 begin
-conPOS_Database := TADOConnection.Create(Self);
+ conPOS_Database := TADOConnection.Create(Self);
 
  sDatabaseName := 'POS_Database';
  sTableStaff := 'Staff';
@@ -93,25 +91,24 @@ conPOS_Database := TADOConnection.Create(Self);
 
 end;
 
-procedure TfrmLogin.FormCreate(Sender: TObject);
+procedure TfrmLogin.FormShow(Sender: TObject);
 begin
-connectDB;
-tblStaff.First;
+connectDb;
+WindowState := TWindowState.wsMaximized;
+gplLogin.Color := RGB(77,120,146);
+pnlLoginbtn.Font.Color := RGB(135,188,222);
+pnlLoginbtn.SetFocus;
+edtUserName.Clear;
+edtPass.Clear;
+
+
+tblStaff.last;
 if tblStaff['Staff_ID'] = '0000' then
   begin
     frmSignup.Show;
     frmLogin.Hide;
   end;
 
-end;
-
-procedure TfrmLogin.FormShow(Sender: TObject);
-begin
-
-WindowState := TWindowState.wsMaximized;
-gplLogin.Color := RGB(77,120,146);
-pnlLoginbtn.Font.Color := RGB(135,188,222);
-pnlLoginbtn.SetFocus;
 end;
 
 procedure TfrmLogin.pnlLoginbtnClick(Sender: TObject);
@@ -148,12 +145,6 @@ if LoginSuccessfull = False then
     Showmessage('StaffID or Password is incorrect');
   end;
 
-end;
-
-procedure TfrmLogin.pnlSignUpBtnClick(Sender: TObject);
-begin
-frmSignup.show;
-frmLogin.Hide;
 end;
 
 end.

@@ -2,8 +2,8 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 653
-  ClientWidth = 1023
+  ClientHeight = 626
+  ClientWidth = 1005
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,14 +12,13 @@ object frmLogin: TfrmLogin
   Font.Style = []
   Position = poDesigned
   StyleName = 'Windows10 SlateGray'
-  OnCreate = FormCreate
   OnShow = FormShow
   TextHeight = 15
   object gplLogin: TGridPanel
     Left = 0
     Top = 0
-    Width = 1023
-    Height = 653
+    Width = 1005
+    Height = 626
     ParentCustomHint = False
     Align = alClient
     BiDiMode = bdLeftToRight
@@ -108,11 +107,11 @@ object frmLogin: TfrmLogin
     StyleElements = [seFont, seClient]
     StyleName = 'Windows'
     DesignSize = (
-      1023
-      653)
+      1005
+      626)
     object lblTitle: TLabel
-      Left = 363
-      Top = 164
+      Left = 354
+      Top = 157
       Width = 297
       Height = 77
       Anchors = [akTop]
@@ -126,24 +125,25 @@ object frmLogin: TfrmLogin
       ExplicitLeft = 170
     end
     object edtPass: TEdit
-      Left = 405
-      Top = 457
+      Left = 396
+      Top = 438
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
+      PasswordChar = '*'
       TabOrder = 0
     end
     object edtUserName: TEdit
-      Left = 407
-      Top = 376
+      Left = 398
+      Top = 360
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
     end
     object pnlLoginbtn: TPanel
-      Left = 413
-      Top = 525
+      Left = 404
+      Top = 501
       Width = 197
       Height = 46
       Anchors = [akBottom]
@@ -161,8 +161,8 @@ object frmLogin: TfrmLogin
       OnClick = pnlLoginbtnClick
     end
     object lblStaffID: TLabel
-      Left = 454
-      Top = 334
+      Left = 445
+      Top = 320
       Width = 115
       Height = 25
       Anchors = []
@@ -179,8 +179,8 @@ object frmLogin: TfrmLogin
       ExplicitTop = 339
     end
     object lblEnterPassword: TLabel
-      Left = 446
-      Top = 416
+      Left = 437
+      Top = 398
       Width = 130
       Height = 25
       Anchors = []

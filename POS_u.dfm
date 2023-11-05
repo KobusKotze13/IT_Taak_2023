@@ -204,19 +204,28 @@ object frmPOS: TfrmPOS
       Anchors = [akLeft, akRight]
       ItemIndex = 0
       TabOrder = 0
-      Text = 'Smoor'
+      Text = 'None'
       Items.Strings = (
-        'Smoor'
-        'Chakalaka'
-        'Curry'
-        'Stock'
-        'Gravy'
+        'None'
         'Butter'
         'Sugar'
         'Milk'
         'Sour Milk'
         'Fat'
         'Syrup'
+        'Smoor'
+        'Chakalaka'
+        'Curry'
+        'Stock'
+        'Gravy'
+        'Morogo'
+        'Cabbage'
+        'Corn'
+        'Spinich'
+        'Pumkin'
+        'Beans'
+        'Onion'
+        'Chilli'
         'Beef'
         'Pork'
         'Lamb'
@@ -226,16 +235,7 @@ object frmPOS: TfrmPOS
         'Affal'
         'Boerewors'
         'Walkie Talkies'
-        'Bacon'
-        'Morogo'
-        'Cabbage'
-        'Corn'
-        'Spinich'
-        'Pumkin'
-        'Beans'
-        'Onion'
-        'Chilli'
-        'None')
+        'Bacon')
     end
     object cmbExtra2: TComboBox
       Left = 118
@@ -246,19 +246,28 @@ object frmPOS: TfrmPOS
       Anchors = [akLeft, akRight]
       ItemIndex = 0
       TabOrder = 1
-      Text = 'Smoor'
+      Text = 'None'
       Items.Strings = (
-        'Smoor'
-        'Chakalaka'
-        'Curry'
-        'Stock'
-        'Gravy'
+        'None'
         'Butter'
         'Sugar'
         'Milk'
         'Sour Milk'
         'Fat'
         'Syrup'
+        'Smoor'
+        'Chakalaka'
+        'Curry'
+        'Stock'
+        'Gravy'
+        'Morogo'
+        'Cabbage'
+        'Corn'
+        'Spinich'
+        'Pumkin'
+        'Beans'
+        'Onion'
+        'Chilli'
         'Beef'
         'Pork'
         'Lamb'
@@ -268,16 +277,7 @@ object frmPOS: TfrmPOS
         'Affal'
         'Boerewors'
         'Walkie Talkies'
-        'Bacon'
-        'Morogo'
-        'Cabbage'
-        'Corn'
-        'Spinich'
-        'Pumkin'
-        'Beans'
-        'Onion'
-        'Chilli'
-        'None')
+        'Bacon')
     end
     object cmbExtra3: TComboBox
       Left = 118
@@ -288,19 +288,28 @@ object frmPOS: TfrmPOS
       Anchors = [akLeft, akRight]
       ItemIndex = 0
       TabOrder = 2
-      Text = 'Smoor'
+      Text = 'None'
       Items.Strings = (
-        'Smoor'
-        'Chakalaka'
-        'Curry'
-        'Stock'
-        'Gravy'
+        'None'
         'Butter'
         'Sugar'
         'Milk'
         'Sour Milk'
         'Fat'
         'Syrup'
+        'Smoor'
+        'Chakalaka'
+        'Curry'
+        'Stock'
+        'Gravy'
+        'Morogo'
+        'Cabbage'
+        'Corn'
+        'Spinich'
+        'Pumkin'
+        'Beans'
+        'Onion'
+        'Chilli'
         'Beef'
         'Pork'
         'Lamb'
@@ -310,16 +319,7 @@ object frmPOS: TfrmPOS
         'Affal'
         'Boerewors'
         'Walkie Talkies'
-        'Bacon'
-        'Morogo'
-        'Cabbage'
-        'Corn'
-        'Spinich'
-        'Pumkin'
-        'Beans'
-        'Onion'
-        'Chilli'
-        'None')
+        'Bacon')
     end
     object cmbMeat: TComboBox
       Left = 118
@@ -330,8 +330,9 @@ object frmPOS: TfrmPOS
       Anchors = [akLeft, akRight]
       ItemIndex = 0
       TabOrder = 3
-      Text = 'Beef'
+      Text = 'None'
       Items.Strings = (
+        'None'
         'Beef'
         'Pork'
         'Lamb'
@@ -341,8 +342,7 @@ object frmPOS: TfrmPOS
         'Affal'
         'Boerewors'
         'Walkie Talkies'
-        'Bacon'
-        'None')
+        'Bacon')
     end
     object cmbVeg: TComboBox
       Left = 118
@@ -353,8 +353,9 @@ object frmPOS: TfrmPOS
       Anchors = [akLeft, akRight]
       ItemIndex = 0
       TabOrder = 4
-      Text = 'Morogo'
+      Text = 'None'
       Items.Strings = (
+        'None'
         'Morogo'
         'Cabbage'
         'Corn'
@@ -362,8 +363,7 @@ object frmPOS: TfrmPOS
         'Pumkin'
         'Beans'
         'Onion'
-        'Chilli'
-        'None')
+        'Chilli')
     end
     object pnlAddOrderBtn: TPanel
       Left = 118
@@ -383,6 +383,7 @@ object frmPOS: TfrmPOS
       Anchors = []
       Caption = 'Finalise Order'
       TabOrder = 6
+      OnClick = pnlFinalOrderClick
     end
     object pnlLogout: TPanel
       Left = 819
@@ -428,6 +429,7 @@ object frmPOS: TfrmPOS
       Lines.Strings = (
         'redOrder')
       ParentFont = False
+      ReadOnly = True
       TabOrder = 10
     end
     object cmbPap: TComboBox
@@ -514,7 +516,6 @@ object frmPOS: TfrmPOS
       Anchors = []
       Caption = 'Total: '
       TabOrder = 12
-      OnClick = pnlAddOrderBtnClick
     end
   end
 end

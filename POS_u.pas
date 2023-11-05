@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls, clsStaff_u;
 
 type
   TfrmPOS = class(TForm)
@@ -34,14 +34,16 @@ type
     procedure pnlAddOrderBtnClick(Sender: TObject);
     procedure DisplayItem;
     procedure SavePriceAndItem;
+    procedure pnlFinalOrderClick(Sender: TObject);
       private
     { Private declarations }
   var
     OrderItems : array[0..5] of string;
     OrderItemPrice : array[0..5] of integer;
-    OrderDishTotal : array of integer;
+    OrderDishTotals : array of integer;
     DishNumber : integer;
     OrderTotal : integer;
+    TotalDish : integer;
 
   public
     { Public declarations }
@@ -61,12 +63,12 @@ Login_u, Staff_u, Stock_u;
 
 procedure TfrmPOS.DisplayItem;
 var
-k : integer;
+i : integer;
 begin
-redOrder.Lines.Add('Dish '+ IntToStr(DishNumber));
+redOrder.Lines.Add('Dish '+ IntToStr(DishNumber + 1));
 redOrder.Lines.Add('');
 redOrder.Lines.Add('Pap: ' + OrderItems[0]+ #9 + FloatToStrF(OrderItemPrice[0],ffCurrency,15,2));
-if cmbMeat.ItemIndex = 10 then
+if cmbMeat.ItemIndex = 0 then
   begin
   end
 else
@@ -74,7 +76,7 @@ else
     redOrder.Lines.Add('Meat: ' + OrderItems[1] + #9 + FloatToStrF(OrderItemPrice[1],ffCurrency,15,2));
   end;
 
-if  cmbVeg.ItemIndex = 8 then
+if  cmbVeg.ItemIndex = 0 then
   begin
   end
 else
@@ -82,7 +84,7 @@ else
     redOrder.Lines.Add('Veg: ' + OrderItems[2]+ #9 + FloatToStrF(OrderItemPrice[2],ffCurrency,15,2));
   end;
 
-if cmbExtra1.ItemIndex = 29 then
+if cmbExtra1.ItemIndex = 0 then
   begin
   end
 else
@@ -90,7 +92,7 @@ else
     redOrder.Lines.Add('Extra: ' + OrderItems[3]+ #9 + FloatToStrF(OrderItemPrice[3],ffCurrency,15,2));
   end;
 
-if cmbExtra2.ItemIndex = 29 then
+if cmbExtra2.ItemIndex = 0 then
   begin
   end
 else
@@ -98,7 +100,7 @@ else
     redOrder.Lines.Add('Extra: ' + OrderItems[4]+ #9 + FloatToStrF(OrderItemPrice[4],ffCurrency,15,2));
   end;
 
-if cmbExtra3.ItemIndex = 29 then
+if cmbExtra3.ItemIndex = 0 then
   begin
   end
 else
@@ -106,12 +108,19 @@ else
     redOrder.Lines.Add('Extra: ' + OrderItems[5]+ #9 + FloatToStrF(OrderItemPrice[5],ffCurrency,15,2));
   end;
 
-
-for k := 0 to Length(OrderDishTotal) -1 do
-  begin
-    OrderTotal := OrderTotal + OrderDishTotal[k];
-  end;
 redOrder.Lines.Add('');
+
+
+OrderTotal := 0;
+for i := 0 to Length(OrderDishTotals) -1 do
+  begin
+    OrderTotal := OrderTotal + OrderDishTotals[i];
+  end;
+
+pnlTotal.Caption := 'Total: ' + FloatToStrF(OrderTotal,ffCurrency,15,2);
+
+inc(Dishnumber);
+SetLength(OrderDishTotals, Length(OrderDishTotals) + 1);
 end;
 
 
@@ -124,7 +133,12 @@ end;
 procedure TfrmPOS.FormShow(Sender: TObject);
 begin
 WindowState := TWindowState.wsMaximized;
-if NOT frmLogin.StaffUser.Get_ManagerStatus = True then
+if  frmLogin.StaffUser.Get_ManagerStatus = True then
+  begin
+    pnlManageStaffBtn.Visible := True;
+    pnlManageStockBtn.Caption := 'Edit Stock';
+  end
+else
   begin
     pnlManageStaffBtn.Visible := False;
     pnlManageStockBtn.Caption := 'View Stock';
@@ -132,32 +146,27 @@ if NOT frmLogin.StaffUser.Get_ManagerStatus = True then
 
 redOrder.Clear;
 DishNumber := 0;
-SetLength(OrderDishTotal, 1);
+SetLength(OrderDishTotals, 1);
+OrderDishTotals[0] := 0;
 redOrder.Paragraph.TabCount := 1;
-redOrder.Paragraph.tab[0] := 300;
+redOrder.Paragraph.tab[0] := 500;
 OrderTotal := 0;
 end;
 
 procedure TfrmPOS.pnlAddOrderBtnClick(Sender: TObject);
-var
-i, TotalDish: Integer;
 begin
-TotalDish := 0;
-
-for i := 0 to 5 do
-  begin
-    TotalDish := TotalDish + OrderItemPrice[i];
-  end;
-
-OrderDishTotal[Dishnumber] := TotalDish;
-
-inc(Dishnumber);
-
 SavePriceAndItem;
 DisplayItem;
+end;
 
-SetLength(OrderDishTotal, Length(OrderDishTotal) + 1);
-pnlTotal.Caption := 'Total: ' + FloatToStrF(OrderTotal,ffCurrency,15,2);
+procedure TfrmPOS.pnlFinalOrderClick(Sender: TObject);
+var
+Reciept : textfile;
+begin
+AssignFile(Reciept,'Reciept.txt');
+Rewrite(Reciept);
+Writeln(Reciept,redOrder.text);
+CloseFile(Reciept);
 end;
 
 procedure TfrmPOS.pnlLogoutClick(Sender: TObject);
@@ -169,22 +178,28 @@ end;
 procedure TfrmPOS.pnlManageStaffBtnClick(Sender: TObject);
 begin
 frmStaff.Show;
+frmStaff.Close;
+frmStaff.Show;
 frmPOS.Close;
 end;
 
 procedure TfrmPOS.pnlManageStockBtnClick(Sender: TObject);
 begin
 frmStock.Show;
+frmStock.Close;
+frmStock.Show;
 frmPOS.Close;
 end;
 
 procedure TfrmPOS.SavePriceAndItem;
+var
+i : integer;
 begin
 OrderItems[0] := cmbPap.text;
 OrderItemPrice[0] := 20;
 
 OrderItems[1] := cmbMeat.text;
-  if cmbMeat.ItemIndex = 10 then
+  if cmbMeat.ItemIndex = 0 then
     begin
       OrderItemPrice[1] := 0;
     end
@@ -195,7 +210,7 @@ OrderItems[1] := cmbMeat.text;
 
 
 OrderItems[2] := cmbVeg.text;
-  if cmbVeg.ItemIndex = 8 then
+  if cmbVeg.ItemIndex = 0 then
     begin
       OrderItemPrice[2] := 0;
     end
@@ -206,27 +221,37 @@ OrderItems[2] := cmbVeg.text;
 
 OrderItems[3] := cmbExtra1.text;
   case cmbExtra1.ItemIndex of
-    0..14 : OrderItemPrice[3] := 20;
-    15..28 : OrderItemPrice[3] := 7;
-    29..35 : OrderItemPrice[3] := 3;
-    36 : OrderItemPrice[3] := 0;
+    0 : OrderItemPrice[3] := 0;
+    1..6 : OrderItemPrice[3] := 3;
+    7..19 : OrderItemPrice[3] := 7;
+    20..30: OrderItemPrice[3] := 20;
   end;
 
 OrderItems[4] := cmbExtra2.text;
   case cmbExtra1.ItemIndex of
-    0..14 : OrderItemPrice[4] := 20;
-    15..28 : OrderItemPrice[4] := 7;
-    29..35 : OrderItemPrice[4] := 3;
-    36 : OrderItemPrice[4] := 0;
+    0 : OrderItemPrice[4] := 0;
+    1..6 : OrderItemPrice[4] := 3;
+    7..19 : OrderItemPrice[4] := 7;
+    20..30: OrderItemPrice[4] := 20;
   end;
 
 OrderItems[5] := cmbExtra3.text;
   case cmbExtra1.ItemIndex of
-    0..14 : OrderItemPrice[5] := 20;
-    15..28 : OrderItemPrice[5] := 7;
-    29..35 : OrderItemPrice[5] := 3;
-    36 : OrderItemPrice[5] := 0;
+    0 : OrderItemPrice[5] := 0;
+    1..6 : OrderItemPrice[5] := 3;
+    7..19 : OrderItemPrice[5] := 7;
+    20..30: OrderItemPrice[5] := 20;
   end;
+
+TotalDish := 0;
+
+for i := 0 to 5 do
+  begin
+    TotalDish := TotalDish + OrderItemPrice[i];
+  end;
+
+OrderDishTotals[Dishnumber] := TotalDish;
+
 end;
 
 end.

@@ -3,7 +3,7 @@ object frmSignup: TfrmSignup
   Top = 0
   Caption = 'Sign Up'
   ClientHeight = 680
-  ClientWidth = 1007
+  ClientWidth = 922
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -11,11 +11,12 @@ object frmSignup: TfrmSignup
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
+  OnCreate = FormCreate
   TextHeight = 15
   object gplSignup: TGridPanel
     Left = 0
     Top = 0
-    Width = 1007
+    Width = 922
     Height = 680
     Align = alClient
     ColumnCollection = <
@@ -47,7 +48,7 @@ object frmSignup: TfrmSignup
       end
       item
         Column = 1
-        Control = Panel1
+        Control = pnlSignupbtn
         Row = 13
         RowSpan = 2
       end
@@ -138,13 +139,13 @@ object frmSignup: TfrmSignup
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitWidth = 1001
+    ExplicitWidth = 916
     ExplicitHeight = 671
     DesignSize = (
-      1007
+      922
       680)
     object edtNewStaffPassword: TEdit
-      Left = 408
+      Left = 366
       Top = 325
       Width = 190
       Height = 23
@@ -152,7 +153,7 @@ object frmSignup: TfrmSignup
       TabOrder = 0
     end
     object edtNewStaffName: TEdit
-      Left = 408
+      Left = 366
       Top = 257
       Width = 190
       Height = 23
@@ -160,7 +161,7 @@ object frmSignup: TfrmSignup
       TabOrder = 1
     end
     object lblSignup: TLabel
-      Left = 402
+      Left = 360
       Top = 105
       Width = 202
       Height = 77
@@ -174,17 +175,18 @@ object frmSignup: TfrmSignup
       ParentFont = False
       ExplicitTop = 97
     end
-    object Panel1: TPanel
-      Left = 411
+    object pnlSignupbtn: TPanel
+      Left = 368
       Top = 597
       Width = 185
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Sign Up'
       TabOrder = 2
+      OnClick = pnlSignupbtnClick
     end
     object edtNewStaffNUmber: TEdit
-      Left = 408
+      Left = 366
       Top = 392
       Width = 190
       Height = 23
@@ -192,7 +194,7 @@ object frmSignup: TfrmSignup
       TabOrder = 3
     end
     object edtNewStaffEmail: TEdit
-      Left = 408
+      Left = 366
       Top = 460
       Width = 190
       Height = 23
@@ -200,7 +202,7 @@ object frmSignup: TfrmSignup
       TabOrder = 4
     end
     object lblNewStaffEmail: TLabel
-      Left = 453
+      Left = 410
       Top = 425
       Width = 101
       Height = 25
@@ -215,7 +217,7 @@ object frmSignup: TfrmSignup
       ExplicitLeft = 398
     end
     object lblNewStaffNumber: TLabel
-      Left = 444
+      Left = 401
       Top = 358
       Width = 119
       Height = 25
@@ -230,7 +232,7 @@ object frmSignup: TfrmSignup
       ExplicitLeft = 421
     end
     object lblNewStaffPassword: TLabel
-      Left = 438
+      Left = 396
       Top = 290
       Width = 130
       Height = 25
@@ -245,7 +247,7 @@ object frmSignup: TfrmSignup
       ExplicitLeft = 476
     end
     object lblNewStaffName: TLabel
-      Left = 395
+      Left = 352
       Top = 222
       Width = 217
       Height = 25
@@ -260,7 +262,7 @@ object frmSignup: TfrmSignup
       ExplicitLeft = 405
     end
     object edtNewStaffAddress: TEdit
-      Left = 408
+      Left = 366
       Top = 528
       Width = 190
       Height = 23
@@ -268,7 +270,7 @@ object frmSignup: TfrmSignup
       TabOrder = 5
     end
     object lblNewStaffAddress: TLabel
-      Left = 444
+      Left = 402
       Top = 493
       Width = 118
       Height = 25

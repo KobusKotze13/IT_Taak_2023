@@ -59,74 +59,50 @@ object frmStaff: TfrmStaff
         RowSpan = 4
       end
       item
-        Column = 4
-        Control = edtAddress
-        Row = 9
-      end
-      item
-        Column = 4
-        Control = edtCellNum
-        Row = 8
-      end
-      item
-        Column = 4
-        Control = edtEmail
-        Row = 7
-      end
-      item
-        Column = 4
-        Control = edtEnterName
-        Row = 4
-      end
-      item
-        Column = 4
-        Control = edtPassEnter
-        Row = 5
-      end
-      item
-        Column = 0
+        Column = 2
         ColumnSpan = 2
         Control = edtSearchName
         Row = 5
       end
       item
-        Column = 4
-        Control = edtWage
+        Column = 3
+        ColumnSpan = 2
+        Control = pnlAddStaff
         Row = 6
       end
       item
-        Column = 6
-        ColumnSpan = 2
-        Control = pnlAddStaff
-        Row = 5
-      end
-      item
-        Column = 0
+        Column = 3
         ColumnSpan = 2
         Control = pnlManagerBtn
-        Row = 8
+        Row = 7
       end
       item
-        Column = 0
-        ColumnSpan = 2
-        Control = pnlRemMAnager
-        Row = 9
-      end
-      item
-        Column = 0
+        Column = 1
         ColumnSpan = 2
         Control = pnlRemStaffBtn
         Row = 7
       end
       item
-        Column = 0
+        Column = 1
         ColumnSpan = 2
         Control = pnlSearchBtn
         Row = 6
       end
       item
-        Column = 8
+        Column = 7
         Control = pnlBackToPOSBtn
+        Row = 8
+      end
+      item
+        Column = 2
+        ColumnSpan = 2
+        Control = lblSearchStaff
+        Row = 4
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = pnlEditStaff
         Row = 8
       end>
     RowCollection = <
@@ -228,123 +204,88 @@ object frmStaff: TfrmStaff
           Visible = True
         end>
     end
-    object edtAddress: TEdit
-      Left = 419
-      Top = 665
-      Width = 166
-      Height = 23
-      Anchors = []
-      TabOrder = 1
-      Text = 'Enter Address'
-    end
-    object edtCellNum: TEdit
-      Left = 419
-      Top = 594
-      Width = 166
-      Height = 23
-      Anchors = []
-      TabOrder = 2
-      Text = 'Enter Cell Number'
-    end
-    object edtEmail: TEdit
-      Left = 419
-      Top = 523
-      Width = 166
-      Height = 23
-      Anchors = []
-      TabOrder = 3
-      Text = 'Enter E-mail'
-    end
-    object edtEnterName: TEdit
-      Left = 419
-      Top = 309
-      Width = 166
-      Height = 23
-      Anchors = []
-      TabOrder = 4
-      Text = 'Enter Name'
-    end
-    object edtPassEnter: TEdit
-      Left = 419
-      Top = 380
-      Width = 166
-      Height = 23
-      Anchors = []
-      TabOrder = 5
-      Text = 'Enter Password'
-    end
     object edtSearchName: TEdit
-      Left = 11
+      Left = 220
       Top = 380
       Width = 188
       Height = 23
       Anchors = [akLeft, akRight]
-      TabOrder = 6
-      Text = 'Enter Name'
-    end
-    object edtWage: TEdit
-      Left = 419
-      Top = 452
-      Width = 166
-      Height = 23
-      Anchors = []
-      TabOrder = 7
-      Text = 'Enter Wage'
+      TabOrder = 1
     end
     object pnlAddStaff: TPanel
-      Left = 640
-      Top = 371
+      Left = 326
+      Top = 443
       Width = 185
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Add Staff Member'
-      TabOrder = 8
+      TabOrder = 2
+      OnClick = pnlAddStaffClick
     end
     object pnlManagerBtn: TPanel
-      Left = 13
-      Top = 585
+      Left = 326
+      Top = 514
       Width = 185
       Height = 41
       Anchors = []
-      Caption = 'Make Manager'
-      TabOrder = 9
-    end
-    object pnlRemMAnager: TPanel
-      Left = 13
-      Top = 656
-      Width = 185
-      Height = 41
-      Anchors = []
-      Caption = 'Remove Manager'
-      TabOrder = 10
+      Caption = 'Change Manager Status'
+      TabOrder = 3
+      OnClick = pnlManagerBtnClick
     end
     object pnlRemStaffBtn: TPanel
-      Left = 13
+      Left = 117
       Top = 514
       Width = 185
       Height = 41
       Anchors = []
       Caption = 'Remove Staff'
-      TabOrder = 11
+      TabOrder = 4
+      OnClick = pnlRemStaffBtnClick
     end
     object pnlSearchBtn: TPanel
-      Left = 13
+      Left = 117
       Top = 443
       Width = 185
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Search'
-      TabOrder = 12
+      TabOrder = 5
+      OnClick = pnlSearchBtnClick
     end
     object pnlBackToPOSBtn: TPanel
-      Left = 837
+      Left = 732
       Top = 585
       Width = 185
       Height = 41
       Anchors = [akLeft, akRight]
       Caption = 'Back to POS '
-      TabOrder = 13
+      TabOrder = 6
       OnClick = pnlBackToPOSBtnClick
+    end
+    object lblSearchStaff: TLabel
+      Left = 264
+      Top = 331
+      Width = 100
+      Height = 25
+      Anchors = [akBottom]
+      Caption = 'Enter Name'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -18
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 255
+    end
+    object pnlEditStaff: TPanel
+      Left = 117
+      Top = 585
+      Width = 185
+      Height = 41
+      Anchors = [akLeft, akRight]
+      Caption = 'Edit Staff Details'
+      TabOrder = 7
+      OnClick = pnlEditStaffClick
     end
   end
 end

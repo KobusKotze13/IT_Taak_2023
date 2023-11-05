@@ -9,8 +9,7 @@ uses
   Signup_u in 'Signup_u.pas' {frmSignup},
   Vcl.Themes,
   Vcl.Styles,
-  clsStaff_u in 'clsStaff_u.pas',
-  clsValidatioin_u in 'clsValidatioin_u.pas';
+  clsStaff_u in 'clsStaff_u.pas';
 
 {$R *.res}
 

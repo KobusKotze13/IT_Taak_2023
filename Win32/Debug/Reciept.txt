@@ -1,0 +1,7 @@
+Dish 1
+
+Pap: Krummel Pap	R20,00
+Meat: Chicken	R20,00
+Extra: Smoor	R7,00
+
+

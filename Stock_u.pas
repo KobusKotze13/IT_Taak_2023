@@ -40,10 +40,44 @@ frmLogin.Show;
 end;
 
 procedure TfrmStock.FormShow(Sender: TObject);
+var
+i, j: Integer;
+Col : Tcolumn;
+FieldDef : TfieldDef;
 begin
 WindowState := TWindowState.wsMaximized;
 frmLogin.connectdb;
 dbgStock.DataSource := dsrStock;
+
+
+
+tblStock.FieldByName('Product_ID').DisplayWidth := 15;
+tblStock.FieldByName('Product_Name').DisplayWidth := 20;
+tblStock.FieldByName('Product_Type').DisplayWidth := 20;
+tblStock.FieldByName('Amount').DisplayWidth := 10;
+tblStock.FieldByName('Supplier_ID').DisplayWidth := 20;
+tblStock.FieldByName('Price_Buy').DisplayWidth := 10;
+tblStock.FieldByName('Price_Sell').DisplayWidth := 10;
+
+
+if frmLogin.StaffUser.Get_ManagerStatus = True then
+  begin
+    pnlAddProductBtn.Visible := True;
+    pnlRemStockBtn.Visible := True;
+    for i := 0 to 6 do
+      begin
+        dbgStock.Fields[i].Visible := True;
+      end;
+  end
+else
+  begin
+    pnlAddProductBtn.Visible := False;
+    pnlRemStockBtn.Visible := False;
+    for j := 6 downto 4 do
+      begin
+        dbgStock.Fields[j].Visible := False;
+      end;
+  end;
 end;
 
 procedure TfrmStock.pnlBackToPOSBtnClick(Sender: TObject);

@@ -4,9 +4,6 @@ Coordinates=138,10,68,58
 [gplSignup]
 Coordinates=300,78,72,58
 
-[Panel1]
-Coordinates=73,10,55,58
-
 []
 Coordinates=383,78,91,36
 
@@ -34,4 +31,7 @@ Coordinates=350,10,142,58
 
 [edtNewStaffEmail]
 Coordinates=10,146,111,58
+
+[pnlSignupbtn]
+Coordinates=73,10,55,58
 
