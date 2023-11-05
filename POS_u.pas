@@ -167,6 +167,7 @@ AssignFile(Reciept,'Reciept.txt');
 Rewrite(Reciept);
 Writeln(Reciept,redOrder.text);
 CloseFile(Reciept);
+Showmessage('Reciept Printed');
 end;
 
 procedure TfrmPOS.pnlLogoutClick(Sender: TObject);

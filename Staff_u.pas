@@ -59,7 +59,6 @@ begin
 WindowState := TWindowState.wsMaximized;
 frmLogin.connectdb;
 dbgStaff.DataSource := dsrStaff;
-tblStaff.Open;
 end;
 
 procedure TfrmStaff.pnlAddStaffClick(Sender: TObject);
@@ -202,7 +201,6 @@ while ValueEdited = False do
 tblStaff.Post;
 frmSignup.CreateStaffID(tblStaff['Staff_Name'],tblStaff['Cell_Number']);
 
-dbgStaff.DataSource.DataSet.Refresh;
 end;
 
 procedure TfrmStaff.pnlManagerBtnClick(Sender: TObject);
@@ -217,26 +215,21 @@ else
     tblStaff['Manager'] := True;
   end;
 tblStaff.Post;
-dsrStaff.DataSet := tblStaff;
 end;
 
 procedure TfrmStaff.pnlRemStaffBtnClick(Sender: TObject);
 begin
-tblStaff.Edit;
 if MessageDlg('Are you sure you want to permanently delete '+tblStaff['Staff_Name'],
             TMsgDlgType.mtWarning,[mbNo, mbYes],0,mbNo) = mrYes then
   begin
     tblStaff.Delete;
   end;
-tblStaff.post;
-dbgStaff.DataSource.DataSet.Refresh;
 end;
 
 procedure TfrmStaff.pnlSearchBtnClick(Sender: TObject);
 begin
 tblStaff.First;
 tblStaff.Locate('Staff_Name', edtSearchName.Text,[loCaseInsensitive,loPartialKey]);
-dbgStaff.DataSource.DataSet.Refresh;
 end;
 
 end.
