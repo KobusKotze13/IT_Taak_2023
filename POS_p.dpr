@@ -8,8 +8,7 @@ uses
   Stock_u in 'Stock_u.pas' {frmStock},
   Signup_u in 'Signup_u.pas' {frmSignup},
   Vcl.Themes,
-  Vcl.Styles,
-  clsStaff_u in 'clsStaff_u.pas';
+  Vcl.Styles;
 
 {$R *.res}
 

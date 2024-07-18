@@ -2,7 +2,7 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 617
+  ClientHeight = 605
   ClientWidth = 999
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
@@ -18,7 +18,7 @@ object frmLogin: TfrmLogin
     Left = 0
     Top = 0
     Width = 999
-    Height = 617
+    Height = 605
     ParentCustomHint = False
     Align = alClient
     BiDiMode = bdLeftToRight
@@ -56,7 +56,7 @@ object frmLogin: TfrmLogin
       end
       item
         Column = 1
-        Control = lblStaffID
+        Control = lblAgentID
         Row = 2
       end
       item
@@ -108,25 +108,27 @@ object frmLogin: TfrmLogin
     StyleName = 'Windows'
     DesignSize = (
       999
-      617)
+      605)
     object lblTitle: TLabel
-      Left = 351
-      Top = 155
-      Width = 297
+      Left = 386
+      Top = 152
+      Width = 226
       Height = 77
       Anchors = [akTop]
-      Caption = 'Foodie POS'
+      Caption = 'Logbook'
+      Color = 9665101
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -58
       Font.Name = 'Segoe UI'
       Font.Style = []
+      ParentColor = False
       ParentFont = False
-      ExplicitLeft = 170
+      ExplicitLeft = 351
     end
     object edtPass: TEdit
       Left = 393
-      Top = 431
+      Top = 423
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
@@ -135,7 +137,7 @@ object frmLogin: TfrmLogin
     end
     object edtUserName: TEdit
       Left = 395
-      Top = 354
+      Top = 347
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
@@ -143,7 +145,7 @@ object frmLogin: TfrmLogin
     end
     object pnlLoginbtn: TPanel
       Left = 401
-      Top = 493
+      Top = 483
       Width = 197
       Height = 46
       Anchors = [akBottom]
@@ -160,13 +162,13 @@ object frmLogin: TfrmLogin
       TabOrder = 2
       OnClick = pnlLoginbtnClick
     end
-    object lblStaffID: TLabel
-      Left = 442
-      Top = 315
-      Width = 115
+    object lblAgentID: TLabel
+      Left = 436
+      Top = 308
+      Width = 126
       Height = 25
       Anchors = []
-      Caption = 'Enter Staff ID'
+      Caption = 'Enter Agent ID'
       Color = 9665357
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -175,12 +177,12 @@ object frmLogin: TfrmLogin
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
-      ExplicitLeft = 464
-      ExplicitTop = 339
+      ExplicitLeft = 442
+      ExplicitTop = 312
     end
     object lblEnterPassword: TLabel
       Left = 434
-      Top = 392
+      Top = 384
       Width = 130
       Height = 25
       Anchors = []

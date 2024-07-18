@@ -4,7 +4,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, POS_u, adodb, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, clsStaff_u, Signup_u;
+  Vcl.DBGrids, Signup_u;
 type
   TfrmLogin = class(TForm)
     gplLogin: TGridPanel;
@@ -12,18 +12,14 @@ type
     edtPass: TEdit;
     edtUserName: TEdit;
     pnlLoginbtn: TPanel;
-    lblStaffID: TLabel;
+    lblAgentID: TLabel;
     lblEnterPassword: TLabel;
-    // Event handler for the Login button
     procedure pnlLoginbtnClick(Sender: TObject);
-    // Event handler for when the form is shown
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
-    // Staff user object to store user information
-    StaffUser: TStaff;
     // Function to connect to the database
     procedure connectDb;
   end;
@@ -117,14 +113,6 @@ begin
     // Check if the entered username and password match a record
     if (Username = tblStaff['Staff_ID']) and (Password = tblStaff['Password']) then
     begin
-      // Create a Staff object to store user information
-      StaffUser := TStaff.Create();
-      LoginSuccessful := True;
-      StaffUser.Set_Name(tblStaff['Staff_Name']);
-      StaffUser.Set_StaffId(tblStaff['Staff_ID']);
-      StaffUser.Set_Password(tblStaff['Password']);
-      StaffUser.Set_ManagerStatus(tblStaff['Manager']);
-      // Show the POS form and hide the login form
       frmPOS.show;
       frmLogin.Hide;
       break; // No need to continue checking

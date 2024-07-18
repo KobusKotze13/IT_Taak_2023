@@ -190,8 +190,7 @@ object frmPOS: TfrmPOS
         SizeStyle = ssAuto
       end>
     TabOrder = 0
-    ExplicitWidth = 1008
-    ExplicitHeight = 662
+    ExplicitHeight = 665
     DesignSize = (
       1014
       671)

@@ -156,3 +156,4 @@ begin
   Result := Staff_Wage;
 end;
 
+END.

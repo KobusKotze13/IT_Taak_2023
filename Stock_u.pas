@@ -69,11 +69,7 @@ begin
   frmLogin.connectdb;
   dbgStock.DataSource := dsrStock;
 
-  if frmLogin.StaffUser.get_ManagerStatus = False then
-  begin
-    pnlAddProductBtn.Hide;
-    pnlRemStockBtn.Hide;
-  end;
+
 
   tblStock.FieldByName('Product_ID').DisplayWidth := 15;
   tblStock.FieldByName('Product_Name').DisplayWidth := 20;
@@ -83,24 +79,6 @@ begin
   tblStock.FieldByName('Price_Buy').DisplayWidth := 10;
   tblStock.FieldByName('Price_Sell').DisplayWidth := 10;
 
-  if frmLogin.StaffUser.Get_ManagerStatus = True then
-  begin
-    pnlAddProductBtn.Visible := True;
-    pnlRemStockBtn.Visible := True;
-    for i := 0 to 6 do
-    begin
-      dbgStock.Fields[i].Visible := True;
-    end;
-  end
-  else
-  begin
-    pnlAddProductBtn.Visible := False;
-    pnlRemStockBtn.Visible := False;
-    for j := 6 downto 4 do
-    begin
-      dbgStock.Fields[j].Visible := False;
-    end;
-  end;
 end;
 
 // Event handler for adding a product

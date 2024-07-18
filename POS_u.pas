@@ -27,31 +27,14 @@ type
     lblPap: TLabel;
     pnlTotal: TPanel;
 
-    // Event handler for logging out
     procedure pnlLogoutClick(Sender: TObject);
-
-    // Event handler for when the form is shown
     procedure FormShow(Sender: TObject);
-
-    // Event handler for managing staff
     procedure pnlManageStaffBtnClick(Sender: TObject);
-
-    // Event handler for managing stock
     procedure pnlManageStockBtnClick(Sender: TObject);
-
-    // Event handler for when the form is closed
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-
-    // Event handler for adding an order
     procedure pnlAddOrderBtnClick(Sender: TObject);
-
-    // Function to display the order item
     procedure DisplayItem;
-
-    // Function to save the price and item
     procedure SavePriceAndItem;
-
-    // Event handler for finalizing the order
     procedure pnlFinalOrderClick(Sender: TObject);
 
   private
@@ -156,16 +139,7 @@ end;
 procedure TfrmPOS.FormShow(Sender: TObject);
 begin
   WindowState := TWindowState.wsMaximized;
-  if frmLogin.StaffUser.Get_ManagerStatus = True then
-  begin
-    pnlManageStaffBtn.Visible := True;
-    pnlManageStockBtn.Caption := 'Edit Stock';
-  end
-  else
-  begin
-    pnlManageStaffBtn.Visible := False;
-    pnlManageStockBtn.Caption := 'View Stock';
-  end;
+
 
   redOrder.Clear;
   DishNumber := 0;

@@ -22,19 +22,14 @@ type
     edtNewStaffAddress: TEdit;
     lblNewStaffAddress: TLabel;
 
-    // Event handler for when the form is closed
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
-    // Event handler for the Signup button
     procedure pnlSignupbtnClick(Sender: TObject);
 
-    // Event handler for when the form is created
     procedure FormCreate(Sender: TObject);
 
-    // Function to create a staff ID
     function CreateStaffID(Name, Number: String): String;
 
-    // Event handler for when the form is shown
     procedure FormShow(Sender: TObject);
 
   private

@@ -140,8 +140,7 @@ object frmSignup: TfrmSignup
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitWidth = 916
-    ExplicitHeight = 671
+    ExplicitHeight = 674
     DesignSize = (
       922
       680)

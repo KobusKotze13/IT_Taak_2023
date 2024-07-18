@@ -125,8 +125,7 @@ object frmStock: TfrmStock
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitWidth = 1049
-    ExplicitHeight = 701
+    ExplicitHeight = 704
     DesignSize = (
       1055
       710)
