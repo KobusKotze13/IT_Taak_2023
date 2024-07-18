@@ -145,6 +145,10 @@
             <Form>frmSignup</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Main_Menu_u.pas">
+            <Form>frmMainMenu</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
