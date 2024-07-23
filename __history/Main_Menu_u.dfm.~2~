@@ -1,0 +1,243 @@
+object frmMainMenu: TfrmMainMenu
+  Left = 0
+  Top = 0
+  ClientHeight = 594
+  ClientWidth = 992
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object gplStaff: TGridPanel
+    Left = 0
+    Top = 0
+    Width = 992
+    Height = 594
+    Align = alClient
+    ColumnCollection = <
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end>
+    ControlCollection = <
+      item
+        Column = 2
+        ColumnSpan = 2
+        Control = edtSearchName
+        Row = 5
+      end
+      item
+        Column = 3
+        ColumnSpan = 2
+        Control = pnlAddStaff
+        Row = 6
+      end
+      item
+        Column = 3
+        ColumnSpan = 2
+        Control = pnlManagerBtn
+        Row = 7
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = pnlRemStaffBtn
+        Row = 7
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = pnlSearchBtn
+        Row = 6
+      end
+      item
+        Column = 7
+        Control = pnlBackToPOSBtn
+        Row = 8
+      end
+      item
+        Column = 2
+        ColumnSpan = 2
+        Control = lblSearchStaff
+        Row = 4
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = pnlEditStaff
+        Row = 8
+      end
+      item
+        Column = 0
+        ColumnSpan = 10
+        Control = ScrollBox1
+        Row = 0
+        RowSpan = 4
+      end>
+    RowCollection = <
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end
+      item
+        Value = 10.000000000000000000
+      end>
+    TabOrder = 0
+    ExplicitLeft = -55
+    ExplicitTop = -119
+    ExplicitWidth = 1047
+    ExplicitHeight = 713
+    DesignSize = (
+      992
+      594)
+    object edtSearchName: TEdit
+      Left = 204
+      Top = 315
+      Width = 188
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 0
+      ExplicitTop = 380
+    end
+    object pnlAddStaff: TPanel
+      Left = 304
+      Top = 365
+      Width = 185
+      Height = 41
+      Anchors = [akLeft, akRight]
+      Caption = 'Add Staff Member'
+      TabOrder = 1
+      ExplicitTop = 443
+    end
+    object pnlManagerBtn: TPanel
+      Left = 304
+      Top = 424
+      Width = 185
+      Height = 41
+      Anchors = []
+      Caption = 'Change Manager Status'
+      TabOrder = 2
+      ExplicitLeft = 326
+      ExplicitTop = 514
+    end
+    object pnlRemStaffBtn: TPanel
+      Left = 106
+      Top = 424
+      Width = 185
+      Height = 41
+      Anchors = []
+      Caption = 'Remove Staff'
+      TabOrder = 3
+      ExplicitLeft = 117
+      ExplicitTop = 514
+    end
+    object pnlSearchBtn: TPanel
+      Left = 106
+      Top = 365
+      Width = 185
+      Height = 41
+      Anchors = [akLeft, akRight]
+      Caption = 'Search'
+      TabOrder = 4
+      ExplicitTop = 443
+    end
+    object pnlBackToPOSBtn: TPanel
+      Left = 694
+      Top = 484
+      Width = 185
+      Height = 41
+      Anchors = [akLeft, akRight]
+      Caption = 'Back to POS '
+      TabOrder = 5
+      ExplicitTop = 585
+    end
+    object lblSearchStaff: TLabel
+      Left = 248
+      Top = 272
+      Width = 100
+      Height = 25
+      Anchors = [akBottom]
+      Caption = 'Enter Name'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -18
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ExplicitLeft = 255
+      ExplicitTop = 331
+    end
+    object pnlEditStaff: TPanel
+      Left = 106
+      Top = 484
+      Width = 185
+      Height = 41
+      Anchors = [akLeft, akRight]
+      Caption = 'Edit Staff Details'
+      TabOrder = 6
+      ExplicitTop = 585
+    end
+    object ScrollBox1: TScrollBox
+      Left = 17
+      Top = 9
+      Width = 957
+      Height = 221
+      Anchors = []
+      TabOrder = 7
+      Visible = False
+      ExplicitLeft = 12
+      ExplicitTop = 52
+    end
+  end
+end

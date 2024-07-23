@@ -2,8 +2,8 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 605
-  ClientWidth = 999
+  ClientHeight = 646
+  ClientWidth = 1027
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -17,8 +17,8 @@ object frmLogin: TfrmLogin
   object gplLogin: TGridPanel
     Left = 0
     Top = 0
-    Width = 999
-    Height = 605
+    Width = 1027
+    Height = 646
     ParentCustomHint = False
     Align = alClient
     BiDiMode = bdLeftToRight
@@ -56,7 +56,7 @@ object frmLogin: TfrmLogin
       end
       item
         Column = 1
-        Control = lblAgentID
+        Control = lblAgentUsername
         Row = 2
       end
       item
@@ -106,12 +106,14 @@ object frmLogin: TfrmLogin
     TabOrder = 0
     StyleElements = [seFont, seClient]
     StyleName = 'Windows'
+    ExplicitWidth = 999
+    ExplicitHeight = 581
     DesignSize = (
-      999
-      605)
+      1027
+      646)
     object lblTitle: TLabel
-      Left = 386
-      Top = 152
+      Left = 400
+      Top = 162
       Width = 226
       Height = 77
       Anchors = [akTop]
@@ -127,25 +129,27 @@ object frmLogin: TfrmLogin
       ExplicitLeft = 351
     end
     object edtPass: TEdit
-      Left = 393
-      Top = 423
+      Left = 407
+      Top = 452
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
       PasswordChar = '*'
       TabOrder = 0
+      ExplicitTop = 405
     end
     object edtUserName: TEdit
-      Left = 395
-      Top = 347
+      Left = 409
+      Top = 371
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
+      ExplicitTop = 333
     end
     object pnlLoginbtn: TPanel
-      Left = 401
-      Top = 483
+      Left = 415
+      Top = 518
       Width = 197
       Height = 46
       Anchors = [akBottom]
@@ -161,14 +165,16 @@ object frmLogin: TfrmLogin
       ParentFont = False
       TabOrder = 2
       OnClick = pnlLoginbtnClick
+      ExplicitLeft = 401
+      ExplicitTop = 462
     end
-    object lblAgentID: TLabel
-      Left = 436
-      Top = 308
-      Width = 126
+    object lblAgentUsername: TLabel
+      Left = 417
+      Top = 330
+      Width = 192
       Height = 25
       Anchors = []
-      Caption = 'Enter Agent ID'
+      Caption = 'Enter Agent Username'
       Color = 9665357
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -177,12 +183,12 @@ object frmLogin: TfrmLogin
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
-      ExplicitLeft = 442
-      ExplicitTop = 312
+      ExplicitLeft = 436
+      ExplicitTop = 299
     end
     object lblEnterPassword: TLabel
-      Left = 434
-      Top = 384
+      Left = 448
+      Top = 411
       Width = 130
       Height = 25
       Anchors = []
