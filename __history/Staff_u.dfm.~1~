@@ -137,7 +137,8 @@ object frmStaff: TfrmStaff
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitHeight = 707
+    ExplicitWidth = 1041
+    ExplicitHeight = 704
     DesignSize = (
       1047
       713)
@@ -219,6 +220,7 @@ object frmStaff: TfrmStaff
       Anchors = [akLeft, akRight]
       Caption = 'Add Staff Member'
       TabOrder = 2
+      OnClick = pnlAddStaffClick
     end
     object pnlManagerBtn: TPanel
       Left = 326
@@ -228,6 +230,7 @@ object frmStaff: TfrmStaff
       Anchors = []
       Caption = 'Change Manager Status'
       TabOrder = 3
+      OnClick = pnlManagerBtnClick
     end
     object pnlRemStaffBtn: TPanel
       Left = 117
@@ -237,6 +240,7 @@ object frmStaff: TfrmStaff
       Anchors = []
       Caption = 'Remove Staff'
       TabOrder = 4
+      OnClick = pnlRemStaffBtnClick
     end
     object pnlSearchBtn: TPanel
       Left = 117
@@ -246,6 +250,7 @@ object frmStaff: TfrmStaff
       Anchors = [akLeft, akRight]
       Caption = 'Search'
       TabOrder = 5
+      OnClick = pnlSearchBtnClick
     end
     object pnlBackToPOSBtn: TPanel
       Left = 732
@@ -255,6 +260,7 @@ object frmStaff: TfrmStaff
       Anchors = [akLeft, akRight]
       Caption = 'Back to POS '
       TabOrder = 6
+      OnClick = pnlBackToPOSBtnClick
     end
     object lblSearchStaff: TLabel
       Left = 264
@@ -279,6 +285,7 @@ object frmStaff: TfrmStaff
       Anchors = [akLeft, akRight]
       Caption = 'Edit Staff Details'
       TabOrder = 7
+      OnClick = pnlEditStaffClick
     end
   end
 end

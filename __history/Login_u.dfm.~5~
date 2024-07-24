@@ -2,7 +2,7 @@ object frmLogin: TfrmLogin
   Left = 0
   Top = 0
   Caption = 'Login'
-  ClientHeight = 640
+  ClientHeight = 646
   ClientWidth = 1027
   Color = clBackground
   Font.Charset = DEFAULT_CHARSET
@@ -18,7 +18,7 @@ object frmLogin: TfrmLogin
     Left = 0
     Top = 0
     Width = 1027
-    Height = 640
+    Height = 646
     ParentCustomHint = False
     Align = alClient
     BiDiMode = bdLeftToRight
@@ -106,12 +106,14 @@ object frmLogin: TfrmLogin
     TabOrder = 0
     StyleElements = [seFont, seClient]
     StyleName = 'Windows'
+    ExplicitWidth = 999
+    ExplicitHeight = 581
     DesignSize = (
       1027
-      640)
+      646)
     object lblTitle: TLabel
       Left = 400
-      Top = 161
+      Top = 162
       Width = 226
       Height = 77
       Anchors = [akTop]
@@ -128,24 +130,26 @@ object frmLogin: TfrmLogin
     end
     object edtPass: TEdit
       Left = 407
-      Top = 448
+      Top = 452
       Width = 212
       Height = 23
       Anchors = [akLeft, akRight]
       PasswordChar = '*'
       TabOrder = 0
+      ExplicitTop = 405
     end
     object edtUserName: TEdit
       Left = 409
-      Top = 368
+      Top = 371
       Width = 209
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 1
+      ExplicitTop = 333
     end
     object pnlLoginbtn: TPanel
       Left = 415
-      Top = 513
+      Top = 518
       Width = 197
       Height = 46
       Anchors = [akBottom]
@@ -161,10 +165,12 @@ object frmLogin: TfrmLogin
       ParentFont = False
       TabOrder = 2
       OnClick = pnlLoginbtnClick
+      ExplicitLeft = 401
+      ExplicitTop = 462
     end
     object lblAgentUsername: TLabel
       Left = 417
-      Top = 327
+      Top = 330
       Width = 192
       Height = 25
       Anchors = []
@@ -182,7 +188,7 @@ object frmLogin: TfrmLogin
     end
     object lblEnterPassword: TLabel
       Left = 448
-      Top = 407
+      Top = 411
       Width = 130
       Height = 25
       Anchors = []

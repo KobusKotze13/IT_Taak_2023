@@ -191,7 +191,6 @@ object frmSignup: TfrmSignup
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 3
-      ExplicitTop = 396
     end
     object edtNewStaffEmail: TEdit
       Left = 366
@@ -200,7 +199,6 @@ object frmSignup: TfrmSignup
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 4
-      ExplicitTop = 464
     end
     object lblNewStaffEmail: TLabel
       Left = 410

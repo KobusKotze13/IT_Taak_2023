@@ -11,11 +11,14 @@ type
     gplSignup: TGridPanel;
     lblSignup: TLabel;
     pnlSignupbtn: TPanel;
-    edtNewStaffName: TEdit;
+
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+
+    procedure pnlSignupbtnClick(Sender: TObject);
 
     procedure FormCreate(Sender: TObject);
 
+    function CreateAgentID(Name, Number: String): String;
 
     procedure FormShow(Sender: TObject);
 
@@ -41,6 +44,16 @@ Login_u;
 
 {$R *.dfm}
 
+// Function to create a unique Agent ID
+function TfrmSignup.CreateAgentID(Name, Number: String): String;
+var
+  NewAgentID: String;
+  SpacePos: integer;
+begin
+  SpacePos := Pos(' ', Name);
+  NewAgentID := Copy(Name, 1, SpacePos - 1) + Copy(Name, SpacePos + 1, 1) + Copy(Number, 1, 2);
+  Result := NewAgentID;
+end;
 
 // Event handler for when the form is closed
 procedure TfrmSignup.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -60,6 +73,26 @@ begin
   WindowState := TWindowState.wsMaximized;
 end;
 
+// Event handler for the Signup button
+procedure TfrmSignup.pnlSignupbtnClick(Sender: TObject);
+var
+  TempPass: string;
+  NewAgentID, FirstName, Surname, CellNumber: String;
+  SpacePos: integer;
+  UserAdded: boolean;
+begin
+  UserAdded := False;
+
+ 
+
+  // Show a message indicating success or failure
+  if UserAdded = True then
+  begin
+    ShowMessage('User Successfully Added');
+    Sleep(300);
+    frmSignup.Close;
+  end;
+end;
 
 end.
 

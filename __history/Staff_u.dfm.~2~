@@ -137,7 +137,6 @@ object frmStaff: TfrmStaff
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitHeight = 707
     DesignSize = (
       1047
       713)

@@ -16,6 +16,7 @@ type
     cmbVeg: TComboBox;
     pnlAddOrderBtn: TPanel;
     pnlFinalOrder: TPanel;
+    pnlLogout: TPanel;
     pnlManageStaffBtn: TPanel;
     pnlManageStockBtn: TPanel;
     redOrder: TRichEdit;
@@ -26,14 +27,25 @@ type
     lblPap: TLabel;
     pnlTotal: TPanel;
 
+    procedure pnlLogoutClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-
+    procedure pnlManageStaffBtnClick(Sender: TObject);
+    procedure pnlManageStockBtnClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure pnlAddOrderBtnClick(Sender: TObject);
+    procedure DisplayItem;
+    procedure SavePriceAndItem;
+    procedure pnlFinalOrderClick(Sender: TObject);
 
   private
     { Private declarations }
   var
-   
+    OrderItems: array[0..5] of string;
+    OrderItemPrice: array[0..5] of integer;
+    OrderDishTotals: array of integer;
+    DishNumber: integer;
+    OrderTotal: integer;
+    TotalDish: integer;
 
   public
     { Public declarations }
@@ -62,6 +74,14 @@ procedure TfrmAddHouse.FormShow(Sender: TObject);
 begin
   WindowState := TWindowState.wsMaximized;
 
+
+  redOrder.Clear;
+  DishNumber := 0;
+  SetLength(OrderDishTotals, 1);
+  OrderDishTotals[0] := 0;
+  redOrder.Paragraph.TabCount := 1;
+  redOrder.Paragraph.tab[0] := 500;
+  OrderTotal := 0;
 end;
 
 

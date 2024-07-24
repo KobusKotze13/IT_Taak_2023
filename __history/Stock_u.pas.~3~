@@ -28,7 +28,7 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
     // Event handler for searching a product
-//    procedure pnlSearchBtnClick(Sender: TObject);
+    procedure pnlSearchBtnClick(Sender: TObject);
 
     // Event handler for adding a product
     procedure pnlAddProductBtnClick(Sender: TObject);

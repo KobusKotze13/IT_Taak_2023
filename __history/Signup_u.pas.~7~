@@ -11,7 +11,7 @@ type
     gplSignup: TGridPanel;
     lblSignup: TLabel;
     pnlSignupbtn: TPanel;
-    edtNewStaffName: TEdit;
+
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
 
     procedure FormCreate(Sender: TObject);

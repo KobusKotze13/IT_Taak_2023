@@ -1,0 +1,23 @@
+program Agent_Logbook;
+
+uses
+  Vcl.Forms,
+  Add_House_u in 'Add_House_u.pas' {frmAddHouse},
+  Login_u in 'Login_u.pas' {frmLogin},
+  Signup_u in 'Signup_u.pas' {frmSignup},
+  Vcl.Themes,
+  Vcl.Styles,
+  Main_Menu_u in 'Main_Menu_u.pas' {frmMainMenu};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Windows10 SlateGray');
+  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TfrmAddHouse, frmAddHouse);
+  Application.CreateForm(TfrmSignup, frmSignup);
+  Application.CreateForm(TfrmMainMenu, frmMainMenu);
+  Application.Run;
+end.

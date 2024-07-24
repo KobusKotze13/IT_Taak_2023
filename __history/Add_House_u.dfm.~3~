@@ -95,6 +95,13 @@ object frmAddHouse: TfrmAddHouse
         RowSpan = 2
       end
       item
+        Column = 8
+        ColumnSpan = 2
+        Control = pnlLogout
+        Row = 0
+        RowSpan = 2
+      end
+      item
         Column = 4
         ColumnSpan = 2
         Control = pnlManageStaffBtn
@@ -182,7 +189,6 @@ object frmAddHouse: TfrmAddHouse
         SizeStyle = ssAuto
       end>
     TabOrder = 0
-    ExplicitHeight = 665
     DesignSize = (
       1014
       671)
@@ -374,6 +380,16 @@ object frmAddHouse: TfrmAddHouse
       Caption = 'Finalise Order'
       TabOrder = 6
     end
+    object pnlLogout: TPanel
+      Left = 819
+      Top = 47
+      Width = 185
+      Height = 41
+      Anchors = []
+      Caption = 'Log Out'
+      TabOrder = 7
+      OnClick = pnlLogoutClick
+    end
     object pnlManageStaffBtn: TPanel
       Left = 414
       Top = 47
@@ -381,7 +397,7 @@ object frmAddHouse: TfrmAddHouse
       Height = 41
       Anchors = []
       Caption = 'Manage Staff'
-      TabOrder = 7
+      TabOrder = 8
     end
     object pnlManageStockBtn: TPanel
       Left = 617
@@ -390,7 +406,7 @@ object frmAddHouse: TfrmAddHouse
       Height = 41
       Anchors = []
       Caption = 'Manage Stock'
-      TabOrder = 8
+      TabOrder = 9
     end
     object redOrder: TRichEdit
       Left = 406
@@ -407,7 +423,7 @@ object frmAddHouse: TfrmAddHouse
         'redOrder')
       ParentFont = False
       ReadOnly = True
-      TabOrder = 9
+      TabOrder = 10
     end
     object cmbPap: TComboBox
       Left = 117
@@ -417,7 +433,7 @@ object frmAddHouse: TfrmAddHouse
       Style = csDropDownList
       Anchors = [akLeft, akRight]
       ItemIndex = 0
-      TabOrder = 10
+      TabOrder = 11
       Text = 'Krummel Pap'
       Items.Strings = (
         'Krummel Pap'
@@ -492,7 +508,7 @@ object frmAddHouse: TfrmAddHouse
       Height = 41
       Anchors = []
       Caption = 'Total: '
-      TabOrder = 11
+      TabOrder = 12
     end
   end
 end
