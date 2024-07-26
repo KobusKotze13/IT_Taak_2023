@@ -9,22 +9,18 @@ uses
 type
   TfrmAddHouse = class(TForm)
     gplPOS: TGridPanel;
-    cmbExtra1: TComboBox;
-    cmbExtra2: TComboBox;
-    cmbExtra3: TComboBox;
-    cmbMeat: TComboBox;
-    cmbVeg: TComboBox;
     pnlAddOrderBtn: TPanel;
-    pnlFinalOrder: TPanel;
-    pnlManageStaffBtn: TPanel;
-    pnlManageStockBtn: TPanel;
+    pnlMainMenubtn: TPanel;
     redOrder: TRichEdit;
-    cmbPap: TComboBox;
     lblExtra: TLabel;
     lblVeg: TLabel;
     lblMeat: TLabel;
     lblPap: TLabel;
-    pnlTotal: TPanel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
 
     procedure FormShow(Sender: TObject);
 

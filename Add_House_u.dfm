@@ -54,58 +54,14 @@ object frmAddHouse: TfrmAddHouse
       item
         Column = 1
         ColumnSpan = 2
-        Control = cmbExtra1
-        Row = 6
-      end
-      item
-        Column = 1
-        ColumnSpan = 2
-        Control = cmbExtra2
-        Row = 7
-      end
-      item
-        Column = 1
-        ColumnSpan = 2
-        Control = cmbExtra3
-        Row = 8
-      end
-      item
-        Column = 1
-        ColumnSpan = 2
-        Control = cmbMeat
-        Row = 4
-      end
-      item
-        Column = 1
-        ColumnSpan = 2
-        Control = cmbVeg
-        Row = 5
-      end
-      item
-        Column = 1
-        ColumnSpan = 2
         Control = pnlAddOrderBtn
         Row = 9
       end
       item
         Column = 7
         ColumnSpan = 3
-        Control = pnlFinalOrder
+        Control = pnlMainMenubtn
         Row = 8
-        RowSpan = 2
-      end
-      item
-        Column = 4
-        ColumnSpan = 2
-        Control = pnlManageStaffBtn
-        Row = 0
-        RowSpan = 2
-      end
-      item
-        Column = 6
-        ColumnSpan = 2
-        Control = pnlManageStockBtn
-        Row = 0
         RowSpan = 2
       end
       item
@@ -114,12 +70,6 @@ object frmAddHouse: TfrmAddHouse
         Control = redOrder
         Row = 2
         RowSpan = 6
-      end
-      item
-        Column = 1
-        ColumnSpan = 2
-        Control = cmbPap
-        Row = 3
       end
       item
         Column = 0
@@ -142,10 +92,34 @@ object frmAddHouse: TfrmAddHouse
         Row = 3
       end
       item
-        Column = 4
+        Column = 1
         ColumnSpan = 2
-        Control = pnlTotal
-        Row = 8
+        Control = Edit1
+        Row = 7
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = Edit2
+        Row = 5
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = Edit3
+        Row = 6
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = Edit4
+        Row = 3
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = Edit5
+        Row = 4
       end>
     RowCollection = <
       item
@@ -186,176 +160,6 @@ object frmAddHouse: TfrmAddHouse
     DesignSize = (
       1014
       671)
-    object cmbExtra1: TComboBox
-      Left = 118
-      Top = 424
-      Width = 171
-      Height = 23
-      Style = csDropDownList
-      Anchors = [akLeft, akRight]
-      ItemIndex = 0
-      TabOrder = 0
-      Text = 'None'
-      Items.Strings = (
-        'None'
-        'Butter'
-        'Sugar'
-        'Milk'
-        'Sour Milk'
-        'Fat'
-        'Syrup'
-        'Smoor'
-        'Chakalaka'
-        'Curry'
-        'Stock'
-        'Gravy'
-        'Morogo'
-        'Cabbage'
-        'Corn'
-        'Spinich'
-        'Pumkin'
-        'Beans'
-        'Onion'
-        'Chilli'
-        'Beef'
-        'Pork'
-        'Lamb'
-        'Chicken'
-        'Goat'
-        'Livers'
-        'Affal'
-        'Boerewors'
-        'Walkie Talkies'
-        'Bacon')
-    end
-    object cmbExtra2: TComboBox
-      Left = 118
-      Top = 491
-      Width = 171
-      Height = 23
-      Style = csDropDownList
-      Anchors = [akLeft, akRight]
-      ItemIndex = 0
-      TabOrder = 1
-      Text = 'None'
-      Items.Strings = (
-        'None'
-        'Butter'
-        'Sugar'
-        'Milk'
-        'Sour Milk'
-        'Fat'
-        'Syrup'
-        'Smoor'
-        'Chakalaka'
-        'Curry'
-        'Stock'
-        'Gravy'
-        'Morogo'
-        'Cabbage'
-        'Corn'
-        'Spinich'
-        'Pumkin'
-        'Beans'
-        'Onion'
-        'Chilli'
-        'Beef'
-        'Pork'
-        'Lamb'
-        'Chicken'
-        'Goat'
-        'Livers'
-        'Affal'
-        'Boerewors'
-        'Walkie Talkies'
-        'Bacon')
-    end
-    object cmbExtra3: TComboBox
-      Left = 118
-      Top = 558
-      Width = 171
-      Height = 23
-      Style = csDropDownList
-      Anchors = [akLeft, akRight]
-      ItemIndex = 0
-      TabOrder = 2
-      Text = 'None'
-      Items.Strings = (
-        'None'
-        'Butter'
-        'Sugar'
-        'Milk'
-        'Sour Milk'
-        'Fat'
-        'Syrup'
-        'Smoor'
-        'Chakalaka'
-        'Curry'
-        'Stock'
-        'Gravy'
-        'Morogo'
-        'Cabbage'
-        'Corn'
-        'Spinich'
-        'Pumkin'
-        'Beans'
-        'Onion'
-        'Chilli'
-        'Beef'
-        'Pork'
-        'Lamb'
-        'Chicken'
-        'Goat'
-        'Livers'
-        'Affal'
-        'Boerewors'
-        'Walkie Talkies'
-        'Bacon')
-    end
-    object cmbMeat: TComboBox
-      Left = 118
-      Top = 291
-      Width = 171
-      Height = 23
-      Style = csDropDownList
-      Anchors = [akLeft, akRight]
-      ItemIndex = 0
-      TabOrder = 3
-      Text = 'None'
-      Items.Strings = (
-        'None'
-        'Beef'
-        'Pork'
-        'Lamb'
-        'Chicken'
-        'Goat'
-        'Livers'
-        'Affal'
-        'Boerewors'
-        'Walkie Talkies'
-        'Bacon')
-    end
-    object cmbVeg: TComboBox
-      Left = 118
-      Top = 357
-      Width = 171
-      Height = 23
-      Style = csDropDownList
-      Anchors = [akLeft, akRight]
-      ItemIndex = 0
-      TabOrder = 4
-      Text = 'None'
-      Items.Strings = (
-        'None'
-        'Morogo'
-        'Cabbage'
-        'Corn'
-        'Spinich'
-        'Pumkin'
-        'Beans'
-        'Onion'
-        'Chilli')
-    end
     object pnlAddOrderBtn: TPanel
       Left = 118
       Top = 616
@@ -363,34 +167,16 @@ object frmAddHouse: TfrmAddHouse
       Height = 41
       Anchors = []
       Caption = 'Add To Order'
-      TabOrder = 5
+      TabOrder = 0
     end
-    object pnlFinalOrder: TPanel
+    object pnlMainMenubtn: TPanel
       Left = 748
       Top = 573
       Width = 225
       Height = 59
       Anchors = []
-      Caption = 'Finalise Order'
-      TabOrder = 6
-    end
-    object pnlManageStaffBtn: TPanel
-      Left = 414
-      Top = 47
-      Width = 185
-      Height = 41
-      Anchors = []
-      Caption = 'Manage Staff'
-      TabOrder = 7
-    end
-    object pnlManageStockBtn: TPanel
-      Left = 617
-      Top = 47
-      Width = 185
-      Height = 41
-      Anchors = []
-      Caption = 'Manage Stock'
-      TabOrder = 8
+      Caption = 'Back to Main Menu'
+      TabOrder = 1
     end
     object redOrder: TRichEdit
       Left = 406
@@ -407,23 +193,9 @@ object frmAddHouse: TfrmAddHouse
         'redOrder')
       ParentFont = False
       ReadOnly = True
-      TabOrder = 9
-    end
-    object cmbPap: TComboBox
-      Left = 117
-      Top = 224
-      Width = 172
-      Height = 23
-      Style = csDropDownList
-      Anchors = [akLeft, akRight]
-      ItemIndex = 0
-      TabOrder = 10
-      Text = 'Krummel Pap'
-      Items.Strings = (
-        'Krummel Pap'
-        'Stywe Pap'
-        'Drink Pap'
-        'Slap Pap')
+      TabOrder = 2
+      ExplicitWidth = 587
+      ExplicitHeight = 418
     end
     object lblExtra: TLabel
       Left = 1
@@ -485,14 +257,54 @@ object frmAddHouse: TfrmAddHouse
       ParentFont = False
       ExplicitLeft = 7
     end
-    object pnlTotal: TPanel
-      Left = 414
-      Top = 549
-      Width = 185
-      Height = 41
-      Anchors = []
-      Caption = 'Total: '
-      TabOrder = 11
+    object Edit1: TEdit
+      Left = 143
+      Top = 491
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 3
+      Text = 'Edit1'
+    end
+    object Edit2: TEdit
+      Left = 143
+      Top = 357
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 4
+      Text = 'Edit1'
+      ExplicitTop = 23
+    end
+    object Edit3: TEdit
+      Left = 143
+      Top = 424
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 5
+      Text = 'Edit1'
+      ExplicitTop = 23
+    end
+    object Edit4: TEdit
+      Left = 143
+      Top = 224
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 6
+      Text = 'Edit1'
+      ExplicitTop = 23
+    end
+    object Edit5: TEdit
+      Left = 143
+      Top = 291
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 7
+      Text = 'Edit1'
+      ExplicitTop = 23
     end
   end
 end

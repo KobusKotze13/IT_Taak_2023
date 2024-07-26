@@ -49,11 +49,6 @@ object frmMainMenu: TfrmMainMenu
       end>
     ControlCollection = <
       item
-        Column = 7
-        Control = pnlBackToPOSBtn
-        Row = 8
-      end
-      item
         Column = 0
         ColumnSpan = 10
         Control = scbHouses
@@ -92,32 +87,17 @@ object frmMainMenu: TfrmMainMenu
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitLeft = -55
-    ExplicitTop = -119
-    ExplicitWidth = 1047
-    ExplicitHeight = 713
+    ExplicitHeight = 588
     DesignSize = (
       992
       594)
-    object pnlBackToPOSBtn: TPanel
-      Left = 694
-      Top = 484
-      Width = 185
-      Height = 41
-      Anchors = [akLeft, akRight]
-      Caption = 'Back to POS '
-      TabOrder = 0
-      ExplicitTop = 585
-    end
     object scbHouses: TScrollBox
       Left = 9
       Top = 6
       Width = 974
       Height = 464
       Anchors = []
-      TabOrder = 1
-      Visible = False
-      ExplicitTop = 0
+      TabOrder = 0
       DesignSize = (
         970
         460)
@@ -140,7 +120,7 @@ object frmMainMenu: TfrmMainMenu
         TabOrder = 1
       end
       object Panel2: TPanel
-        Left = 448
+        Left = 456
         Top = 378
         Width = 185
         Height = 41
@@ -156,6 +136,38 @@ object frmMainMenu: TfrmMainMenu
         Anchors = []
         Caption = 'Change Manager Status'
         TabOrder = 3
+      end
+      object Panel4: TPanel
+        Left = 34
+        Top = 40
+        Width = 185
+        Height = 241
+        Caption = 'Panel4'
+        TabOrder = 4
+      end
+      object Panel5: TPanel
+        Left = 241
+        Top = 40
+        Width = 185
+        Height = 241
+        Caption = 'Panel4'
+        TabOrder = 5
+      end
+      object Panel6: TPanel
+        Left = 449
+        Top = 40
+        Width = 185
+        Height = 241
+        Caption = 'Panel4'
+        TabOrder = 6
+      end
+      object Panel7: TPanel
+        Left = 674
+        Top = 40
+        Width = 185
+        Height = 241
+        Caption = 'Panel4'
+        TabOrder = 7
       end
     end
   end

@@ -10,11 +10,14 @@ type
   TfrmMainMenu = class(TForm)
     gplStaff: TGridPanel;
     pnlManagerBtn: TPanel;
-    pnlBackToPOSBtn: TPanel;
     scbHouses: TScrollBox;
     Panel1: TPanel;
     Panel2: TPanel;
     Panel3: TPanel;
+    Panel4: TPanel;
+    Panel5: TPanel;
+    Panel6: TPanel;
+    Panel7: TPanel;
   private
     { Private declarations }
   public
