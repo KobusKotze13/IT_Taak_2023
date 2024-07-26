@@ -58,7 +58,7 @@ object frmAddHouse: TfrmAddHouse
         Row = 8
       end
       item
-        Column = 7
+        Column = 9
         ColumnSpan = 3
         Control = pnlMainMenubtn
         Row = 9
@@ -173,7 +173,7 @@ object frmAddHouse: TfrmAddHouse
       ExplicitTop = 616
     end
     object pnlMainMenubtn: TPanel
-      Left = 748
+      Left = 912
       Top = 607
       Width = 225
       Height = 59
@@ -181,8 +181,8 @@ object frmAddHouse: TfrmAddHouse
       Caption = 'Back to Main Menu'
       TabOrder = 1
       OnClick = pnlMainMenubtnClick
-      ExplicitLeft = 912
-      ExplicitTop = 612
+      ExplicitLeft = 748
+      ExplicitTop = 573
     end
     object lblErfSize: TLabel
       Left = 20

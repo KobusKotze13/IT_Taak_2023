@@ -10,18 +10,17 @@ uses
 type
   TfrmAddHouse = class(TForm)
     gplPOS: TGridPanel;
-    pnlAddHouseBtn: TPanel;
+    pnlAddOrderBtn: TPanel;
     pnlMainMenubtn: TPanel;
     lblErfSize: TLabel;
     lblBathrooms: TLabel;
     lblBedrooms: TLabel;
     lblAddress: TLabel;
-    edtAddress: TEdit;
+    Edit1: TEdit;
+    Edit4: TEdit;
     memDiscription: TMemo;
-    sedBedrooms: TSpinEdit;
+    SpinEdit1: TSpinEdit;
     imgHouses: TImage;
-    sedBathrooms: TSpinEdit;
-    sedErfSize: TSpinEdit;
 
     procedure FormShow(Sender: TObject);
 
@@ -58,7 +57,8 @@ end;
 // Event handler for when the form is shown
 procedure TfrmAddHouse.FormShow(Sender: TObject);
 begin
-frmAddHouse.WindowState := TWindowState.wsMaximized;
+  WindowState := TWindowState.wsMaximized;
+
 end;
 
 

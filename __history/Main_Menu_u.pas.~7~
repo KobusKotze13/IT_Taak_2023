@@ -19,7 +19,6 @@ type
     Panel6: TPanel;
     Panel7: TPanel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,11 +37,6 @@ Login_u;
 procedure TfrmMainMenu.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
 frmLogin.show;
-end;
-
-procedure TfrmMainMenu.FormShow(Sender: TObject);
-begin
-frmMainMenu.WindowState := TWindowState.wsMaximized;
 end;
 
 end.

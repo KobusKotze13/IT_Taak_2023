@@ -89,7 +89,8 @@ object frmMainMenu: TfrmMainMenu
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitLeft = -8
+    ExplicitWidth = 992
+    ExplicitHeight = 588
     object scbHouses: TScrollBox
       Left = 1
       Top = 1
@@ -101,7 +102,6 @@ object frmMainMenu: TfrmMainMenu
       Padding.Right = 2
       Padding.Bottom = 2
       TabOrder = 0
-      UseWheelForScrolling = True
       ExplicitWidth = 990
       ExplicitHeight = 474
       DesignSize = (

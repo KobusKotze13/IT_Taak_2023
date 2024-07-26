@@ -10,7 +10,7 @@ uses
 type
   TfrmAddHouse = class(TForm)
     gplPOS: TGridPanel;
-    pnlAddHouseBtn: TPanel;
+    pnlAddOrderBtn: TPanel;
     pnlMainMenubtn: TPanel;
     lblErfSize: TLabel;
     lblBathrooms: TLabel;

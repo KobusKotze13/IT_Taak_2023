@@ -54,11 +54,11 @@ object frmAddHouse: TfrmAddHouse
       item
         Column = 4
         ColumnSpan = 2
-        Control = pnlAddHouseBtn
-        Row = 8
+        Control = pnlAddOrderBtn
+        Row = 9
       end
       item
-        Column = 7
+        Column = 0
         ColumnSpan = 3
         Control = pnlMainMenubtn
         Row = 9
@@ -91,7 +91,7 @@ object frmAddHouse: TfrmAddHouse
         Row = 3
       end
       item
-        Column = 4
+        Column = 5
         ColumnSpan = 5
         Control = memDiscription
         Row = 5
@@ -161,19 +161,18 @@ object frmAddHouse: TfrmAddHouse
     DesignSize = (
       1014
       671)
-    object pnlAddHouseBtn: TPanel
+    object pnlAddOrderBtn: TPanel
       Left = 422
-      Top = 549
+      Top = 616
       Width = 170
       Height = 41
       Anchors = []
-      Caption = 'Add House'
+      Caption = 'Add To Order'
       TabOrder = 0
       ExplicitLeft = 118
-      ExplicitTop = 616
     end
     object pnlMainMenubtn: TPanel
-      Left = 748
+      Left = 40
       Top = 607
       Width = 225
       Height = 59
@@ -181,8 +180,8 @@ object frmAddHouse: TfrmAddHouse
       Caption = 'Back to Main Menu'
       TabOrder = 1
       OnClick = pnlMainMenubtnClick
-      ExplicitLeft = 912
-      ExplicitTop = 612
+      ExplicitLeft = 748
+      ExplicitTop = 573
     end
     object lblErfSize: TLabel
       Left = 20
@@ -254,7 +253,7 @@ object frmAddHouse: TfrmAddHouse
       ExplicitTop = 228
     end
     object memDiscription: TMemo
-      Left = 406
+      Left = 507
       Top = 336
       Width = 506
       Height = 200
@@ -262,7 +261,10 @@ object frmAddHouse: TfrmAddHouse
       Lines.Strings = (
         'Enter Discription')
       TabOrder = 3
-      ExplicitLeft = 403
+      ExplicitLeft = 25
+      ExplicitTop = 73
+      ExplicitWidth = 185
+      ExplicitHeight = 89
     end
     object sedBedrooms: TSpinEdit
       Left = 161

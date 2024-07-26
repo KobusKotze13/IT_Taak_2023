@@ -52,75 +52,74 @@ object frmAddHouse: TfrmAddHouse
       end>
     ControlCollection = <
       item
-        Column = 4
+        Column = 1
         ColumnSpan = 2
-        Control = pnlAddHouseBtn
-        Row = 8
+        Control = pnlAddOrderBtn
+        Row = 9
       end
       item
         Column = 7
         ColumnSpan = 3
         Control = pnlMainMenubtn
-        Row = 9
+        Row = 8
         RowSpan = 2
       end
       item
-        Column = 0
-        Control = lblErfSize
-        Row = 6
-      end
-      item
-        Column = 0
-        Control = lblBathrooms
-        Row = 5
-      end
-      item
-        Column = 0
-        Control = lblBedrooms
-        Row = 4
-      end
-      item
-        Column = 0
-        Control = lblAddress
-        Row = 3
-      end
-      item
-        Column = 1
-        ColumnSpan = 3
-        Control = edtAddress
-        Row = 3
-      end
-      item
         Column = 4
-        ColumnSpan = 5
-        Control = memDiscription
-        Row = 5
-        RowSpan = 3
+        ColumnSpan = 6
+        Control = redOrder
+        Row = 2
+        RowSpan = 6
       end
       item
-        Column = 1
-        ColumnSpan = 3
-        Control = sedBedrooms
+        Column = 0
+        Control = lblExtra
+        Row = 6
+      end
+      item
+        Column = 0
+        Control = lblVeg
+        Row = 5
+      end
+      item
+        Column = 0
+        Control = lblMeat
         Row = 4
       end
       item
-        Column = 5
-        ColumnSpan = 3
-        Control = imgHouses
-        Row = 1
-        RowSpan = 3
+        Column = 0
+        Control = lblPap
+        Row = 3
       end
       item
         Column = 1
-        ColumnSpan = 3
-        Control = sedBathrooms
+        ColumnSpan = 2
+        Control = Edit1
+        Row = 7
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = Edit2
         Row = 5
       end
       item
         Column = 1
-        ColumnSpan = 3
-        Control = sedErfSize
+        ColumnSpan = 2
+        Control = Edit3
         Row = 6
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = Edit4
+        Row = 3
+      end
+      item
+        Column = 1
+        ColumnSpan = 2
+        Control = Edit5
+        Row = 4
       end>
     RowCollection = <
       item
@@ -157,160 +156,155 @@ object frmAddHouse: TfrmAddHouse
         SizeStyle = ssAuto
       end>
     TabOrder = 0
-    ExplicitTop = -8
+    ExplicitHeight = 665
     DesignSize = (
       1014
       671)
-    object pnlAddHouseBtn: TPanel
-      Left = 422
-      Top = 549
+    object pnlAddOrderBtn: TPanel
+      Left = 118
+      Top = 616
       Width = 170
       Height = 41
       Anchors = []
-      Caption = 'Add House'
+      Caption = 'Add To Order'
       TabOrder = 0
-      ExplicitLeft = 118
-      ExplicitTop = 616
     end
     object pnlMainMenubtn: TPanel
       Left = 748
-      Top = 607
+      Top = 573
       Width = 225
       Height = 59
       Anchors = []
       Caption = 'Back to Main Menu'
       TabOrder = 1
-      OnClick = pnlMainMenubtnClick
-      ExplicitLeft = 912
-      ExplicitTop = 612
     end
-    object lblErfSize: TLabel
-      Left = 20
+    object redOrder: TRichEdit
+      Left = 406
+      Top = 135
+      Width = 607
+      Height = 401
+      Align = alClient
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      Lines.Strings = (
+        'redOrder')
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 2
+      ExplicitWidth = 587
+      ExplicitHeight = 418
+    end
+    object lblExtra: TLabel
+      Left = 1
       Top = 423
-      Width = 63
+      Width = 108
       Height = 25
-      Anchors = [akLeft, akRight]
-      Caption = 'Erf Size'
+      Anchors = [akRight]
+      Caption = 'Select Extras'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlight
       Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitTop = 418
+      ExplicitLeft = 47
     end
-    object lblBathrooms: TLabel
-      Left = 5
+    object lblVeg: TLabel
+      Left = 9
       Top = 356
       Width = 93
       Height = 25
-      Anchors = [akLeft, akRight]
-      Caption = 'Bathrooms'
+      Anchors = [akRight]
+      Caption = 'Select Veg:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlight
       Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitTop = 392
+      ExplicitLeft = 24
     end
-    object lblBedrooms: TLabel
-      Left = 8
+    object lblMeat: TLabel
+      Left = 1
       Top = 290
-      Width = 86
+      Width = 104
       Height = 25
-      Anchors = [akLeft, akRight]
-      Caption = 'Bedrooms'
+      Anchors = [akRight]
+      Caption = 'Select meat:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlight
       Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitTop = 336
+      ExplicitLeft = 24
     end
-    object lblAddress: TLabel
-      Left = 17
+    object lblPap: TLabel
+      Left = 9
       Top = 223
-      Width = 68
+      Width = 93
       Height = 25
-      Anchors = [akLeft, akRight]
-      Caption = 'Address'
+      Anchors = [akRight]
+      Caption = 'Select Pap:'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlight
       Font.Height = -18
       Font.Name = 'Segoe UI'
       Font.Style = [fsBold]
       ParentFont = False
-      ExplicitTop = 247
+      ExplicitLeft = 7
     end
-    object edtAddress: TEdit
-      Left = 161
-      Top = 219
-      Width = 186
-      Height = 33
+    object Edit1: TEdit
+      Left = 143
+      Top = 491
+      Width = 121
+      Height = 23
       Anchors = [akLeft, akRight]
-      TabOrder = 2
-      ExplicitTop = 228
-    end
-    object memDiscription: TMemo
-      Left = 406
-      Top = 336
-      Width = 506
-      Height = 200
-      Align = alClient
-      Lines.Strings = (
-        'Enter Discription')
       TabOrder = 3
-      ExplicitLeft = 403
+      Text = 'Edit1'
     end
-    object sedBedrooms: TSpinEdit
-      Left = 161
-      Top = 290
-      Width = 186
-      Height = 24
-      Anchors = []
-      MaxValue = 0
-      MinValue = 0
-      TabOrder = 4
-      Value = 0
-      ExplicitLeft = 169
-      ExplicitTop = 299
-    end
-    object imgHouses: TImage
-      Left = 507
-      Top = 69
-      Width = 306
-      Height = 198
-      Anchors = []
-      ExplicitLeft = 606
-      ExplicitTop = 116
-    end
-    object sedBathrooms: TSpinEdit
-      Left = 161
+    object Edit2: TEdit
+      Left = 143
       Top = 357
-      Width = 186
-      Height = 24
-      Anchors = []
-      MaxValue = 0
-      MinValue = 0
-      TabOrder = 5
-      Value = 0
-      ExplicitLeft = 169
-      ExplicitTop = 366
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 4
+      Text = 'Edit1'
+      ExplicitTop = 23
     end
-    object sedErfSize: TSpinEdit
-      Left = 161
-      Top = 423
-      Width = 186
-      Height = 24
-      Anchors = []
-      MaxValue = 0
-      MinValue = 0
+    object Edit3: TEdit
+      Left = 143
+      Top = 424
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 5
+      Text = 'Edit1'
+      ExplicitTop = 23
+    end
+    object Edit4: TEdit
+      Left = 143
+      Top = 224
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
       TabOrder = 6
-      Value = 0
-      ExplicitLeft = 169
-      ExplicitTop = 432
+      Text = 'Edit1'
+      ExplicitTop = 23
+    end
+    object Edit5: TEdit
+      Left = 143
+      Top = 291
+      Width = 121
+      Height = 23
+      Anchors = [akLeft, akRight]
+      TabOrder = 7
+      Text = 'Edit1'
+      ExplicitTop = 23
     end
   end
 end
