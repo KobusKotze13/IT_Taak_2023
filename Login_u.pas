@@ -51,7 +51,7 @@ begin
   conPOS_Database.ConnectionString := 'Provider=Microsoft.Jet.OLEDB.4.0;Data Source=' + sDatabaseName + '.mdb;Mode=ReadWrite;Persist Security Info=False';
   conPOS_Database.LoginPrompt := False;
   conPOS_Database.Connected := True;
-  // Create tables for Staff, Houses, and Clients
+  // Create tables for Agents, Houses, and Clients
   tblAgents := TADOTable.Create(Self);
   tblAgents.Connection := conPOS_Database;
   tblAgents.TableName := sTableAgents;
@@ -97,22 +97,22 @@ begin
   // Start from the first record in the staff table
   tblAgents.First;
   while (NOT tblAgents.EOF) and (NOT LoginSuccessful) do
-  begin
-    // Check if the entered username and password match a record
-    if (Username = tblAgents['Agent_Username']) and (Password = tblAgents['Agent_Password']) then
     begin
-      LoginSuccessful := True;
-      frmMainMenu.show;
-      frmLogin.Hide;
-      break; // No need to continue checking
+      // Check if the entered username and password match a record
+      if (Username = tblAgents['Agent_Username']) and (Password = tblAgents['Agent_Password']) then
+        begin
+          LoginSuccessful := True;
+          frmMainMenu.show;
+          frmLogin.Hide;
+          break; // No need to continue checking
+        end;
+      tblAgents.Next;
     end;
-    tblAgents.Next;
-  end;
   // If login is not successful, show an error message
   if NOT LoginSuccessful then
-  begin
-    ShowMessage('Username or Password is incorrect');
-  end;
+    begin
+      ShowMessage('Username or Password is incorrect');
+    end;
 end;
 end.
 

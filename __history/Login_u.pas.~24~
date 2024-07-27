@@ -3,8 +3,8 @@ unit Login_u;
 interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, POS_u, adodb, Data.DB, Vcl.Grids,
-  Vcl.DBGrids, Signup_u, Main_Menu_u;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, adodb, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Main_Menu_u;
 type
   TfrmLogin = class(TForm)
     gplLogin: TGridPanel;
@@ -27,10 +27,10 @@ var
   // Declaration and DB connection variables
   frmLogin: TfrmLogin;
   conPOS_Database: TADOConnection;
-  tblAgent: TADOTable;
+  tblAgents: TADOTable;
   tblHouses: TADOTable;
   tblClients: TADOTable;
-  dsrStaff: TDataSource;
+  dsrAgent: TDataSource;
   dsrHouses: TDataSource;
   dsrClients: TDataSource;
   sDatabaseName: string;
@@ -43,7 +43,7 @@ implementation
 procedure TfrmLogin.connectDb;
 begin
   conPOS_Database := TADOConnection.Create(Self);
-  sDatabaseName := 'Agent_Logbook';
+  sDatabaseName := 'Agents_Logbook';
   sTableAgents := 'tblAgents';
   sTableHouses := 'tblHouses';
   sTableClients := 'tblClients';
@@ -52,10 +52,10 @@ begin
   conPOS_Database.LoginPrompt := False;
   conPOS_Database.Connected := True;
   // Create tables for Staff, Houses, and Clients
-  tblAgent := TADOTable.Create(Self);
-  tblAgent.Connection := conPOS_Database;
-  tblAgent.TableName := sTableAgents;
-  tblAgent.Active := True;
+  tblAgents := TADOTable.Create(Self);
+  tblAgents.Connection := conPOS_Database;
+  tblAgents.TableName := sTableAgents;
+  tblAgents.Active := True;
   tblHouses := TADOTable.Create(Self);
   tblHouses.Connection := conPOS_Database;
   tblHouses.TableName := sTableHouses;
@@ -65,8 +65,8 @@ begin
   tblClients.TableName := sTableClients;
   tblClients.Active := True;
   // Create data sources for the tables
-  dsrStaff := TDataSource.Create(Self);
-  dsrStaff.DataSet := tblAgent;
+  dsrAgent := TDataSource.Create(Self);
+  dsrAgent.DataSet := tblAgents;
   dsrHouses := TDataSource.Create(Self);
   dsrHouses.DataSet := tblHouses;
   dsrClients := TDataSource.Create(Self);
@@ -95,17 +95,18 @@ begin
   Username := edtUserName.Text;
   Password := edtPass.Text;
   // Start from the first record in the staff table
-  tblAgent.First;
-  while (NOT tblAgent.EOF) and (NOT LoginSuccessful) do
+  tblAgents.First;
+  while (NOT tblAgents.EOF) and (NOT LoginSuccessful) do
   begin
     // Check if the entered username and password match a record
-    if (Username = tblAgent['Agent_Username']) and (Password = tblAgent['Password']) then
+    if (Username = tblAgents['Agent_Username']) and (Password = tblAgents['Agent_Password']) then
     begin
+      LoginSuccessful := True;
       frmMainMenu.show;
       frmLogin.Hide;
       break; // No need to continue checking
     end;
-    tblAgent.Next;
+    tblAgents.Next;
   end;
   // If login is not successful, show an error message
   if NOT LoginSuccessful then

@@ -1,9 +1,0 @@
-Dish 1
-
-Pap: Krummel Pap	R20,00
-
-Dish 2
-
-Pap: Krummel Pap	R20,00
-
-
