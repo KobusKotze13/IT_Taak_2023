@@ -24,9 +24,9 @@ type
     sedErfSize: TSpinEdit;
     lblHouseSize: TLabel;
     sedHouseSize: TSpinEdit;
-    lblPrice: TLabel;
+    Label1: TLabel;
     edtPrice: TEdit;
-    pnlAddPhoto: TPanel;
+    Panel1: TPanel;
     lblGarage: TLabel;
     SpinEdit1: TSpinEdit;
 

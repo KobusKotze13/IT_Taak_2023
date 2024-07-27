@@ -9,11 +9,11 @@
     <Transaction>2023/09/14 19:02:56.000.593,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Login_u.pas</Transaction>
     <Transaction>2023/09/14 19:02:56.000.593,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Login_u.dfm</Transaction>
     <Transaction>2023/09/14 19:30:25.000.649,=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.pas</Transaction>
-    <Transaction>2023/09/14 19:30:41.000.208,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Staff_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.pas</Transaction>
     <Transaction>2023/09/14 19:30:41.000.208,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Staff_u.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.dfm</Transaction>
+    <Transaction>2023/09/14 19:30:41.000.208,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Staff_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.pas</Transaction>
     <Transaction>2023/09/14 19:30:49.000.163,=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit2.pas</Transaction>
-    <Transaction>2023/09/14 19:31:07.000.756,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Stock_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit2.pas</Transaction>
     <Transaction>2023/09/14 19:31:07.000.756,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Stock_u.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit2.dfm</Transaction>
+    <Transaction>2023/09/14 19:31:07.000.756,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Stock_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit2.pas</Transaction>
     <Transaction>2023/10/02 11:39:01.000.470,=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.pas</Transaction>
     <Transaction>2023/10/02 11:39:21.000.290,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Signup_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.pas</Transaction>
     <Transaction>2023/10/02 11:39:21.000.290,C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Signup_u.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\PAT_2023\IT_Taak_2023\Unit1.dfm</Transaction>
@@ -38,10 +38,16 @@
     <Transaction>2024/07/18 13:04:38.000.548,=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Unit1.pas</Transaction>
     <Transaction>2024/07/18 13:04:55.000.622,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Main_Menu_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Unit1.pas</Transaction>
     <Transaction>2024/07/18 13:04:55.000.622,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Main_Menu_u.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Unit1.dfm</Transaction>
-    <Transaction>2024/07/23 11:26:18.000.520,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\POS_u.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Add_House_u.dfm</Transaction>
     <Transaction>2024/07/23 11:26:18.000.520,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\POS_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Add_House_u.pas</Transaction>
+    <Transaction>2024/07/23 11:26:18.000.520,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\POS_u.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Add_House_u.dfm</Transaction>
     <Transaction>2024/07/24 13:12:40.000.341,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Agent_Logbook.dproj=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\POS_p.dproj</Transaction>
     <Transaction>2024/07/24 13:12:56.000.985,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Stock_u.pas=</Transaction>
     <Transaction>2024/07/24 13:13:00.000.711,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Staff_u.pas=</Transaction>
+    <Transaction>2024/07/27 16:51:38.000.496,=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Unit1.pas</Transaction>
+    <Transaction>2024/07/27 16:52:09.000.494,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Unit1.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\clsHouse.pas</Transaction>
+    <Transaction>2024/07/27 18:03:41.649,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\AddAgent_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Signup_u.pas</Transaction>
+    <Transaction>2024/07/27 18:03:41.649,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\AddAgent_u.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Signup_u.dfm</Transaction>
+    <Transaction>2024/07/27 18:04:13.509,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Add_Agent_u.dfm=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\AddAgent_u.dfm</Transaction>
+    <Transaction>2024/07/27 18:04:13.509,C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\Add_Agent_u.pas=C:\Users\kotze\OneDrive\Desktop\code\Delphi\IT_PAT_2024\IT_Taak_2023\AddAgent_u.pas</Transaction>
   </Transactions>
 </BorlandProject>

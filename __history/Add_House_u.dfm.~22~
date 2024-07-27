@@ -147,7 +147,7 @@ object frmAddHouse: TfrmAddHouse
       item
         Column = 7
         ColumnSpan = 2
-        Control = pnlAddPhoto
+        Control = Panel1
         Row = 4
       end
       item
@@ -387,7 +387,7 @@ object frmAddHouse: TfrmAddHouse
       Anchors = [akLeft, akRight]
       TabOrder = 8
     end
-    object pnlAddPhoto: TPanel
+    object Panel1: TPanel
       Left = 718
       Top = 282
       Width = 185

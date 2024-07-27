@@ -22,10 +22,6 @@ type
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure btnLogoutMMClick(Sender: TObject);
-    procedure pnlAddHouseBtnClick(Sender: TObject);
-    procedure pnlViewHousesBtnClick(Sender: TObject);
-    procedure pnlManageAgentsBtnClick(Sender: TObject);
-    procedure pnlAddAgentBtnClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,7 +33,7 @@ var
 
 implementation
 uses
-Login_u, Add_House_u, Add_Agent_u;
+Login_u;
 
 {$R *.dfm}
 
@@ -55,26 +51,6 @@ end;
 procedure TfrmMainMenu.FormShow(Sender: TObject);
 begin
 frmMainMenu.WindowState := TWindowState.wsMaximized;
-end;
-
-procedure TfrmMainMenu.pnlAddAgentBtnClick(Sender: TObject);
-begin
-frmAddAgent.Show;
-end;
-
-procedure TfrmMainMenu.pnlAddHouseBtnClick(Sender: TObject);
-begin
-frmAddHouse.Show;
-end;
-
-procedure TfrmMainMenu.pnlManageAgentsBtnClick(Sender: TObject);
-begin
-showmessage('Ballss');
-end;
-
-procedure TfrmMainMenu.pnlViewHousesBtnClick(Sender: TObject);
-begin
-showmessage('Balls');
 end;
 
 end.

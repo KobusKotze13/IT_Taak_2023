@@ -59,7 +59,7 @@ end;
 
 procedure TfrmMainMenu.pnlAddAgentBtnClick(Sender: TObject);
 begin
-frmAddAgent.Show;
+frmSignup.Show;
 end;
 
 procedure TfrmMainMenu.pnlAddHouseBtnClick(Sender: TObject);

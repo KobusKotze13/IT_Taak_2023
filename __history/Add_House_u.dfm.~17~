@@ -135,7 +135,7 @@ object frmAddHouse: TfrmAddHouse
       end
       item
         Column = 0
-        Control = lblPrice
+        Control = Label1
         Row = 2
       end
       item
@@ -143,23 +143,6 @@ object frmAddHouse: TfrmAddHouse
         ColumnSpan = 3
         Control = edtPrice
         Row = 2
-      end
-      item
-        Column = 7
-        ColumnSpan = 2
-        Control = pnlAddPhoto
-        Row = 4
-      end
-      item
-        Column = 0
-        Control = lblGarage
-        Row = 8
-      end
-      item
-        Column = 1
-        ColumnSpan = 3
-        Control = SpinEdit1
-        Row = 8
       end>
     RowCollection = <
       item
@@ -339,6 +322,7 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 6
       Value = 0
+      ExplicitTop = 428
     end
     object lblHouseSize: TLabel
       Left = 5
@@ -364,8 +348,9 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 7
       Value = 0
+      ExplicitLeft = 193
     end
-    object lblPrice: TLabel
+    object Label1: TLabel
       Left = 30
       Top = 156
       Width = 42
@@ -386,41 +371,6 @@ object frmAddHouse: TfrmAddHouse
       Height = 23
       Anchors = [akLeft, akRight]
       TabOrder = 8
-    end
-    object pnlAddPhoto: TPanel
-      Left = 718
-      Top = 282
-      Width = 185
-      Height = 41
-      Anchors = []
-      Caption = 'Add Photo'
-      TabOrder = 9
-    end
-    object lblGarage: TLabel
-      Left = 21
-      Top = 557
-      Width = 61
-      Height = 25
-      Anchors = [akLeft, akRight]
-      Caption = 'Garage'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlight
-      Font.Height = -18
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitTop = 22
-    end
-    object SpinEdit1: TSpinEdit
-      Left = 161
-      Top = 557
-      Width = 186
-      Height = 24
-      Anchors = []
-      MaxValue = 0
-      MinValue = 0
-      TabOrder = 10
-      Value = 0
     end
   end
 end

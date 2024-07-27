@@ -59,7 +59,7 @@ end;
 
 procedure TfrmMainMenu.pnlAddAgentBtnClick(Sender: TObject);
 begin
-frmAddAgent.Show;
+frmSignup.Show;
 end;
 
 procedure TfrmMainMenu.pnlAddHouseBtnClick(Sender: TObject);
@@ -69,7 +69,7 @@ end;
 
 procedure TfrmMainMenu.pnlManageAgentsBtnClick(Sender: TObject);
 begin
-showmessage('Ballss');
+showmessage('Balls');
 end;
 
 procedure TfrmMainMenu.pnlViewHousesBtnClick(Sender: TObject);

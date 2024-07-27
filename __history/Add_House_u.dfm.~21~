@@ -147,7 +147,7 @@ object frmAddHouse: TfrmAddHouse
       item
         Column = 7
         ColumnSpan = 2
-        Control = pnlAddPhoto
+        Control = Panel1
         Row = 4
       end
       item
@@ -159,6 +159,12 @@ object frmAddHouse: TfrmAddHouse
         Column = 1
         ColumnSpan = 3
         Control = SpinEdit1
+        Row = 8
+      end
+      item
+        Column = 6
+        ColumnSpan = 2
+        Control = pnlEditHouseBtn
         Row = 8
       end>
     RowCollection = <
@@ -387,7 +393,7 @@ object frmAddHouse: TfrmAddHouse
       Anchors = [akLeft, akRight]
       TabOrder = 8
     end
-    object pnlAddPhoto: TPanel
+    object Panel1: TPanel
       Left = 718
       Top = 282
       Width = 185
@@ -421,6 +427,17 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 10
       Value = 0
+    end
+    object pnlEditHouseBtn: TPanel
+      Left = 617
+      Top = 549
+      Width = 185
+      Height = 41
+      Anchors = []
+      Caption = 'Edit House'
+      TabOrder = 11
+      ExplicitLeft = 1
+      ExplicitTop = 14
     end
   end
 end

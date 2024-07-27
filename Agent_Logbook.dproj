@@ -133,14 +133,15 @@
             <Form>frmLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Signup_u.pas">
-            <Form>frmSignup</Form>
+        <DCCReference Include="Add_Agent_u.pas">
+            <Form>frmAddAgent</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Main_Menu_u.pas">
             <Form>frmMainMenu</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="clsHouse.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

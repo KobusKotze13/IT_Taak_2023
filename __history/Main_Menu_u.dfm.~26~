@@ -197,8 +197,6 @@ object frmMainMenu: TfrmMainMenu
       Caption = 'Logout'
       TabOrder = 1
       OnClick = btnLogoutMMClick
-      ExplicitLeft = 853
-      ExplicitTop = 606
     end
   end
 end

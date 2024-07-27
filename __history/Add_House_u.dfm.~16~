@@ -121,45 +121,6 @@ object frmAddHouse: TfrmAddHouse
         ColumnSpan = 3
         Control = sedErfSize
         Row = 6
-      end
-      item
-        Column = 0
-        Control = lblHouseSize
-        Row = 7
-      end
-      item
-        Column = 1
-        ColumnSpan = 3
-        Control = sedHouseSize
-        Row = 7
-      end
-      item
-        Column = 0
-        Control = lblPrice
-        Row = 2
-      end
-      item
-        Column = 1
-        ColumnSpan = 3
-        Control = edtPrice
-        Row = 2
-      end
-      item
-        Column = 7
-        ColumnSpan = 2
-        Control = pnlAddPhoto
-        Row = 4
-      end
-      item
-        Column = 0
-        Control = lblGarage
-        Row = 8
-      end
-      item
-        Column = 1
-        ColumnSpan = 3
-        Control = SpinEdit1
-        Row = 8
       end>
     RowCollection = <
       item
@@ -196,7 +157,7 @@ object frmAddHouse: TfrmAddHouse
         SizeStyle = ssAuto
       end>
     TabOrder = 0
-    ExplicitHeight = 665
+    ExplicitTop = -8
     DesignSize = (
       1014
       671)
@@ -208,6 +169,8 @@ object frmAddHouse: TfrmAddHouse
       Anchors = []
       Caption = 'Add House'
       TabOrder = 0
+      ExplicitLeft = 118
+      ExplicitTop = 616
     end
     object pnlMainMenubtn: TPanel
       Left = 748
@@ -218,6 +181,8 @@ object frmAddHouse: TfrmAddHouse
       Caption = 'Back to Main Menu'
       TabOrder = 1
       OnClick = pnlMainMenubtnClick
+      ExplicitLeft = 912
+      ExplicitTop = 612
     end
     object lblErfSize: TLabel
       Left = 20
@@ -281,11 +246,12 @@ object frmAddHouse: TfrmAddHouse
     end
     object edtAddress: TEdit
       Left = 161
-      Top = 224
+      Top = 219
       Width = 186
-      Height = 23
+      Height = 33
       Anchors = [akLeft, akRight]
       TabOrder = 2
+      ExplicitTop = 228
     end
     object memDiscription: TMemo
       Left = 406
@@ -295,8 +261,8 @@ object frmAddHouse: TfrmAddHouse
       Align = alClient
       Lines.Strings = (
         'Enter Discription')
-      MaxLength = 255
       TabOrder = 3
+      ExplicitLeft = 403
     end
     object sedBedrooms: TSpinEdit
       Left = 161
@@ -308,6 +274,8 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 4
       Value = 0
+      ExplicitLeft = 169
+      ExplicitTop = 299
     end
     object imgHouses: TImage
       Left = 507
@@ -328,6 +296,8 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 5
       Value = 0
+      ExplicitLeft = 169
+      ExplicitTop = 366
     end
     object sedErfSize: TSpinEdit
       Left = 161
@@ -339,88 +309,8 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 6
       Value = 0
-    end
-    object lblHouseSize: TLabel
-      Left = 5
-      Top = 490
-      Width = 93
-      Height = 25
-      Anchors = [akLeft, akRight]
-      Caption = 'House Size'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlight
-      Font.Height = -18
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object sedHouseSize: TSpinEdit
-      Left = 161
-      Top = 490
-      Width = 186
-      Height = 24
-      Anchors = []
-      MaxValue = 0
-      MinValue = 0
-      TabOrder = 7
-      Value = 0
-    end
-    object lblPrice: TLabel
-      Left = 30
-      Top = 156
-      Width = 42
-      Height = 25
-      Anchors = [akLeft, akRight]
-      Caption = 'Price'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlight
-      Font.Height = -18
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-    object edtPrice: TEdit
-      Left = 161
-      Top = 157
-      Width = 186
-      Height = 23
-      Anchors = [akLeft, akRight]
-      TabOrder = 8
-    end
-    object pnlAddPhoto: TPanel
-      Left = 718
-      Top = 282
-      Width = 185
-      Height = 41
-      Anchors = []
-      Caption = 'Add Photo'
-      TabOrder = 9
-    end
-    object lblGarage: TLabel
-      Left = 21
-      Top = 557
-      Width = 61
-      Height = 25
-      Anchors = [akLeft, akRight]
-      Caption = 'Garage'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clHighlight
-      Font.Height = -18
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-      ExplicitTop = 22
-    end
-    object SpinEdit1: TSpinEdit
-      Left = 161
-      Top = 557
-      Width = 186
-      Height = 24
-      Anchors = []
-      MaxValue = 0
-      MinValue = 0
-      TabOrder = 10
-      Value = 0
+      ExplicitLeft = 169
+      ExplicitTop = 432
     end
   end
 end

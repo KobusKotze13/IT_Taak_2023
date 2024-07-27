@@ -147,7 +147,7 @@ object frmAddHouse: TfrmAddHouse
       item
         Column = 7
         ColumnSpan = 2
-        Control = pnlAddPhoto
+        Control = Panel1
         Row = 4
       end
       item
@@ -339,6 +339,7 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 6
       Value = 0
+      ExplicitTop = 428
     end
     object lblHouseSize: TLabel
       Left = 5
@@ -364,6 +365,7 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 7
       Value = 0
+      ExplicitLeft = 193
     end
     object lblPrice: TLabel
       Left = 30
@@ -387,7 +389,7 @@ object frmAddHouse: TfrmAddHouse
       Anchors = [akLeft, akRight]
       TabOrder = 8
     end
-    object pnlAddPhoto: TPanel
+    object Panel1: TPanel
       Left = 718
       Top = 282
       Width = 185
@@ -395,6 +397,8 @@ object frmAddHouse: TfrmAddHouse
       Anchors = []
       Caption = 'Add Photo'
       TabOrder = 9
+      ExplicitLeft = 1
+      ExplicitTop = 14
     end
     object lblGarage: TLabel
       Left = 21
@@ -421,6 +425,7 @@ object frmAddHouse: TfrmAddHouse
       MinValue = 0
       TabOrder = 10
       Value = 0
+      ExplicitLeft = 193
     end
   end
 end

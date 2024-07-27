@@ -22,13 +22,6 @@ type
     imgHouses: TImage;
     sedBathrooms: TSpinEdit;
     sedErfSize: TSpinEdit;
-    lblHouseSize: TLabel;
-    sedHouseSize: TSpinEdit;
-    lblPrice: TLabel;
-    edtPrice: TEdit;
-    pnlAddPhoto: TPanel;
-    lblGarage: TLabel;
-    SpinEdit1: TSpinEdit;
 
     procedure FormShow(Sender: TObject);
 

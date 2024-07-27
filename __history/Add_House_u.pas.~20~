@@ -24,11 +24,8 @@ type
     sedErfSize: TSpinEdit;
     lblHouseSize: TLabel;
     sedHouseSize: TSpinEdit;
-    lblPrice: TLabel;
+    Label1: TLabel;
     edtPrice: TEdit;
-    pnlAddPhoto: TPanel;
-    lblGarage: TLabel;
-    SpinEdit1: TSpinEdit;
 
     procedure FormShow(Sender: TObject);
 
