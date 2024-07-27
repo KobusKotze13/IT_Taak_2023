@@ -56,6 +56,13 @@ object frmMainMenu: TfrmMainMenu
         Control = scbHouses
         Row = 0
         RowSpan = 8
+      end
+      item
+        Column = 8
+        ColumnSpan = 2
+        Control = btnLogoutMM
+        Row = 8
+        RowSpan = 2
       end>
     RowCollection = <
       item
@@ -89,7 +96,10 @@ object frmMainMenu: TfrmMainMenu
         Value = 10.000000000000000000
       end>
     TabOrder = 0
-    ExplicitLeft = -8
+    ExplicitHeight = 634
+    DesignSize = (
+      1023
+      640)
     object scbHouses: TScrollBox
       Left = 1
       Top = 1
@@ -102,90 +112,85 @@ object frmMainMenu: TfrmMainMenu
       Padding.Bottom = 2
       TabOrder = 0
       UseWheelForScrolling = True
-      ExplicitWidth = 990
-      ExplicitHeight = 474
       DesignSize = (
         1017
         506)
-      object pnlManagerBtn: TPanel
+      object pnlAddHouseBtn: TPanel
         Left = 38
         Top = 360
         Width = 185
         Height = 41
         Anchors = []
-        Caption = 'Change Manager Status'
+        Caption = 'Add House'
         TabOrder = 0
-        ExplicitLeft = 34
-        ExplicitTop = 333
       end
-      object Panel1: TPanel
+      object pnlViewHousesBtn: TPanel
         Left = 252
         Top = 360
         Width = 185
         Height = 41
         Anchors = []
-        Caption = 'Change Manager Status'
+        Caption = 'View Houses'
         TabOrder = 1
-        ExplicitLeft = 241
-        ExplicitTop = 333
       end
-      object Panel2: TPanel
+      object pnlManageAgentsBtn: TPanel
         Left = 466
         Top = 360
         Width = 185
         Height = 41
         Anchors = []
-        Caption = 'Change Manager Status'
+        Caption = 'Manage Houses'
         TabOrder = 2
-        ExplicitLeft = 449
-        ExplicitTop = 333
       end
-      object Panel3: TPanel
+      object pnlAddAgentBtn: TPanel
         Left = 698
         Top = 360
         Width = 185
         Height = 41
         Anchors = []
-        Caption = 'Change Manager Status'
+        Caption = 'Add Agent'
         TabOrder = 3
-        ExplicitLeft = 674
-        ExplicitTop = 333
       end
-      object Panel4: TPanel
+      object pnlAddHouse: TPanel
         Left = 38
         Top = 36
         Width = 185
         Height = 241
         Anchors = []
-        Caption = 'Panel4'
         TabOrder = 4
-        ExplicitLeft = 33
-        ExplicitTop = 40
       end
-      object Panel5: TPanel
+      object pnlViewHouses: TPanel
         Left = 241
         Top = 40
         Width = 185
         Height = 241
-        Caption = 'Panel4'
         TabOrder = 5
       end
-      object Panel6: TPanel
+      object pnlManageAgents: TPanel
         Left = 449
         Top = 40
         Width = 185
         Height = 241
-        Caption = 'Panel4'
         TabOrder = 6
       end
-      object Panel7: TPanel
+      object pnlAddAgent: TPanel
         Left = 674
         Top = 40
         Width = 185
         Height = 241
-        Caption = 'Panel4'
         TabOrder = 7
       end
+    end
+    object btnLogoutMM: TButton
+      Left = 845
+      Top = 550
+      Width = 150
+      Height = 50
+      Anchors = []
+      Caption = 'Logout'
+      TabOrder = 1
+      OnClick = btnLogoutMMClick
+      ExplicitTop = 562
     end
   end
 end
