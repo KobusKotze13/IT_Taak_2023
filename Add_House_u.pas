@@ -9,7 +9,7 @@ uses
 
 type
   TfrmAddHouse = class(TForm)
-    gplPOS: TGridPanel;
+    gplAddHouse: TGridPanel;
     pnlAddHouseBtn: TPanel;
     pnlMainMenubtn: TPanel;
     lblErfSize: TLabel;
@@ -28,7 +28,7 @@ type
     edtPrice: TEdit;
     pnlAddPhoto: TPanel;
     lblGarage: TLabel;
-    SpinEdit1: TSpinEdit;
+    sedGarage: TSpinEdit;
 
     procedure FormShow(Sender: TObject);
 

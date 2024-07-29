@@ -9,7 +9,7 @@ uses
 
 type
   TfrmAddAgent = class(TForm)
-    gplAddAgent: TGridPanel;
+    gplPOS: TGridPanel;
     pnlMainMenubtn: TPanel;
     lblEmailAddress: TLabel;
     lblCellphoneNum: TLabel;

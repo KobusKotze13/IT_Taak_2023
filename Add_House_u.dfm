@@ -13,7 +13,7 @@ object frmAddHouse: TfrmAddHouse
   OnClose = FormClose
   OnShow = FormShow
   TextHeight = 15
-  object gplPOS: TGridPanel
+  object gplAddHouse: TGridPanel
     Left = 0
     Top = 0
     Width = 1014
@@ -158,7 +158,7 @@ object frmAddHouse: TfrmAddHouse
       item
         Column = 1
         ColumnSpan = 3
-        Control = SpinEdit1
+        Control = sedGarage
         Row = 8
       end>
     RowCollection = <
@@ -411,7 +411,7 @@ object frmAddHouse: TfrmAddHouse
       ParentFont = False
       ExplicitTop = 22
     end
-    object SpinEdit1: TSpinEdit
+    object sedGarage: TSpinEdit
       Left = 161
       Top = 557
       Width = 186

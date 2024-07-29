@@ -10,17 +10,25 @@ uses
 type
   TfrmAddHouse = class(TForm)
     gplPOS: TGridPanel;
-    pnlAddOrderBtn: TPanel;
+    pnlAddHouseBtn: TPanel;
     pnlMainMenubtn: TPanel;
     lblErfSize: TLabel;
     lblBathrooms: TLabel;
     lblBedrooms: TLabel;
     lblAddress: TLabel;
-    Edit1: TEdit;
-    Edit4: TEdit;
+    edtAddress: TEdit;
     memDiscription: TMemo;
-    SpinEdit1: TSpinEdit;
+    sedBedrooms: TSpinEdit;
     imgHouses: TImage;
+    sedBathrooms: TSpinEdit;
+    sedErfSize: TSpinEdit;
+    lblHouseSize: TLabel;
+    sedHouseSize: TSpinEdit;
+    lblPrice: TLabel;
+    edtPrice: TEdit;
+    pnlAddPhoto: TPanel;
+    lblGarage: TLabel;
+    SpinEdit1: TSpinEdit;
 
     procedure FormShow(Sender: TObject);
 

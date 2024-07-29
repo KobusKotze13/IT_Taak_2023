@@ -123,6 +123,7 @@ object frmMainMenu: TfrmMainMenu
         Anchors = []
         Caption = 'Add House'
         TabOrder = 0
+        OnClick = pnlAddHouseBtnClick
       end
       object pnlViewHousesBtn: TPanel
         Left = 252
@@ -132,6 +133,7 @@ object frmMainMenu: TfrmMainMenu
         Anchors = []
         Caption = 'View Houses'
         TabOrder = 1
+        OnClick = pnlViewHousesBtnClick
       end
       object pnlManageAgentsBtn: TPanel
         Left = 466
@@ -139,8 +141,9 @@ object frmMainMenu: TfrmMainMenu
         Width = 185
         Height = 41
         Anchors = []
-        Caption = 'Manage Houses'
+        Caption = 'Manage Agents'
         TabOrder = 2
+        OnClick = pnlManageAgentsBtnClick
       end
       object pnlAddAgentBtn: TPanel
         Left = 698
@@ -150,6 +153,7 @@ object frmMainMenu: TfrmMainMenu
         Anchors = []
         Caption = 'Add Agent'
         TabOrder = 3
+        OnClick = pnlAddAgentBtnClick
       end
       object pnlAddHouse: TPanel
         Left = 38
@@ -160,24 +164,27 @@ object frmMainMenu: TfrmMainMenu
         TabOrder = 4
       end
       object pnlViewHouses: TPanel
-        Left = 241
-        Top = 40
+        Left = 252
+        Top = 36
         Width = 185
         Height = 241
+        Anchors = []
         TabOrder = 5
       end
       object pnlManageAgents: TPanel
-        Left = 449
-        Top = 40
+        Left = 466
+        Top = 36
         Width = 185
         Height = 241
+        Anchors = []
         TabOrder = 6
       end
       object pnlAddAgent: TPanel
-        Left = 674
-        Top = 40
+        Left = 698
+        Top = 36
         Width = 185
         Height = 241
+        Anchors = []
         TabOrder = 7
       end
     end
@@ -190,7 +197,8 @@ object frmMainMenu: TfrmMainMenu
       Caption = 'Logout'
       TabOrder = 1
       OnClick = btnLogoutMMClick
-      ExplicitTop = 562
+      ExplicitLeft = 853
+      ExplicitTop = 606
     end
   end
 end

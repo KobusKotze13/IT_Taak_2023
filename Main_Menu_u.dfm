@@ -112,6 +112,8 @@ object frmMainMenu: TfrmMainMenu
       Padding.Bottom = 2
       TabOrder = 0
       UseWheelForScrolling = True
+      ExplicitLeft = 2
+      ExplicitTop = 0
       DesignSize = (
         1017
         506)
@@ -126,7 +128,7 @@ object frmMainMenu: TfrmMainMenu
         OnClick = pnlAddHouseBtnClick
       end
       object pnlViewHousesBtn: TPanel
-        Left = 252
+        Left = 284
         Top = 360
         Width = 185
         Height = 41
@@ -136,7 +138,7 @@ object frmMainMenu: TfrmMainMenu
         OnClick = pnlViewHousesBtnClick
       end
       object pnlManageAgentsBtn: TPanel
-        Left = 466
+        Left = 538
         Top = 360
         Width = 185
         Height = 41
@@ -146,7 +148,7 @@ object frmMainMenu: TfrmMainMenu
         OnClick = pnlManageAgentsBtnClick
       end
       object pnlAddAgentBtn: TPanel
-        Left = 698
+        Left = 794
         Top = 360
         Width = 185
         Height = 41
@@ -164,7 +166,7 @@ object frmMainMenu: TfrmMainMenu
         TabOrder = 4
       end
       object pnlViewHouses: TPanel
-        Left = 252
+        Left = 284
         Top = 36
         Width = 185
         Height = 241
@@ -172,7 +174,7 @@ object frmMainMenu: TfrmMainMenu
         TabOrder = 5
       end
       object pnlManageAgents: TPanel
-        Left = 466
+        Left = 538
         Top = 36
         Width = 185
         Height = 241
@@ -180,7 +182,7 @@ object frmMainMenu: TfrmMainMenu
         TabOrder = 6
       end
       object pnlAddAgent: TPanel
-        Left = 698
+        Left = 794
         Top = 36
         Width = 185
         Height = 241
@@ -197,8 +199,6 @@ object frmMainMenu: TfrmMainMenu
       Caption = 'Logout'
       TabOrder = 1
       OnClick = btnLogoutMMClick
-      ExplicitLeft = 853
-      ExplicitTop = 606
     end
   end
 end
